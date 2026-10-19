@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T06:05:35.610Z",
+  "updatedAt": "2026-10-19T06:25:43.725Z",
   "products": [
     {
       "id": "avhd-asu",
@@ -43,6 +43,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/avhd-asu_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "AVHD-AS2/U",
@@ -72,7 +73,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:04:56.009Z"
+      "lastCheckedAt": "2026-10-19T06:25:03.719Z"
     },
     {
       "id": "avhd-usu",
@@ -116,6 +117,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/avhd-usu_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "AVHD-US4/U",
@@ -145,7 +147,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:05:00.896Z"
+      "lastCheckedAt": "2026-10-19T06:25:08.615Z"
     },
     {
       "id": "avhd-wru",
@@ -189,6 +191,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/avhd-wru_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "AVHD-WR3/U",
@@ -218,7 +221,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:04:51.164Z"
+      "lastCheckedAt": "2026-10-19T06:24:58.836Z"
     },
     {
       "id": "avssd-rs",
@@ -261,6 +264,7 @@
         "静音設計"
       ],
       "imageUrl": "https://www.iodata.jp/image/avssd-rs_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "AVSSD-RS1",
@@ -281,7 +285,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:04:06.812Z"
+      "lastCheckedAt": "2026-10-19T06:24:14.094Z"
     },
     {
       "id": "hd4-utn",
@@ -323,6 +327,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/hd4-utn_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HD4-UTN08",
@@ -388,7 +393,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:05:35.610Z"
+      "lastCheckedAt": "2026-10-19T06:25:43.724Z"
     },
     {
       "id": "hd4-utnc",
@@ -430,6 +435,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/hd4-utnc_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HD4-UTN8C",
@@ -495,7 +501,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:05:30.761Z"
+      "lastCheckedAt": "2026-10-19T06:25:38.931Z"
     },
     {
       "id": "hdcx-utp",
@@ -537,6 +543,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdcx-utp_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDCX-UT12P",
@@ -575,7 +582,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:01:53.546Z"
+      "lastCheckedAt": "2026-10-19T06:22:00.717Z"
     },
     {
       "id": "hdd-utb",
@@ -617,6 +624,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdd-utb_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDD-UT1KB",
@@ -682,7 +690,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:02:08.545Z"
+      "lastCheckedAt": "2026-10-19T06:22:15.719Z"
     },
     {
       "id": "hdd-utc",
@@ -725,6 +733,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdd-utc_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDD-UT1KC",
@@ -790,7 +799,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:02:03.628Z"
+      "lastCheckedAt": "2026-10-19T06:22:10.859Z"
     },
     {
       "id": "hdja-sutc",
@@ -832,6 +841,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdja-sutc_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDJA-SUTC1",
@@ -879,7 +889,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:02:39.435Z"
+      "lastCheckedAt": "2026-10-19T06:22:46.084Z"
     },
     {
       "id": "hdja-utb",
@@ -921,6 +931,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdja-utb_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDJA-UT1B",
@@ -959,7 +970,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:01:43.796Z"
+      "lastCheckedAt": "2026-10-19T06:21:50.929Z"
     },
     {
       "id": "hdja-utnb",
@@ -1002,6 +1013,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdja-utnb_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDJA-UTN1B",
@@ -1103,7 +1115,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:02:23.789Z"
+      "lastCheckedAt": "2026-10-19T06:22:30.332Z"
     },
     {
       "id": "hdja-utnc",
@@ -1145,6 +1157,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdja-utnc_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDJA-UTN1C",
@@ -1246,7 +1259,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:02:13.884Z"
+      "lastCheckedAt": "2026-10-19T06:22:20.643Z"
     },
     {
       "id": "hdja-utnldb",
@@ -1290,6 +1303,7 @@
         "NASバックアップ専用"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdja-utnldb_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDJA-UTN1/LDB",
@@ -1391,7 +1405,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:02:28.751Z"
+      "lastCheckedAt": "2026-10-19T06:22:35.538Z"
     },
     {
       "id": "hdja-utnldc",
@@ -1435,6 +1449,7 @@
         "NASバックアップ専用"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdja-utnldc_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDJA-UTN1/LDC",
@@ -1536,7 +1551,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:02:34.342Z"
+      "lastCheckedAt": "2026-10-19T06:22:40.738Z"
     },
     {
       "id": "hdja-utr",
@@ -1578,6 +1593,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdja-utr_02.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDJA-UT1R",
@@ -1625,7 +1641,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:01:48.589Z"
+      "lastCheckedAt": "2026-10-19T06:21:55.731Z"
     },
     {
       "id": "hdja-utu",
@@ -1667,6 +1683,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdja-utu_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDJA-UTU8",
@@ -1705,7 +1722,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:02:18.746Z"
+      "lastCheckedAt": "2026-10-19T06:22:25.482Z"
     },
     {
       "id": "hdpd-sutc",
@@ -1727,7 +1744,7 @@
       "gameNote": null,
       "otherDevices": null,
       "shockproof": true,
-      "shockNote": "ハードウェア自動暗号化＆耐衝撃ポータブルHDD HDPD-SUTCシリーズ 仕様書印刷 概",
+      "shockNote": "MIL-STD-810H Method：516.8 ProcedureⅣに規定されている落下試験を実施し",
       "encryptionHw": true,
       "encryptionSw": true,
       "encryptionNote": "ハードウェア自動暗号化",
@@ -1745,6 +1762,7 @@
       "dimensions": "1・2TB：約84（W）×130（D）×19（H）mm 3・4TB：約84（W）×130（D）×25（H）mm",
       "features": [],
       "imageUrl": "https://www.iodata.jp/image/hdpd-sutc_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDPD-SUTC1",
@@ -1783,7 +1801,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:03:27.865Z"
+      "lastCheckedAt": "2026-10-19T06:23:35.082Z"
     },
     {
       "id": "hdpd-sutcs",
@@ -1805,7 +1823,7 @@
       "gameNote": null,
       "otherDevices": null,
       "shockproof": true,
-      "shockNote": "①落下の衝撃からデータを守る耐衝撃ボディ 衝撃からデータを守る耐衝撃ボディ 頻繁に持ち歩くポー",
+      "shockNote": "MIL-STD-810H Method：516.8 ProcedureⅣに規定されている落下試験を実施し",
       "encryptionHw": true,
       "encryptionSw": true,
       "encryptionNote": "【かんたんデータ移行アプリ内蔵】ハードウェア暗号化",
@@ -1825,6 +1843,7 @@
         "データ移行アプリ内蔵"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdpd-sutcs_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDPD-SUTC1/S",
@@ -1854,7 +1873,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:03:32.784Z"
+      "lastCheckedAt": "2026-10-19T06:23:40.002Z"
     },
     {
       "id": "hdph-uts",
@@ -1896,6 +1915,7 @@
         "データ移行アプリ内蔵"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdph-uts_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDPH-UT1KR/S",
@@ -1916,7 +1936,7 @@
           "status": "生産終了"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:03:13.288Z"
+      "lastCheckedAt": "2026-10-19T06:23:20.309Z"
     },
     {
       "id": "hdph-utv",
@@ -1958,6 +1978,7 @@
         "データ移行アプリ内蔵"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdph-utv_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDPH-UTV1K",
@@ -2023,7 +2044,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:03:18.220Z"
+      "lastCheckedAt": "2026-10-19T06:23:25.118Z"
     },
     {
       "id": "hdph-utv5dk",
@@ -2065,6 +2086,7 @@
         "データ移行アプリ内蔵"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdph-utv5dk_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDPH-UTV5DK",
@@ -2076,7 +2098,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:03:03.442Z"
+      "lastCheckedAt": "2026-10-19T06:23:10.577Z"
     },
     {
       "id": "hdph-utv5dkb",
@@ -2119,6 +2141,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdph-utv5dkb_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDPH-UTV5DKB",
@@ -2130,7 +2153,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:03:08.339Z"
+      "lastCheckedAt": "2026-10-19T06:23:15.453Z"
     },
     {
       "id": "hdph-utvb",
@@ -2173,6 +2196,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdph-utvb_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDPH-UTV1KB",
@@ -2238,7 +2262,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:03:23.032Z"
+      "lastCheckedAt": "2026-10-19T06:23:30.074Z"
     },
     {
       "id": "hdpl-utab",
@@ -2279,6 +2303,7 @@
         "静音設計"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdpl-utab_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDPL-UTA1KB",
@@ -2308,7 +2333,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:05:05.859Z"
+      "lastCheckedAt": "2026-10-19T06:25:13.579Z"
     },
     {
       "id": "hdpx-uts",
@@ -2350,6 +2375,7 @@
         "静音設計"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdpx-uts_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDPX-UTS1K",
@@ -2388,7 +2414,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:02:58.671Z"
+      "lastCheckedAt": "2026-10-19T06:23:05.709Z"
     },
     {
       "id": "hdpx-utsb",
@@ -2431,6 +2457,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdpx-utsb_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDPX-UTS1KB",
@@ -2469,7 +2496,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:02:49.127Z"
+      "lastCheckedAt": "2026-10-19T06:22:55.904Z"
     },
     {
       "id": "hdpx-utsc",
@@ -2512,6 +2539,7 @@
         "静音設計"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdpx-utsc_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDPX-UTSC1K",
@@ -2550,7 +2578,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:02:53.903Z"
+      "lastCheckedAt": "2026-10-19T06:23:00.752Z"
     },
     {
       "id": "hdpx-utscb",
@@ -2594,6 +2622,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdpx-utscb_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDPX-UTSC1KB",
@@ -2632,7 +2661,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:02:44.276Z"
+      "lastCheckedAt": "2026-10-19T06:22:51.033Z"
     },
     {
       "id": "hdpz-utb",
@@ -2673,6 +2702,7 @@
         "静音設計"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdpz-utb_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDPZ-UT2KB",
@@ -2693,7 +2723,7 @@
           "status": "生産終了"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:05:10.730Z"
+      "lastCheckedAt": "2026-10-19T06:25:18.680Z"
     },
     {
       "id": "hdw-utcs",
@@ -2735,6 +2765,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdw-utcs_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDW-UTCS2",
@@ -2782,7 +2813,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:01:58.466Z"
+      "lastCheckedAt": "2026-10-19T06:22:05.778Z"
     },
     {
       "id": "hdw-utnb",
@@ -2824,6 +2855,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdw-utnb_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDW-UTNB2",
@@ -2925,7 +2957,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:05:25.743Z"
+      "lastCheckedAt": "2026-10-19T06:25:33.810Z"
     },
     {
       "id": "hdw-utnc",
@@ -2967,6 +2999,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdw-utnc_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDW-UTN2C",
@@ -3068,7 +3101,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:05:20.878Z"
+      "lastCheckedAt": "2026-10-19T06:25:28.943Z"
     },
     {
       "id": "hdw-utu",
@@ -3110,6 +3143,7 @@
         "グリーン購入法適合"
       ],
       "imageUrl": "https://www.iodata.jp/image/hdw-utu_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "HDW-UTU16",
@@ -3148,12 +3182,12 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:05:15.739Z"
+      "lastCheckedAt": "2026-10-19T06:25:23.817Z"
     },
     {
       "id": "r-sspt-uf",
       "sourceUrl": "https://www.iodata.jp/product/hdd/ssd/r-sspt-uf/index.htm",
-      "seriesName": "SSPT-UFシリーズ",
+      "seriesName": "R-SSPT-UFシリーズ",
       "category": "ssd",
       "mediaType": "SSD",
       "formFactor": "portable",
@@ -3170,7 +3204,7 @@
       "gameNote": null,
       "otherDevices": null,
       "shockproof": true,
-      "shockNote": "コンパクト・軽量・衝撃に強い！持ち運びに◎ コ",
+      "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
@@ -3190,6 +3224,7 @@
         "静音設計"
       ],
       "imageUrl": "https://www.iodata.jp/image/r-sspt-uf_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "R-SSPT-UF1",
@@ -3219,7 +3254,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:04:31.510Z"
+      "lastCheckedAt": "2026-10-19T06:24:38.838Z"
     },
     {
       "id": "ssca-suw",
@@ -3241,7 +3276,7 @@
       "gameNote": null,
       "otherDevices": null,
       "shockproof": true,
-      "shockNote": "はSSDを採用しており、可動するディスク駆動部品がないため、衝撃や振動に強く、安心してお持ち運",
+      "shockNote": "MIL-STD-810H MIL-STDでは試験の根拠として",
       "encryptionHw": true,
       "encryptionSw": true,
       "encryptionNote": "また、ハードウェア自動暗号化",
@@ -3259,6 +3294,11 @@
       "dimensions": "約55×92×12mm",
       "features": [],
       "imageUrl": "https://www.iodata.jp/image/ssca-suw_l.jpg",
+      "speed": {
+        "readMBps": null,
+        "writeMBps": 1800,
+        "note": null
+      },
       "variants": [
         {
           "sku": "SSCA-SUW500CP",
@@ -3333,7 +3373,9 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:04:16.825Z"
+      "lastCheckedAt": "2026-10-19T06:24:24.097Z",
+      "pcOnly": true,
+      "pcOnlyText": "セキュリティロックアプリは解除可能ですが、スマホ・タブレットでは動作未検証です。"
     },
     {
       "id": "ssmg-uwcb",
@@ -3355,7 +3397,7 @@
       "gameNote": null,
       "otherDevices": null,
       "shockproof": true,
-      "shockNote": "衝撃・振動に強く、軽量！ 衝撃・振動に強く、軽量！ SSDは",
+      "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
@@ -3375,6 +3417,7 @@
         "MagSafe対応"
       ],
       "imageUrl": "https://www.iodata.jp/image/ssmg-uwcb_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "SSMG-UWC1B",
@@ -3404,7 +3447,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:04:26.602Z"
+      "lastCheckedAt": "2026-10-19T06:24:33.956Z"
     },
     {
       "id": "sspa-usc",
@@ -3426,7 +3469,7 @@
       "gameNote": null,
       "otherDevices": null,
       "shockproof": true,
-      "shockNote": "約46×72×11mmと手のひらに収まるコンパクトな筐体は、耐衝撃性や耐振動性を兼ね備えており、持ち運びにも最適！ exFAT",
+      "shockNote": "MIL-STD-810H 準拠 MIL-STDでは試験の根拠として",
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
@@ -3447,6 +3490,7 @@
         "静音設計"
       ],
       "imageUrl": "https://www.iodata.jp/image/sspa-usc_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "SSPA-USC500K",
@@ -3476,7 +3520,7 @@
           "status": "生産終了"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:04:36.400Z"
+      "lastCheckedAt": "2026-10-19T06:24:43.834Z"
     },
     {
       "id": "sspd-sutcb",
@@ -3498,7 +3542,7 @@
       "gameNote": null,
       "otherDevices": null,
       "shockproof": true,
-      "shockNote": "持ち運び時の落下によるデータ消失リスクを軽減する耐衝撃構造を採用し、雨やホコリの侵入を防ぐキャップも装備",
+      "shockNote": "MIL-STD-810H MIL-STDでは試験の根拠として",
       "encryptionHw": true,
       "encryptionSw": true,
       "encryptionNote": "パスワードロック＆自動暗号化",
@@ -3518,6 +3562,7 @@
         "Mac Time Machine対応"
       ],
       "imageUrl": "https://www.iodata.jp/image/sspd-sutcb_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "SSPD-SUTC500B",
@@ -3565,7 +3610,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:04:46.274Z"
+      "lastCheckedAt": "2026-10-19T06:24:53.744Z"
     },
     {
       "id": "sspd-sutcs",
@@ -3587,7 +3632,7 @@
       "gameNote": null,
       "otherDevices": null,
       "shockproof": true,
-      "shockNote": "①落下の衝撃からデータを守る耐衝撃ボディ 衝撃からデータを守る耐衝撃ボディ 頻繁に持ち歩くポー",
+      "shockNote": "MIL-STD-810H MIL-STDでは試験の根拠として",
       "encryptionHw": true,
       "encryptionSw": true,
       "encryptionNote": "ハードウェア暗号化",
@@ -3607,6 +3652,7 @@
         "データ移行アプリ内蔵"
       ],
       "imageUrl": "https://www.iodata.jp/image/sspd-sutcs_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "SSPD-SUTC500/S",
@@ -3654,7 +3700,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:04:41.473Z"
+      "lastCheckedAt": "2026-10-19T06:24:48.785Z"
     },
     {
       "id": "sspj-utc",
@@ -3695,6 +3741,7 @@
         "Mac Time Machine対応"
       ],
       "imageUrl": "https://www.iodata.jp/image/sspj-utc_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "SSPJ-UTC256",
@@ -3715,7 +3762,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:03:42.675Z"
+      "lastCheckedAt": "2026-10-19T06:23:49.851Z"
     },
     {
       "id": "sspj-utcb",
@@ -3756,6 +3803,7 @@
         "Mac Time Machine対応"
       ],
       "imageUrl": "https://www.iodata.jp/image/sspj-utcb_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "SSPJ-UTC256B",
@@ -3776,7 +3824,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:03:37.725Z"
+      "lastCheckedAt": "2026-10-19T06:23:44.804Z"
     },
     {
       "id": "sspq-usc",
@@ -3798,7 +3846,7 @@
       "gameNote": "PlayStation®5、PlayStation®5 Pro",
       "otherDevices": null,
       "shockproof": true,
-      "shockNote": "耐衝撃・耐振動性能 耐衝撃・耐振動性能 破損しやすいディスク駆動部",
+      "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
@@ -3818,6 +3866,11 @@
         "Mac Time Machine対応"
       ],
       "imageUrl": "https://www.iodata.jp/image/sspq-usc_l.jpg",
+      "speed": {
+        "readMBps": null,
+        "writeMBps": 900,
+        "note": "※250GBの書き込み速度は500MB/sとなります。"
+      },
       "variants": [
         {
           "sku": "SSPQ-USC250",
@@ -3856,7 +3909,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:04:01.920Z"
+      "lastCheckedAt": "2026-10-19T06:24:09.269Z"
     },
     {
       "id": "sspr-suscb",
@@ -3878,7 +3931,7 @@
       "gameNote": null,
       "otherDevices": null,
       "shockproof": true,
-      "shockNote": "耐衝撃・耐振動性能 耐衝撃・耐振動性能 破損しやすいディスク駆動部",
+      "shockNote": null,
       "encryptionHw": true,
       "encryptionSw": true,
       "encryptionNote": "パスワードロック＆自動暗号化",
@@ -3897,6 +3950,7 @@
         "Mac Time Machine対応"
       ],
       "imageUrl": "https://www.iodata.jp/image/sspr-suscb_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "SSPR-SUSC1B",
@@ -3926,7 +3980,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:04:21.721Z"
+      "lastCheckedAt": "2026-10-19T06:24:28.976Z"
     },
     {
       "id": "ssps-us",
@@ -3968,6 +4022,7 @@
         "静音設計"
       ],
       "imageUrl": "https://www.iodata.jp/image/ssps-us_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "SSPS-US500GR",
@@ -4024,7 +4079,7 @@
           "status": "生産終了"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:03:52.289Z"
+      "lastCheckedAt": "2026-10-19T06:23:59.586Z"
     },
     {
       "id": "ssps-usb",
@@ -4046,7 +4101,7 @@
       "gameNote": "PlayStation®5、PlayStation®5 Digital Edition、PlayStation®5 Pro",
       "otherDevices": null,
       "shockproof": true,
-      "shockNote": "耐衝撃・耐振動性能 耐衝撃・耐振動性能 破損しやすいディスク駆動部",
+      "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
@@ -4066,6 +4121,7 @@
         "静音設計"
       ],
       "imageUrl": "https://www.iodata.jp/image/ssps-usb_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "SSPS-US2GRB",
@@ -4077,7 +4133,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:03:47.512Z"
+      "lastCheckedAt": "2026-10-19T06:23:54.720Z"
     },
     {
       "id": "ssps-uss",
@@ -4119,6 +4175,7 @@
         "データ移行アプリ内蔵"
       ],
       "imageUrl": "https://www.iodata.jp/image/ssps-uss_l.jpg",
+      "speed": null,
       "variants": [
         {
           "sku": "SSPS-US500GR/S",
@@ -4139,7 +4196,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:03:57.115Z"
+      "lastCheckedAt": "2026-10-19T06:24:04.504Z"
     },
     {
       "id": "sspu-tfcb",
@@ -4180,6 +4237,11 @@
         "Mac Time Machine対応"
       ],
       "imageUrl": "https://www.iodata.jp/image/sspu-tfcb_l.jpg",
+      "speed": {
+        "readMBps": null,
+        "writeMBps": 5000,
+        "note": null
+      },
       "variants": [
         {
           "sku": "SSPU-TFC2B",
@@ -4209,7 +4271,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:04:11.777Z"
+      "lastCheckedAt": "2026-10-19T06:24:19.235Z"
     }
   ]
 }
