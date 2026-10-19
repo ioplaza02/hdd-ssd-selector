@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T06:49:24.411Z",
+  "updatedAt": "2026-10-19T22:05:51.927Z",
   "products": [
     {
       "id": "avhd-asu",
@@ -73,7 +73,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:48:44.693Z"
+      "lastCheckedAt": "2026-10-19T22:05:12.644Z"
     },
     {
       "id": "avhd-usu",
@@ -147,7 +147,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:48:49.597Z"
+      "lastCheckedAt": "2026-10-19T22:05:17.382Z"
     },
     {
       "id": "avhd-wru",
@@ -221,7 +221,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:48:39.934Z"
+      "lastCheckedAt": "2026-10-19T22:05:07.601Z"
     },
     {
       "id": "avssd-rs",
@@ -285,7 +285,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:47:55.646Z"
+      "lastCheckedAt": "2026-10-19T22:04:23.322Z"
     },
     {
       "id": "hd4-utn",
@@ -393,7 +393,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:49:24.411Z"
+      "lastCheckedAt": "2026-10-19T22:05:51.927Z"
     },
     {
       "id": "hd4-utnc",
@@ -501,7 +501,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:49:19.446Z"
+      "lastCheckedAt": "2026-10-19T22:05:46.966Z"
     },
     {
       "id": "hdcx-utp",
@@ -582,7 +582,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:45:43.173Z"
+      "lastCheckedAt": "2026-10-19T22:02:11.425Z"
     },
     {
       "id": "hdd-utb",
@@ -690,7 +690,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:45:57.787Z"
+      "lastCheckedAt": "2026-10-19T22:02:26.119Z"
     },
     {
       "id": "hdd-utc",
@@ -799,7 +799,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:45:52.940Z"
+      "lastCheckedAt": "2026-10-19T22:02:21.105Z"
     },
     {
       "id": "hdja-sutc",
@@ -889,7 +889,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:46:27.765Z"
+      "lastCheckedAt": "2026-10-19T22:02:55.773Z"
     },
     {
       "id": "hdja-utb",
@@ -970,7 +970,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:45:33.479Z"
+      "lastCheckedAt": "2026-10-19T22:02:01.731Z"
     },
     {
       "id": "hdja-utnb",
@@ -1115,7 +1115,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:46:12.801Z"
+      "lastCheckedAt": "2026-10-19T22:02:40.614Z"
     },
     {
       "id": "hdja-utnc",
@@ -1259,7 +1259,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:46:02.915Z"
+      "lastCheckedAt": "2026-10-19T22:02:30.945Z"
     },
     {
       "id": "hdja-utnldb",
@@ -1405,7 +1405,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:46:17.665Z"
+      "lastCheckedAt": "2026-10-19T22:02:45.745Z"
     },
     {
       "id": "hdja-utnldc",
@@ -1551,7 +1551,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:46:22.808Z"
+      "lastCheckedAt": "2026-10-19T22:02:50.876Z"
     },
     {
       "id": "hdja-utr",
@@ -1641,7 +1641,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:45:38.305Z"
+      "lastCheckedAt": "2026-10-19T22:02:06.522Z"
     },
     {
       "id": "hdja-utu",
@@ -1722,7 +1722,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:46:07.886Z"
+      "lastCheckedAt": "2026-10-19T22:02:35.853Z"
     },
     {
       "id": "hdpd-sutc",
@@ -1801,7 +1801,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:47:16.595Z"
+      "lastCheckedAt": "2026-10-19T22:03:44.259Z"
     },
     {
       "id": "hdpd-sutcs",
@@ -1873,7 +1873,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:47:21.448Z"
+      "lastCheckedAt": "2026-10-19T22:03:49.183Z"
     },
     {
       "id": "hdph-uts",
@@ -1936,7 +1936,7 @@
           "status": "生産終了"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:47:02.044Z"
+      "lastCheckedAt": "2026-10-19T22:03:29.384Z"
     },
     {
       "id": "hdph-utv",
@@ -2044,7 +2044,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:47:06.774Z"
+      "lastCheckedAt": "2026-10-19T22:03:34.371Z"
     },
     {
       "id": "hdph-utv5dk",
@@ -2098,7 +2098,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:46:52.440Z"
+      "lastCheckedAt": "2026-10-19T22:03:19.776Z"
     },
     {
       "id": "hdph-utv5dkb",
@@ -2153,7 +2153,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:46:57.249Z"
+      "lastCheckedAt": "2026-10-19T22:03:24.517Z"
     },
     {
       "id": "hdph-utvb",
@@ -2262,7 +2262,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:47:11.654Z"
+      "lastCheckedAt": "2026-10-19T22:03:39.314Z"
     },
     {
       "id": "hdpl-utab",
@@ -2333,7 +2333,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:48:54.391Z"
+      "lastCheckedAt": "2026-10-19T22:05:22.222Z"
     },
     {
       "id": "hdpx-uts",
@@ -2414,7 +2414,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:46:47.458Z"
+      "lastCheckedAt": "2026-10-19T22:03:15.002Z"
     },
     {
       "id": "hdpx-utsb",
@@ -2496,7 +2496,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:46:37.679Z"
+      "lastCheckedAt": "2026-10-19T22:03:05.426Z"
     },
     {
       "id": "hdpx-utsc",
@@ -2578,7 +2578,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:46:42.577Z"
+      "lastCheckedAt": "2026-10-19T22:03:10.159Z"
     },
     {
       "id": "hdpx-utscb",
@@ -2661,7 +2661,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:46:32.638Z"
+      "lastCheckedAt": "2026-10-19T22:03:00.578Z"
     },
     {
       "id": "hdpz-utb",
@@ -2723,7 +2723,7 @@
           "status": "生産終了"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:48:59.337Z"
+      "lastCheckedAt": "2026-10-19T22:05:27.043Z"
     },
     {
       "id": "hdw-utcs",
@@ -2817,7 +2817,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:45:47.932Z"
+      "lastCheckedAt": "2026-10-19T22:02:16.323Z"
     },
     {
       "id": "hdw-utnb",
@@ -2961,7 +2961,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:49:14.456Z"
+      "lastCheckedAt": "2026-10-19T22:05:42.020Z"
     },
     {
       "id": "hdw-utnc",
@@ -3105,7 +3105,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:49:09.456Z"
+      "lastCheckedAt": "2026-10-19T22:05:36.965Z"
     },
     {
       "id": "hdw-utu",
@@ -3186,7 +3186,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:49:04.262Z"
+      "lastCheckedAt": "2026-10-19T22:05:31.946Z"
     },
     {
       "id": "r-sspt-uf",
@@ -3279,7 +3279,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:48:20.468Z"
+      "lastCheckedAt": "2026-10-19T22:04:47.994Z"
     },
     {
       "id": "ssca-suw",
@@ -3398,7 +3398,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:48:05.731Z",
+      "lastCheckedAt": "2026-10-19T22:04:33.537Z",
       "pcOnly": true,
       "pcOnlyText": "セキュリティロックアプリは解除可能ですが、スマホ・タブレットでは動作未検証です。"
     },
@@ -3476,7 +3476,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:48:15.528Z"
+      "lastCheckedAt": "2026-10-19T22:04:43.136Z"
     },
     {
       "id": "sspa-usc",
@@ -3553,7 +3553,7 @@
           "status": "生産終了"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:48:25.338Z"
+      "lastCheckedAt": "2026-10-19T22:04:52.817Z"
     },
     {
       "id": "sspd-sutcb",
@@ -3643,7 +3643,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:48:35.048Z"
+      "lastCheckedAt": "2026-10-19T22:05:02.700Z"
     },
     {
       "id": "sspd-sutcs",
@@ -3733,7 +3733,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:48:30.233Z"
+      "lastCheckedAt": "2026-10-19T22:04:57.687Z"
     },
     {
       "id": "sspj-utc",
@@ -3799,7 +3799,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:47:31.156Z"
+      "lastCheckedAt": "2026-10-19T22:03:59.091Z"
     },
     {
       "id": "sspj-utcb",
@@ -3865,7 +3865,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:47:26.342Z"
+      "lastCheckedAt": "2026-10-19T22:03:54.094Z"
     },
     {
       "id": "sspq-usc",
@@ -3972,7 +3972,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:47:50.805Z"
+      "lastCheckedAt": "2026-10-19T22:04:18.445Z"
     },
     {
       "id": "sspr-suscb",
@@ -4047,7 +4047,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:48:10.580Z"
+      "lastCheckedAt": "2026-10-19T22:04:38.324Z"
     },
     {
       "id": "ssps-us",
@@ -4150,7 +4150,7 @@
           "status": "生産終了"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:47:41.228Z"
+      "lastCheckedAt": "2026-10-19T22:04:08.763Z"
     },
     {
       "id": "ssps-usb",
@@ -4208,7 +4208,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:47:36.243Z"
+      "lastCheckedAt": "2026-10-19T22:04:03.948Z"
     },
     {
       "id": "ssps-uss",
@@ -4275,7 +4275,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:47:46.055Z"
+      "lastCheckedAt": "2026-10-19T22:04:13.692Z"
     },
     {
       "id": "sspu-tfcb",
@@ -4350,7 +4350,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T06:48:00.621Z"
+      "lastCheckedAt": "2026-10-19T22:04:28.396Z"
     }
   ]
 }
