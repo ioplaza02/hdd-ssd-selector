@@ -264,13 +264,25 @@
       const plugs = cableList(p).map((c) => plugName(c.plug));
       return `本体の端子は${dc}です（本体にUSB-C端子はありません）。付属の${(plugs.length ? plugs : (p.hostConnectors || []).map(plugName)).join("・")}ケーブルで接続します。`;
     }
-    // パソコン専用の注意：USB-Cでつながるが、ロック解除にパソコン用アプリが必要なセキュリティモデル。
+    // パソコン専用の注意：暗号化モデルは、専用ソフト（SHGate・I-O Security Lock App 等）で
+    // パスワード認証しないとアクセスできないため、スマホ・タブレットやテレビでは使えない。
+    // 端子の形（USB-A／USB-C）は関係ない（実例：HDJA-SUTCはUSB-Aのみだが同じくパソコン専用）。
     // data/overrides.json で "pcOnly": true / false を指定すれば個別に上書きできる。
     function isPcOnly(p) {
       if (typeof p.pcOnly === "boolean") return p.pcOnly;
-      return !!((p.encryptionHw || p.encryptionSw) && (p.hostConnectors || []).includes("C") && !p.smartphone);
+      return !!((p.encryptionHw || p.encryptionSw) && !p.smartphone);
     }
-    const PC_ONLY_TEXT = "パソコン専用です。本体のセキュリティ機能（ロック解除）はパソコン用のアプリでしか操作できないため、USB-Cでスマホ・タブレットに直接つないでも使えません。";
+    const PC_ONLY_TEXT = "パソコン専用です。専用ソフトでパスワード認証（ロック解除）しないとデータにアクセスできないため、スマホ・タブレットやテレビにつないでも使えません。";
+
+    // 「Windows PC」「Mac」タグ。LAN DISK用バックアップ専用品は「LAN DISK専用」と出す
+    function isLanDiskOnly(p) { return (p.features || []).includes("NASバックアップ専用"); }
+    function pcBadges(p) {
+      if (isLanDiskOnly(p)) return ["🗄 LAN DISK専用"];
+      const out = [];
+      if (p.pcWindows !== false) out.push("💻 Windows PC");
+      if (p.pcMac === true) out.push("Mac");
+      return out;
+    }
 
     function connText(p) {
       return (p.hostConnectors || []).map((c) => c === "A" ? "USB-A" : "USB-C").join("／") || "—";
@@ -433,6 +445,8 @@
       ].join("");
 
       const badges = [];
+      // パソコンで使えることは「中の人の前提」なので、カードにも必ず明記する
+      pcBadges(p).forEach((t) => badges.push(`<span class="badge badge--pc">${t}</span>`));
       if (p.smartphone) badges.push(`<span class="badge badge--on">📱 スマホ・タブレット</span>`);
       if (p.tv) badges.push(`<span class="badge badge--on">📺 テレビ録画</span>`);
       if (p.gameConsole) badges.push(`<span class="badge badge--on">🎮 ゲーム機</span>`);
@@ -569,7 +583,10 @@
         group("種類・使い方"),
         row("種類", (p) => p.mediaType),
         row("形", (p) => FORM_LABEL[p.formFactor] || "—"),
-        row("パソコン", () => yesNo(true)),
+        row("パソコン", (p) => isLanDiskOnly(p)
+          ? `<span class="yes">LAN DISK専用</span><br><small>当社NAS「LAN DISK」のバックアップ専用です</small>`
+          : `<span class="yes">${pcBadges(p).map((t) => t.replace(/^💻 /, "")).join("・")}</span>${p.pcNote ? `<br><small>${escapeHtml(fixText(p.pcNote))}</small>` : ""}`,
+          (p) => pcBadges(p).join("・")),
         row("スマホ・タブレット", (p) => p.smartphone
           ? `<span class="yes">対応</span>${p.smartphoneNote ? `<br><small>${escapeHtml(fixText(p.smartphoneNote))}</small>` : ""}`
           : isPcOnly(p) ? `<span class="ng">使えません（パソコン専用）</span><br><small>${PC_ONLY_TEXT}</small>` : yesNo(false),

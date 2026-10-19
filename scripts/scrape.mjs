@@ -293,6 +293,8 @@ function deriveFields({ slug, folder, listedIn, indexHtml, specHtml }) {
 
   // スマホ：専用の行が無いページ（例：R-SSPT-UF）は「対応機種」欄の中身で判定する
   const compatText = findSpec(spec, [/^対応機種$/, /対応機種/]) || "";
+  // 対応機種の「パソコン」欄（例：「Windowsパソコン、Mac」）。専用の行が無いページは対応機種欄全体で判定
+  const pcText = findSpec(spec, [/^パソコン$/, /対応機種:パソコン/]) || compatText;
   const smartphone = phoneText != null && !isDash(phoneText)
     ? true
     : /(iPhone|iPad|Android|スマートフォン)/.test(compatText);
@@ -370,6 +372,9 @@ function deriveFields({ slug, folder, listedIn, indexHtml, specHtml }) {
     smartphoneNote: smartphone && phoneText ? phoneText : null,
     tv,
     tvRecordingMain,
+    pcWindows: pcText ? /Windows/i.test(pcText) : null,
+    pcMac: pcText ? /Mac/i.test(pcText) : null,
+    pcNote: pcText && pcText.length < 120 ? pcText : null,
     gameConsole: gameText != null && !isDash(gameText),
     gameNote: gameText != null && !isDash(gameText) ? gameText : null,
     otherDevices: otherText != null && !isDash(otherText) && otherText.length < 120 ? otherText : null,
