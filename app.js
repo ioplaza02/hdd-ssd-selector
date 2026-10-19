@@ -5,7 +5,7 @@
   const SITE_PASSWORD = "hddssd2026";
   const STORAGE_KEY = "hddssd-selector-auth";
   // USBメモリーセレクターを公開したら、ここにURLを入れるとページ上部のリンクが有効になる
-  const USB_MEMORY_SELECTOR_URL = "";
+  const USB_MEMORY_SELECTOR_URL = "https://ioplaza02.github.io/usb-memory-selector/";
   const DATA_URL = "data/products.json";
   const STALE_DAYS = 40;
 
