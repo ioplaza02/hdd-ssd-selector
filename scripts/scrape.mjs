@@ -148,8 +148,8 @@ function toGB(value, unit) {
 function iconStatusText(rowHtml) {
   const t = [];
   if (/icon_order/i.test(rowHtml)) t.push("受注生産");
-  if (/icon_(stock|zaiko|limit)/i.test(rowHtml)) t.push("在庫限り");
-  if (/icon_(end|eol|discontinu)/i.test(rowHtml)) t.push("生産終了");
+  // ※在庫限り・生産終了は公式では備考欄の文字で書かれている（アイコンでは判定しない。
+  //   推測でアイコン名を判定したら、在庫ありの型番を在庫限りと誤判定した実例があった）
   return t.join(" ");
 }
 
@@ -179,10 +179,13 @@ function extractVariants(indexHtml) {
 
     for (const r of rows) {
       const texts = r.map((c) => c.text);
+      // 型番の判定用：アイコン画像のalt文字を含めないテキスト。
+      // 新商品の「NEW」アイコンのaltが型番にくっつく（例：HD4-UTN8CNEW）のを防ぐ
+      const plain = r.map((c) => decodeEntities(c.html.replace(/<img[^>]*>/gi, " ").replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim());
       // 1列目（またはどこか）に型番らしいセルがある行だけ
-      const skuIdx = texts.findIndex((t) => /^[A-Z][A-Z0-9-]*\d[A-Z0-9-\/]*$/.test(t.replace(/\s/g, "")));
+      const skuIdx = plain.findIndex((t) => /^[A-Z][A-Z0-9-]*\d[A-Z0-9-\/]*$/.test(t.replace(/\s/g, "")));
       if (skuIdx < 0) continue;
-      const sku = texts[skuIdx].replace(/\s/g, "");
+      const sku = plain[skuIdx].replace(/\s/g, "").replace(/NEW$/, "");
       const rowText = texts.join(" ");
       const cap = rowText.match(/(\d+(?:\.\d+)?)\s*(TB|GB)\b/i);
       if (!cap) continue;
@@ -268,10 +271,9 @@ function deriveFields({ slug, folder, listedIn, indexHtml, specHtml }) {
   const mediaType = /^(ss|avssd|r-ss)/.test(slug) || /SSD/.test(seriesName) ? "SSD" : "HDD";
 
   let formFactor = "stationary";
-  if (/スティック/.test(all) && mediaType === "SSD" && /^ssps/.test(slug)) formFactor = "stick";
+  if (mediaType === "SSD" && (/^(ssps|sspq|avssd)/.test(slug) || /スティック/.test(title))) formFactor = "stick";
   else if (/^sspj/.test(slug) || (mediaType === "SSD" && /小型SSD/.test(all) && !/ポータブルSSD/.test(seriesName))) formFactor = "compact";
   else if (folder === "portable" || listedIn.has("portable") || mediaType === "SSD" || /^hdp/.test(slug)) formFactor = "portable";
-  if (/^avssd/.test(slug)) formFactor = /スティック/.test(all) ? "stick" : formFactor;
 
   const driveMatch = all.match(/(\d)\s*ドライブ/);
   const driveCount = /^hd4-/.test(slug) ? 4 : /^hdw-/.test(slug) ? 2 : driveMatch ? Number(driveMatch[1]) : 1;
@@ -291,13 +293,15 @@ function deriveFields({ slug, folder, listedIn, indexHtml, specHtml }) {
   // 「テレビでは使えません」と明記されている商品（例：HDPH-UTV5DK）は必ず非対応にする。
   const tvNegative = /テレビ.{0,12}(使用できません|使えません|非対応|ご利用いただけません|ご使用いただけません)/.test(all) || /AV機器は非対応/.test(all);
   let tv;
-  if (tvNegative) tv = false;
+  if (listedIn.has("rokuga")) tv = true; // 例：HDD-UTB・SSPS-US（録画用ページ掲載＝テレビ録画対応）
+  else if (tvNegative) tv = false;
   else if (tvText != null && !/^対応機種/.test(tvText)) tv = !isDash(tvText);
   else tv = /(AV機器|テレビ|レコーダー)/.test(compatText) || folder === "rokuga";
   const tvRecordingMain = folder === "rokuga" || /^(av|hdpl|hdpz)/.test(slug);
 
-  const shockproof = /耐衝撃/.test(all);
-  const shockNote = (all.match(/[^。 ]{0,30}(MIL[^。]{0,40}|耐衝撃[^。]{0,30})/) || [])[0] || null;
+  // 「耐衝撃」と書かず「衝撃・振動に強い」と書く商品もある（例：R-SSPT-UF、SSMG-UWCB）
+  const shockproof = /耐衝撃|衝撃(?:や|・|、)?(?:振動)?に強/.test(all);
+  const shockNote = (all.match(/[^。 ]{0,30}(MIL[^。]{0,40}|耐衝撃[^。]{0,30}|衝撃[^。]{0,20}に強[^。]{0,10})/) || [])[0] || null;
 
   const encHw = /(ハードウェア暗号化|自動暗号化|AES\s*-?\s*\d{3}\s*bit[^。]{0,20}暗号化|暗号化チップ)/i.test(all);
   // 「パソコンの暗号化・管理ソフトに対応」：パソコン側のアプリ（I-O Security Lock App、
@@ -308,8 +312,9 @@ function deriveFields({ slug, folder, listedIn, indexHtml, specHtml }) {
   // 端子：本体側コネクター＋付属ケーブルからパソコン／スマホ側の差し込み口を判定
   const conn = (connectorText + " " + accessoryText + " " + interfaceText);
   const host = new Set();
-  if (/(Type-?C|USB-?C|C-microB|C-C|C-A|USB4|Thunderbolt|C to|Cケーブル)/i.test(conn)) host.add("C");
-  if (/(Type-?A|USB-?A|A-microB|A-C|A-B|A to|Aケーブル|変換アダプター)/i.test(conn)) host.add("A");
+  // 「A-microB」「A - microB」「A－microB」など、空白や全角ハイフンのゆれを許容する
+  if (/(Type-?C|USB-?C|\bC\s*[-－–]\s*(micro\s*B|C|A)|USB4|Thunderbolt|C to|Cケーブル)/i.test(conn)) host.add("C");
+  if (/(Type-?A|USB-?A|\bA\s*[-－–]\s*(micro\s*B|B|C)|A to|Aケーブル|変換アダプター)/i.test(conn)) host.add("A");
   if (/(C-C|USB-?C.{0,6}USB-?C)/i.test(accessoryText) && /(変換|アダプター).{0,10}(A|USB-A)/i.test(accessoryText)) host.add("A");
   if (host.size === 0) host.add("A"); // 記載が無い古い据え置き機はUSB-A
 
@@ -372,7 +377,8 @@ function deriveFields({ slug, folder, listedIn, indexHtml, specHtml }) {
     warrantyYears: warrantyYears ? Number(warrantyYears) : null,
     weightG,
     dimensions: dimText || null,
-    features
+    features,
+    imageUrl
   };
 }
 
@@ -388,7 +394,9 @@ function extractImage(html, slug) {
   const key = slug.replace(/-/g, "[-_]?");
   const re = new RegExp(`<img[^>]+src=["']([^"']*${key}[^"']*\\.(?:jpg|jpeg|png|webp))["']`, "i");
   const m = body.match(re);
-  return m ? absUrl(m[1], BASE + "/") : null;
+  if (m) return absUrl(m[1], BASE + "/");
+  // 最後の手段：公式の商品画像の標準的な置き場所（多くのシリーズがこの形）
+  return `${BASE}/image/${slug}_l.jpg`;
 }
 
 function folderToCategory(folder) {
