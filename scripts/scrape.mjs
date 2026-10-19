@@ -156,16 +156,74 @@ function parseSpeed(text) {
   return { readMBps: r, writeMBps: w, note: null };
 }
 
-// 仕様表の「最大転送速度」欄（読み込み／書き込み）から速度を読む。
-// 値に「（1TBモデルは約3,500MB/s）」のような補足があれば注記として残す。
+// 仕様表の「最大転送速度」欄から読み書き速度を読む。公式の書き方は3通りある：
+//  ① 読み込み／書き込みの行が別々で全容量共通　 例：「読み込み：約400MB/s」「書き込み：約400MB/s」
+//  ② 行は別々だが容量ごとに違う　　　　　　　　 例（SSPQ-USC）：「250GB：約500MB/s　500GB、1TB、2TB：約900MB/s」
+//  ③ 1つの欄に容量ごとのRead/Writeをまとめて書く 例（R-SSPT-UF）：「1TB：Read 約4000MB/s、Write 約3500MB/s　2TB・4TB：…」
+// 容量ごとの値は byCapacity に入れ、画面では「選んでいる容量」の速度を出す。
+const CAP_GROUP = "((?:\\d+(?:\\.\\d+)?\\s*(?:GB|TB)\\s*[、,・／/\\s]*)+)[：:]";
+function capsOf(text) {
+  return [...String(text).matchAll(/(\d+(?:\.\d+)?)\s*(GB|TB)/gi)].map((m) => toGB(m[1], m[2]));
+}
+function firstMBps(text) {
+  const m = String(text || "").match(/([\d,]+)\s*MB\/s/i);
+  return m ? Number(m[1].replace(/,/g, "")) : null;
+}
+// 容量ごとに区切る。「250GB：約500MB/s　500GB、1TB、2TB：約900MB/s」→ [{caps:[250], body:"約500MB/s"}, …]
+function splitByCapacity(text) {
+  const t = String(text || "");
+  const re = new RegExp(CAP_GROUP, "gi");
+  const marks = [...t.matchAll(re)];
+  if (!marks.length) return null;
+  return marks.map((m, i) => ({
+    caps: capsOf(m[1]),
+    body: t.slice(m.index + m[0].length, i + 1 < marks.length ? marks[i + 1].index : t.length)
+  }));
+}
+function pickRW(body, which) {
+  const re = which === "r" ? /(?:Read|読み込み|読み出し)[^\d]{0,6}([\d,]+)\s*MB\/s/i : /(?:Write|書き込み)[^\d]{0,6}([\d,]+)\s*MB\/s/i;
+  const m = String(body).match(re);
+  return m ? Number(m[1].replace(/,/g, "")) : null;
+}
 function speedFromSpec(spec) {
-  const r = findSpec(spec, [/最大転送速度:読/, /^読み込み$/, /^読み出し$/, /読み込み速度/, /読み出し速度/]);
-  const w = findSpec(spec, [/最大転送速度:書/, /^書き込み$/, /書き込み速度/]);
-  const first = (t) => { const m = String(t || "").match(/([\d,]+)\s*MB\/s/i); return m ? Number(m[1].replace(/,/g, "")) : null; };
-  const readMBps = first(r), writeMBps = first(w);
+  const rCell = findSpec(spec, [/最大転送速度:読/, /^読み込み$/, /^読み出し$/, /読み込み速度/, /読み出し速度/]);
+  const wCell = findSpec(spec, [/最大転送速度:書/, /^書き込み$/, /書き込み速度/]);
+  const both = findSpec(spec, [/^最大転送速度$/, /^転送速度$/]);
+  const byCap = new Map(); // capacityGB → {readMBps, writeMBps}
+  const put = (caps, key, val) => caps.forEach((c) => {
+    if (val == null) return;
+    const e = byCap.get(c) || { capacityGB: c, readMBps: null, writeMBps: null };
+    e[key] = val; byCap.set(c, e);
+  });
+  let readMBps = null, writeMBps = null;
+
+  if (rCell || wCell) {
+    for (const [cell, key] of [[rCell, "readMBps"], [wCell, "writeMBps"]]) {
+      if (!cell) continue;
+      const parts = splitByCapacity(cell);
+      if (parts) {
+        parts.forEach((p) => put(p.caps, key, firstMBps(p.body)));
+        const vals = parts.map((p) => firstMBps(p.body)).filter((x) => x != null);
+        const best = vals.length ? Math.max(...vals) : null; // 見出しの値は「最大」＝一番速い値
+        if (key === "readMBps") readMBps = best; else writeMBps = best;
+      } else if (key === "readMBps") readMBps = firstMBps(cell); else writeMBps = firstMBps(cell);
+    }
+  } else if (both && /(Read|Write|読み|書き)/i.test(both)) {
+    const parts = splitByCapacity(both);
+    if (parts) {
+      parts.forEach((p) => { put(p.caps, "readMBps", pickRW(p.body, "r")); put(p.caps, "writeMBps", pickRW(p.body, "w")); });
+      const rs = parts.map((p) => pickRW(p.body, "r")).filter((x) => x != null);
+      const ws = parts.map((p) => pickRW(p.body, "w")).filter((x) => x != null);
+      readMBps = rs.length ? Math.max(...rs) : null;
+      writeMBps = ws.length ? Math.max(...ws) : null;
+    } else {
+      readMBps = pickRW(both, "r");
+      writeMBps = pickRW(both, "w");
+    }
+  }
   if (!readMBps && !writeMBps) return null;
-  const extra = [r, w].filter((t) => t && (String(t).match(/MB\/s/gi) || []).length > 1).map((t) => t.replace(/^[^（(※]*/, "").trim()).filter(Boolean);
-  return { readMBps, writeMBps, note: extra.length ? extra.join(" ") : null };
+  const byCapacity = [...byCap.values()].sort((a, b) => a.capacityGB - b.capacityGB);
+  return { readMBps, writeMBps, note: null, ...(byCapacity.length ? { byCapacity } : {}) };
 }
 
 // ---------- 2) 価格表（index.htm） ----------

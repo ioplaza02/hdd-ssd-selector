@@ -295,16 +295,36 @@
       return out;
     }
 
-    // 読み書き速度（公式の一覧ページの「Read／Write」枠）。記載のある商品だけ表示する
-    function speedHtml(p, compact) {
+    // 読み書き速度（公式の仕様表の「最大転送速度」）。記載のある商品だけ表示する。
+    // 容量によって速度が違う商品（例：SSPQ-USCの250GB、R-SSPT-UFの1TB）は、選んでいる容量の値を出す
+    function speedFor(p, v) {
       const sp = p.speed;
-      if (!sp || (!sp.readMBps && !sp.writeMBps)) return "";
-      const n = (x) => x ? `約${x.toLocaleString("ja-JP")}<small>MB/s</small>` : "—";
-      return `<div class="speed${compact ? " speed--compact" : ""}">
-        <div class="speed__tile"><span class="speed__label">Read<i>読み込み</i></span><span class="speed__val">${n(sp.readMBps)}</span></div>
-        <div class="speed__tile"><span class="speed__label">Write<i>書き込み</i></span><span class="speed__val">${n(sp.writeMBps)}</span></div>
-        ${sp.note ? `<p class="speed__note">${escapeHtml(fixText(sp.note))}</p>` : ""}
+      if (!sp || (!sp.readMBps && !sp.writeMBps)) return null;
+      let e = null;
+      if (v && Array.isArray(sp.byCapacity)) {
+        e = sp.byCapacity.find((x) => Math.abs(x.capacityGB - v.capacityGB) <= v.capacityGB * 0.1) || null;
+      }
+      return {
+        read: (e && e.readMBps != null) ? e.readMBps : sp.readMBps,
+        write: (e && e.writeMBps != null) ? e.writeMBps : sp.writeMBps,
+        note: sp.note
+      };
+    }
+    function speedHtml(p, v) {
+      const s = speedFor(p, v);
+      if (!s) return "";
+      const n = (x) => x ? `約${x.toLocaleString("ja-JP")}<small>MB/s</small>` : `<span class="speed__none">記載なし</span>`;
+      return `<div class="speed">
+        <div class="speed__tile"><span class="speed__label">Read<i>読み込み</i></span><span class="speed__val">${n(s.read)}</span></div>
+        <div class="speed__tile"><span class="speed__label">Write<i>書き込み</i></span><span class="speed__val">${n(s.write)}</span></div>
+        ${s.note ? `<p class="speed__note">${escapeHtml(fixText(s.note))}</p>` : ""}
       </div>`;
+    }
+    function speedText(p, v) {
+      const s = speedFor(p, v);
+      if (!s) return "—";
+      const n = (x) => x ? `約${x.toLocaleString("ja-JP")}MB/s` : "記載なし";
+      return `Read ${n(s.read)}<br>Write ${n(s.write)}${s.note ? `<br><small>${escapeHtml(fixText(s.note))}</small>` : ""}`;
     }
 
     function connText(p) {
@@ -547,7 +567,7 @@
             ? `<span class="price-inc">${yen(v.priceIncTax)}<small>（税込）</small></span>${v.priceExTax != null ? `<span class="price-ex">税抜 ${yen(v.priceExTax)}</span>` : ""}${up ? `<span class="unit-price">1TBあたり 約${yen(up)}</span>` : ""}`
             : `<span class="price-open">オープン価格</span>`}
         </div>
-        ${speedHtml(p)}
+        ${speedHtml(p, v)}
         <div class="badges">${badges.join("")}</div>
         <dl class="spec-mini">
           <dt>JAN</dt><dd>${v.jan ? `${escapeHtml(v.jan)}<button type="button" class="copy-jan" data-copy="${escapeHtml(v.jan)}">コピー</button>` : "—"}</dd>
@@ -664,9 +684,7 @@
         row("Mac Time Machine", (p) => yesNo(p.macTimeMachine)),
         group("接続・電源"),
         row("パソコン・スマホ側の端子", (p) => (p.hostConnectors || []).map((c) => `<span class="ct-plug">${plugIcon(c)}${plugName(c)}</span>`).join(" "), (p) => connText(p)),
-        row("読み書き速度", (p) => p.speed && (p.speed.readMBps || p.speed.writeMBps)
-          ? `Read 約${(p.speed.readMBps || 0).toLocaleString("ja-JP")}MB/s<br>Write 約${(p.speed.writeMBps || 0).toLocaleString("ja-JP")}MB/s${p.speed.note ? `<br><small>${escapeHtml(fixText(p.speed.note))}</small>` : ""}`
-          : "—"),
+        row("読み書き速度", (p, v) => speedText(p, v)),
         row("接続方法・速度・ケーブル長", (p) => connLines(p).map((l) => `${l.plug ? plugIcon(l.plug, .75) : ""}<b>${escapeHtml(l.head)}</b>${l.body ? `：${escapeHtml(l.body)}` : ""}`).join("<br>")),
         row("本体側の端子", (p) => escapeHtml(deviceConnLabel(p) || "—") + (microBNote(p) ? `<br><small>${escapeHtml(microBNote(p))}</small>` : "")),
         row("付属ケーブル", (p) => escapeHtml(fixText(p.cables || (p.formFactor === "stick" || p.formFactor === "compact" ? "なし（直挿し）" : "—")))),
