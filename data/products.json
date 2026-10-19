@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T03:07:29.190Z",
+  "updatedAt": "2026-10-19T04:30:36.525Z",
   "products": [
     {
       "id": "avhd-asu",
@@ -14,6 +14,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": true,
+      "pcWindows": false,
+      "pcMac": false,
+      "pcNote": null,
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -69,7 +72,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:06:49.826Z"
+      "lastCheckedAt": "2026-10-19T04:29:57.209Z"
     },
     {
       "id": "avhd-usu",
@@ -84,6 +87,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": true,
+      "pcWindows": false,
+      "pcMac": false,
+      "pcNote": null,
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -139,7 +145,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:06:54.711Z"
+      "lastCheckedAt": "2026-10-19T04:30:02.004Z"
     },
     {
       "id": "avhd-wru",
@@ -154,6 +160,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": true,
+      "pcWindows": false,
+      "pcMac": false,
+      "pcNote": null,
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -209,7 +218,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:06:44.943Z"
+      "lastCheckedAt": "2026-10-19T04:29:52.350Z"
     },
     {
       "id": "avssd-rs",
@@ -224,6 +233,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": true,
+      "pcWindows": true,
+      "pcMac": false,
+      "pcNote": "Windowsパソコン",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -269,7 +281,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:06:01.576Z"
+      "lastCheckedAt": "2026-10-19T04:29:07.506Z"
     },
     {
       "id": "hd4-utn",
@@ -284,6 +296,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、MAC、 当社製NAS「LAN DISK」",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -373,7 +388,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:07:29.190Z"
+      "lastCheckedAt": "2026-10-19T04:30:36.524Z"
     },
     {
       "id": "hd4-utnc",
@@ -388,6 +403,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": "当社製LAN DISK",
@@ -477,7 +495,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:07:24.221Z"
+      "lastCheckedAt": "2026-10-19T04:30:31.542Z"
     },
     {
       "id": "hdcx-utp",
@@ -492,6 +510,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": null,
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -554,7 +575,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:03:51.033Z"
+      "lastCheckedAt": "2026-10-19T04:26:55.923Z"
     },
     {
       "id": "hdd-utb",
@@ -569,6 +590,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac、Chromebook",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -658,7 +682,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:04:05.514Z"
+      "lastCheckedAt": "2026-10-19T04:27:10.694Z"
     },
     {
       "id": "hdd-utc",
@@ -673,6 +697,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac、Chromebook",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": "当社製LAN DISK",
@@ -763,7 +790,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:04:00.705Z"
+      "lastCheckedAt": "2026-10-19T04:27:05.756Z"
     },
     {
       "id": "hdja-sutc",
@@ -778,6 +805,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "■Windowsパソコン ■Mac ■ 当社製LAN DISK",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -849,7 +879,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:04:34.732Z"
+      "lastCheckedAt": "2026-10-19T04:27:40.257Z"
     },
     {
       "id": "hdja-utb",
@@ -864,6 +894,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac、Chromebook",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": "当社製LAN DISK",
@@ -926,7 +959,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:03:41.179Z"
+      "lastCheckedAt": "2026-10-19T04:26:46.338Z"
     },
     {
       "id": "hdja-utnb",
@@ -941,6 +974,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac、Chromebook、 当社製NAS「LAN DISK」",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -1067,7 +1103,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:04:20.062Z"
+      "lastCheckedAt": "2026-10-19T04:27:25.221Z"
     },
     {
       "id": "hdja-utnc",
@@ -1082,6 +1118,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac、Chromebook",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": "当社製LAN DISK",
@@ -1207,7 +1246,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:04:10.297Z"
+      "lastCheckedAt": "2026-10-19T04:27:15.462Z"
     },
     {
       "id": "hdja-utnldb",
@@ -1222,6 +1261,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": false,
+      "pcNote": "当社製NAS「LAN DISK」 、Windowsパソコン、Chromebook",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -1349,7 +1391,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:04:24.817Z"
+      "lastCheckedAt": "2026-10-19T04:27:30.265Z"
     },
     {
       "id": "hdja-utnldc",
@@ -1364,6 +1406,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": false,
+      "pcNote": "Windowsパソコン、Chromebook",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": "当社製LAN DISK",
@@ -1491,7 +1536,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:04:29.930Z"
+      "lastCheckedAt": "2026-10-19T04:27:35.327Z"
     },
     {
       "id": "hdja-utr",
@@ -1506,6 +1551,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac、Chromebook",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -1577,7 +1625,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:03:46.076Z"
+      "lastCheckedAt": "2026-10-19T04:26:51.094Z"
     },
     {
       "id": "hdja-utu",
@@ -1592,6 +1640,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac、Chromebook",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": "当社製LAN DISK ※1",
@@ -1654,7 +1705,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:04:15.174Z"
+      "lastCheckedAt": "2026-10-19T04:27:20.266Z"
     },
     {
       "id": "hdpd-sutc",
@@ -1669,6 +1720,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0ポート USB-C®／USB-Aコネクターを搭載した下記機種 ■Windowsパソコン ■Mac",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -1729,7 +1783,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:05:22.737Z"
+      "lastCheckedAt": "2026-10-19T04:28:28.567Z"
     },
     {
       "id": "hdpd-sutcs",
@@ -1744,6 +1798,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0ポート（USB-AまたはUSB-C®コネクター）を搭載した下記機種 ■Windowsパソコン ■Mac",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -1797,7 +1854,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:05:27.584Z"
+      "lastCheckedAt": "2026-10-19T04:28:33.450Z"
     },
     {
       "id": "hdph-uts",
@@ -1812,6 +1869,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": false,
+      "pcNote": "Windowsパソコン",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -1856,7 +1916,7 @@
           "status": "生産終了"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:05:08.254Z"
+      "lastCheckedAt": "2026-10-19T04:28:13.817Z"
     },
     {
       "id": "hdph-utv",
@@ -1871,6 +1931,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン Macパソコン Chromebook USBハードディスク録画に対応したAV機器（対応情報は こちら ）",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -1960,7 +2023,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:05:12.963Z"
+      "lastCheckedAt": "2026-10-19T04:28:18.652Z"
     },
     {
       "id": "hdph-utv5dk",
@@ -1975,6 +2038,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン Macパソコン Chromebook",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -2010,7 +2076,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:04:58.606Z"
+      "lastCheckedAt": "2026-10-19T04:28:04.175Z"
     },
     {
       "id": "hdph-utv5dkb",
@@ -2025,6 +2091,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac、Chromebook",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -2061,7 +2130,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:05:03.401Z"
+      "lastCheckedAt": "2026-10-19T04:28:08.903Z"
     },
     {
       "id": "hdph-utvb",
@@ -2076,6 +2145,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac、Chromebook",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -2166,7 +2238,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:05:17.715Z"
+      "lastCheckedAt": "2026-10-19T04:28:23.713Z"
     },
     {
       "id": "hdpl-utab",
@@ -2181,6 +2253,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": true,
+      "pcWindows": false,
+      "pcMac": false,
+      "pcNote": null,
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -2233,7 +2308,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:06:59.541Z"
+      "lastCheckedAt": "2026-10-19T04:30:06.923Z"
     },
     {
       "id": "hdpx-uts",
@@ -2248,6 +2323,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac、Chromebook",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -2310,7 +2388,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:04:53.875Z"
+      "lastCheckedAt": "2026-10-19T04:27:59.304Z"
     },
     {
       "id": "hdpx-utsb",
@@ -2325,6 +2403,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac、Chromebook",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -2388,7 +2469,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:04:44.149Z"
+      "lastCheckedAt": "2026-10-19T04:27:49.789Z"
     },
     {
       "id": "hdpx-utsc",
@@ -2403,6 +2484,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Mac、Windowsパソコン",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -2466,7 +2550,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:04:49.011Z"
+      "lastCheckedAt": "2026-10-19T04:27:54.497Z"
     },
     {
       "id": "hdpx-utscb",
@@ -2481,6 +2565,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac、Chromebook",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -2545,7 +2632,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:04:39.448Z"
+      "lastCheckedAt": "2026-10-19T04:27:45.042Z"
     },
     {
       "id": "hdpz-utb",
@@ -2560,6 +2647,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": true,
+      "pcWindows": false,
+      "pcMac": false,
+      "pcNote": null,
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -2603,7 +2693,7 @@
           "status": "生産終了"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:07:04.385Z"
+      "lastCheckedAt": "2026-10-19T04:30:11.821Z"
     },
     {
       "id": "hdw-utcs",
@@ -2618,6 +2708,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": null,
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -2689,7 +2782,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:03:55.934Z"
+      "lastCheckedAt": "2026-10-19T04:27:00.885Z"
     },
     {
       "id": "hdw-utnb",
@@ -2704,6 +2797,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac、Chromebook",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": "当社製LAN DISK",
@@ -2829,7 +2925,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:07:19.301Z"
+      "lastCheckedAt": "2026-10-19T04:30:26.743Z"
     },
     {
       "id": "hdw-utnc",
@@ -2844,6 +2940,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac、Chromebook",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": "当社製LAN DISK",
@@ -2969,7 +3068,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:07:14.264Z"
+      "lastCheckedAt": "2026-10-19T04:30:21.836Z"
     },
     {
       "id": "hdw-utu",
@@ -2984,6 +3083,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac、Chromebook",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": "当社製LAN DISK",
@@ -3046,7 +3148,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:07:09.234Z"
+      "lastCheckedAt": "2026-10-19T04:30:16.881Z"
     },
     {
       "id": "r-sspt-uf",
@@ -3061,6 +3163,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "スマホ・タブレット：iPhone、iPad、Android パソコン：Windowsパソコン、Mac、Chromebook ※USB-Cコネクターを搭載した機種",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -3114,7 +3219,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:06:25.750Z"
+      "lastCheckedAt": "2026-10-19T04:29:31.918Z"
     },
     {
       "id": "ssca-suw",
@@ -3129,6 +3234,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -3225,7 +3333,9 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:06:11.128Z"
+      "lastCheckedAt": "2026-10-19T04:29:17.356Z",
+      "pcOnly": true,
+      "pcOnlyText": "セキュリティロックアプリは解除可能ですが、スマホ・タブレットでは動作未検証です。"
     },
     {
       "id": "ssmg-uwcb",
@@ -3240,6 +3350,9 @@
       "smartphoneNote": "iPhone、iPad",
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac、Chromebook",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -3293,7 +3406,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:06:21.015Z"
+      "lastCheckedAt": "2026-10-19T04:29:27.037Z"
     },
     {
       "id": "sspa-usc",
@@ -3308,6 +3421,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": null,
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -3362,7 +3478,7 @@
           "status": "生産終了"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:06:30.471Z"
+      "lastCheckedAt": "2026-10-19T04:29:36.979Z"
     },
     {
       "id": "sspd-sutcb",
@@ -3377,6 +3493,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -3448,7 +3567,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:06:40.079Z"
+      "lastCheckedAt": "2026-10-19T04:29:47.395Z"
     },
     {
       "id": "sspd-sutcs",
@@ -3463,6 +3582,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "USB 5Gbps（USB 3.2 Gen1）／ USB 2.0ポート（USB-AまたはUSB-C®コネクター）を搭載した下記機種 ■Windowsパソコン ■Mac",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -3534,7 +3656,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:06:35.354Z"
+      "lastCheckedAt": "2026-10-19T04:29:42.419Z"
     },
     {
       "id": "sspj-utc",
@@ -3549,6 +3671,9 @@
       "smartphoneNote": "iPhone（※1、2） iPad（※1、2） Androidスマートフォン・タブレット（※1、2、3）",
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windows Mac Chromebook",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -3592,7 +3717,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:05:37.290Z"
+      "lastCheckedAt": "2026-10-19T04:28:43.097Z"
     },
     {
       "id": "sspj-utcb",
@@ -3607,6 +3732,9 @@
       "smartphoneNote": "iPhone、iPad、Androidスマートフォン・タブレット",
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac、Chromebook",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -3650,7 +3778,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:05:32.403Z"
+      "lastCheckedAt": "2026-10-19T04:28:38.289Z"
     },
     {
       "id": "sspq-usc",
@@ -3665,6 +3793,9 @@
       "smartphoneNote": "iPhone、iPad、Androidスマートフォン・タブレット",
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac、Chromebook",
       "gameConsole": true,
       "gameNote": "PlayStation®5、PlayStation®5 Pro",
       "otherDevices": null,
@@ -3727,7 +3858,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:05:56.785Z"
+      "lastCheckedAt": "2026-10-19T04:29:02.564Z"
     },
     {
       "id": "sspr-suscb",
@@ -3742,6 +3873,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -3794,7 +3928,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:06:15.934Z"
+      "lastCheckedAt": "2026-10-19T04:29:22.223Z"
     },
     {
       "id": "ssps-us",
@@ -3809,6 +3943,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac、Chromebook",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -3889,7 +4026,7 @@
           "status": "生産終了"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:05:47.067Z"
+      "lastCheckedAt": "2026-10-19T04:28:52.895Z"
     },
     {
       "id": "ssps-usb",
@@ -3904,6 +4041,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac、Chromebook",
       "gameConsole": true,
       "gameNote": "PlayStation®5、PlayStation®5 Digital Edition、PlayStation®5 Pro",
       "otherDevices": null,
@@ -3939,7 +4079,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:05:42.077Z"
+      "lastCheckedAt": "2026-10-19T04:28:47.976Z"
     },
     {
       "id": "ssps-uss",
@@ -3954,6 +4094,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": false,
+      "pcNote": "Windowsパソコン",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -3998,7 +4141,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:05:51.852Z"
+      "lastCheckedAt": "2026-10-19T04:28:57.749Z"
     },
     {
       "id": "sspu-tfcb",
@@ -4013,6 +4156,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "pcWindows": true,
+      "pcMac": true,
+      "pcNote": "Windowsパソコン、Mac",
       "gameConsole": false,
       "gameNote": null,
       "otherDevices": null,
@@ -4065,7 +4211,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T03:06:06.385Z"
+      "lastCheckedAt": "2026-10-19T04:29:12.349Z"
     }
   ]
 }
