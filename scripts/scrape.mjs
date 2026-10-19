@@ -63,7 +63,11 @@ function decodeEntities(s) {
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
     .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)))
-    .replace(/&yen;/g, "￥");
+    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCharCode(parseInt(n, 16)))
+    // 名前付きの文字参照。実例：「USB 3.2 Gen2&times;2」の「×」が化けて表示されていた
+    .replace(/&(times|yen|reg|trade|copy|middot|hellip|minus|plusmn|deg|micro|sup2|sup3|frac12|rarr|larr|ndash|mdash);/g,
+      (_, n) => ({ times: "×", yen: "￥", reg: "®", trade: "™", copy: "©", middot: "・", hellip: "…", minus: "−", plusmn: "±",
+        deg: "°", micro: "µ", sup2: "²", sup3: "³", frac12: "½", rarr: "→", larr: "←", ndash: "–", mdash: "—" })[n]);
 }
 
 // タグを除去してテキスト化。<img alt="店頭在庫限り"> のようにアイコン画像で
@@ -264,6 +268,9 @@ function deriveFields({ slug, folder, listedIn, indexHtml, specHtml }) {
   const powerText = [findSpec(spec, [/定格電圧/]), findSpec(spec, [/^電源/, /電源方式/]), findSpec(spec, [/^定格$/])].filter(Boolean).join(" ");
   const phoneText = findSpec(spec, [/スマートフォン/, /タブレット/]);
   const tvText = findSpec(spec, [/^テレビ$/, /対応機種:テレビ/]);
+  // 対応機種の「ゲーム機」「その他」欄（例：「PlayStation 5」「Windows／Mac以外のUSB機器」）
+  const gameText = findSpec(spec, [/^ゲーム機$/, /対応機種:ゲーム機/]);
+  const otherText = findSpec(spec, [/^対応機種:その他$/, /^その他$/]);
   const warrantyText = findSpec(spec, [/保証期間/]) || "";
   const weightText = findSpec(spec, [/質量/, /重さ/, /重量/]) || "";
   const dimText = findSpec(spec, [/外形寸法/]) || "";
@@ -363,6 +370,9 @@ function deriveFields({ slug, folder, listedIn, indexHtml, specHtml }) {
     smartphoneNote: smartphone && phoneText ? phoneText : null,
     tv,
     tvRecordingMain,
+    gameConsole: gameText != null && !isDash(gameText),
+    gameNote: gameText != null && !isDash(gameText) ? gameText : null,
+    otherDevices: otherText != null && !isDash(otherText) && otherText.length < 120 ? otherText : null,
     shockproof,
     shockNote: shockproof ? shockNote : null,
     encryptionHw: encHw,

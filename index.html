@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>外付けHDD／SSDセレクター（試作）</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -51,6 +53,11 @@
   </div>
 </div>
 
+<div class="disclaimer">
+  <p>価格はI-O DATA公式サイト掲載のメーカー希望小売価格（税込）です。<b>価格・在庫状況は変動する場合があります。</b>購入前に商品ページで最新の情報をご確認ください。</p>
+  <p class="disclaimer__date" id="updated-top"></p>
+</div>
+
 <main class="layout">
   <aside class="filter-panel" id="filter-panel" aria-label="絞り込み">
     <div class="filter-panel__head">
@@ -77,7 +84,7 @@
     </div>
 
     <div class="fgroup">
-      <p class="fgroup__title">つなぐ機器・使い方</p>
+      <p class="fgroup__title">PC以外に使用できる機器・使い方</p>
       <div class="checks" data-filter="use"></div>
     </div>
 
@@ -106,8 +113,9 @@
     </div>
 
     <div class="fgroup">
-      <p class="fgroup__title">対象</p>
-      <div class="checks" data-filter="segment"></div>
+      <p class="fgroup__title">保証期間</p>
+      <div class="chips" data-filter="warranty"></div>
+      <p class="fgroup__note">選ばない場合は、1年保証の商品も含めてすべて表示します。</p>
     </div>
   </aside>
 

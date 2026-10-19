@@ -278,3 +278,126 @@ img { max-width: 100%; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
+
+/* =====================================================================
+   リッチ化（NASセレクター・B社比較ツールと同じ作り：立体ボタン・帯のドット模様・浮くカード）
+   ===================================================================== */
+:root {
+  --card-shadow: 0 1px 2px rgba(16,24,40,.06), 0 12px 32px rgba(16,24,40,.10);
+  --teal-dark: #08535d;
+  --orange: #e8892b;
+  --orange-dark: #a85a12;
+}
+body { background: linear-gradient(180deg, #eef2f6 0%, #e4e9ef 100%); min-height: 100vh; }
+
+/* ---- 帯 ---- */
+.site-header {
+  background: radial-gradient(1200px 300px at 85% -40%, rgba(255,255,255,.18), transparent 60%),
+              linear-gradient(115deg, #0e1a2d 0%, #15304d 45%, #0d6a76 100%);
+  box-shadow: 0 10px 30px rgba(10,40,60,.30);
+}
+.site-header::before { display: none; }
+.site-header::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(rgba(255,255,255,.13) 1px, transparent 1px); background-size: 14px 14px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 60%); mask-image: linear-gradient(90deg, transparent, #000 60%);
+}
+.site-header__inner { position: relative; z-index: 1; padding-top: 20px; padding-bottom: 20px; }
+.site-header__logo { font-size: 26px; text-shadow: 0 2px 8px rgba(0,0,0,.25); }
+.site-header__badge { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.45); backdrop-filter: blur(4px); }
+.search__input { height: 46px; border: 0; box-shadow: 0 6px 18px rgba(0,0,0,.18), inset 0 1px 2px rgba(0,0,0,.06); }
+
+.page-title { background: transparent; border-bottom: 0; }
+.page-title__inner { padding-top: 22px; padding-bottom: 6px; }
+.page-title__h { font-size: 24px; }
+
+/* ---- 注意書き ---- */
+.disclaimer {
+  max-width: 1216px; margin: 12px auto 0; padding: 10px 18px; font-size: 13px; line-height: 1.7;
+  background: #fffaf0; border: 1px solid #ecd9a6; border-left: 4px solid #e2a400; border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(16,24,40,.05);
+}
+.disclaimer p { margin: 0; }
+.disclaimer__date { font-weight: 800; color: #5a4a1a; }
+.disclaimer__date.is-stale { color: #b42318; }
+@media (min-width: 901px) { .disclaimer { margin-left: 32px; margin-right: 32px; } }
+@media (min-width: 1281px) { .disclaimer { margin-left: auto; margin-right: auto; } }
+@media (max-width: 900px) { .disclaimer { margin: 10px 16px 0; } }
+
+/* ---- 絞り込みパネル ---- */
+.filter-panel { border-radius: 16px; box-shadow: var(--card-shadow); padding: 20px 20px 10px; }
+.filter-panel__heading { font-size: 16px; }
+.fgroup__title { position: relative; padding-left: 11px; }
+.fgroup__title::before { content: ""; position: absolute; left: 0; top: 3px; bottom: 3px; width: 4px; border-radius: 2px; background: linear-gradient(180deg, #20becd, var(--accent)); }
+.fgroup__lead { margin: -2px 0 8px; font-size: 12px; line-height: 1.55; color: var(--text-soft); background: #f1f6f8; border-radius: 8px; padding: 6px 9px; }
+.seg button { border-radius: 12px; box-shadow: 0 2px 6px rgba(16,24,40,.05); transition: transform .2s, box-shadow .2s, border-color .2s, background .2s; }
+.seg button:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(16,24,40,.10); }
+.seg button[aria-pressed="true"] {
+  background: linear-gradient(180deg, #fff 0%, #e6f6f8 100%);
+  box-shadow: 0 0 0 3px rgba(15,125,140,.14), 0 10px 22px rgba(15,125,140,.18); transform: translateY(-2px);
+}
+.chips button { transition: transform .15s, box-shadow .15s, background .15s; }
+.chips button:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 4px 10px rgba(16,24,40,.08); }
+.chips button[aria-pressed="true"] { background: linear-gradient(180deg, #17a0b1 0%, var(--accent) 100%); box-shadow: 0 2px 0 var(--teal-dark), 0 6px 12px rgba(15,125,140,.25); }
+
+/* ---- 結果 ---- */
+.result-head { padding: 14px 18px; border-radius: 16px; background: #fff; box-shadow: var(--card-shadow); }
+.cards { gap: 18px; }
+.card { border-radius: 16px; box-shadow: var(--card-shadow); transition: transform .2s, box-shadow .2s, border-color .2s; }
+.card:hover { transform: translateY(-3px); box-shadow: 0 2px 4px rgba(16,24,40,.08), 0 18px 40px rgba(16,24,40,.14); }
+.card__img { background: radial-gradient(circle at 50% 40%, #ffffff 0%, #eef2f6 100%); border: 1px solid var(--line-soft); }
+.card__series { font-size: 16px; }
+.price-inc { font-size: 24px; }
+.cap-btn { transition: transform .12s; }
+.cap-btn[aria-pressed="true"] { background: linear-gradient(180deg, #17a0b1 0%, var(--accent) 100%); box-shadow: 0 2px 0 var(--teal-dark); }
+.conn-line { display: block; }
+.conn-line b { font-weight: 800; }
+
+/* パソコン専用の注意（目立たせる） */
+.alert { display: flex; gap: 8px; align-items: flex-start; margin: 10px 16px 0; padding: 9px 12px; border-radius: 10px; font-size: 12.5px; line-height: 1.55; }
+.alert b { display: block; font-size: 13.5px; }
+.alert__icon { font-size: 18px; line-height: 1.2; }
+.alert--pc { background: #fff1ec; border: 1.5px solid #f2a184; color: #7a2a0c; box-shadow: 0 2px 8px rgba(194,72,30,.10); }
+.note-info { display: flex; gap: 6px; margin: 8px 16px 0; padding: 7px 10px; border-radius: 9px; background: #eef5fb; color: #23415f; font-size: 12px; line-height: 1.55; }
+.note-info span { font-weight: 800; color: #2b6cb0; }
+.ng { color: #b0381a; font-weight: 800; }
+
+/* ---- 立体ボタン（押すと沈む） ---- */
+.compare-bar__btn {
+  background: linear-gradient(180deg, #f3a04a 0%, var(--orange) 100%); border-radius: 12px;
+  box-shadow: 0 1px 0 rgba(255,255,255,.35) inset, 0 4px 0 var(--orange-dark), 0 10px 18px rgba(232,137,43,.35);
+  transition: transform .08s, box-shadow .08s, filter .15s;
+}
+.compare-bar__btn:hover:not(:disabled) { filter: brightness(1.06); }
+.compare-bar__btn:active:not(:disabled) { transform: translateY(3px); box-shadow: 0 1px 0 var(--orange-dark), 0 3px 6px rgba(232,137,43,.3); }
+.compare-bar__btn:disabled { box-shadow: none; }
+.modal-btn--primary {
+  background: linear-gradient(180deg, #17a0b1 0%, var(--accent) 100%); border: 0; border-radius: 10px;
+  box-shadow: 0 1px 0 rgba(255,255,255,.35) inset, 0 3px 0 var(--teal-dark), 0 6px 12px rgba(15,125,140,.28);
+  transition: transform .08s, box-shadow .08s, filter .15s;
+}
+.modal-btn--primary::before { content: "⤓ "; }
+.modal-btn--primary:hover { filter: brightness(1.07); background: linear-gradient(180deg, #17a0b1 0%, var(--accent) 100%); }
+.modal-btn--primary:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--teal-dark); }
+.share-btn, .modal-btn:not(.modal-btn--primary), .card__link {
+  background: linear-gradient(180deg, #ffffff, #eef1f5); color: #1c2a3a; border: 1px solid #cfd6df; border-radius: 10px;
+  box-shadow: 0 3px 0 #b6c0cc, 0 6px 14px rgba(16,24,40,.10); transition: transform .08s, box-shadow .08s;
+}
+.share-btn::before, .modal-btn:not(.modal-btn--primary)::before { content: "🔗 "; }
+.share-btn:hover, .modal-btn:not(.modal-btn--primary):hover, .card__link:hover { background: linear-gradient(180deg, #ffffff, #e6f4f6); color: var(--accent-deep); border-color: #9fcfd6; }
+.share-btn:active, .modal-btn:not(.modal-btn--primary):active, .card__link:active { transform: translateY(3px); box-shadow: 0 0 0 #b6c0cc; }
+.compare-check { border-radius: 10px; background: #eef3f6; box-shadow: inset 0 1px 2px rgba(0,0,0,.06); }
+.compare-check:has(input:checked) { background: linear-gradient(180deg, #17a0b1, var(--accent)); box-shadow: 0 3px 0 var(--teal-dark); }
+
+/* ---- 比較バー・比較表 ---- */
+.compare-bar { background: linear-gradient(115deg, #0e1a2d 0%, #15304d 60%, #0d5f6a 100%); }
+.compare-modal__box { border-radius: 18px; overflow: hidden; }
+.compare-modal__head { background: linear-gradient(180deg, #f7fafc, #fff); }
+.compare-modal__title { position: relative; padding-left: 12px; }
+.compare-modal__title::before { content: ""; position: absolute; left: 0; top: 4px; bottom: 4px; width: 4px; border-radius: 2px; background: linear-gradient(180deg, #20becd, var(--accent)); }
+.compare-table tr.is-group th, .compare-table tr.is-group td { background: linear-gradient(90deg, #15233a, #1d3a58); }
+.ct-head img { background: radial-gradient(circle at 50% 40%, #fff 0%, #eef2f6 100%); border: 1px solid var(--line-soft); }
+
+@media print {
+  .ps-table .ng { color: #b0381a; font-weight: 700; }
+}

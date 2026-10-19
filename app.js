@@ -67,10 +67,10 @@
     // mode "and"：チェックした条件を全部満たす / mode "or"：どれか1つに当てはまる
     const CHECK_GROUPS = {
       use: { mode: "and", options: [
-        { v: "phone", label: "スマホ・タブレットで使える", sub: "iPhone・iPad・Androidの対応機種に記載あり", test: (p) => p.smartphone },
-        { v: "tv", label: "テレビ録画にも使える", sub: "テレビ・レコーダーの録画に対応", test: (p) => p.tv },
-        { v: "tvmain", label: "主にテレビ録画用", sub: "録画専用に作られたモデル", test: (p) => p.tvRecordingMain },
-        { v: "mac", label: "Mac Time Machine対応", test: (p) => p.macTimeMachine }
+        { v: "phone", label: "スマホ/タブレット", test: (p) => p.smartphone },
+        { v: "game", label: "ゲーム機", test: (p) => p.gameConsole },
+        { v: "tv", label: "テレビ", test: (p) => p.tv },
+        { v: "mac", label: "MacのTimeMachine利用", test: (p) => p.macTimeMachine }
       ] },
       power: { mode: "and", options: [
         { v: "bus", label: "バスパワー", sub: "USBケーブル1本で動く（ACアダプター不要）", test: (p) => p.busPower }
@@ -86,25 +86,25 @@
         { v: "stick", label: "スティック型", sub: "ケーブルなしで直接挿す", test: (p) => p.formFactor === "stick" },
         { v: "compact", label: "小型（スマホ直挿し）", sub: "USB-Cに直接挿す超小型", test: (p) => p.formFactor === "compact" }
       ] },
-      segment: { mode: "or", options: [
-        { v: "personal", label: "個人向け", test: (p) => p.category !== "biz" },
-        { v: "biz", label: "法人向け", sub: "長期保証・NASバックアップ・セキュリティモデル", test: (p) => p.category === "biz" }
+      // 保証期間：1つだけ選ぶ（「5年」を選べば5年保証だけ、「3年以上」なら3年・5年）
+      warranty: { mode: "or", single: true, chips: true, options: [
+        { v: "3", label: "3年以上", test: (p) => (p.warrantyYears || 0) >= 3 },
+        { v: "5", label: "5年", test: (p) => (p.warrantyYears || 0) >= 5 }
       ] }
     };
     const SEG_GROUPS = {
       media: { test: (p, v) => p.mediaType === v },
       conn: { test: (p, v) => (p.hostConnectors || []).includes(v) }
     };
-    const GROUP_LABELS = { media: "", cap: "", price: "", conn: "端子 ", use: "", power: "", secure: "", form: "", segment: "" };
 
     const state = {
       media: new Set(), cap: new Set(), price: new Set(), conn: new Set(),
-      use: new Set(), power: new Set(), secure: new Set(), form: new Set(), segment: new Set(),
+      use: new Set(), power: new Set(), secure: new Set(), form: new Set(), warranty: new Set(),
       q: "", sort: "recommend", eol: false,
       selected: {},        // シリーズID → 選択中の型番
       compare: []          // 比較中の型番（順番を保持）
     };
-    const FILTER_KEYS = ["media", "cap", "price", "conn", "use", "power", "secure", "form", "segment"];
+    const FILTER_KEYS = ["media", "cap", "price", "conn", "use", "power", "secure", "form", "warranty"];
 
     let products = [];
     const skuIndex = new Map(); // 型番 → { product, variant }
@@ -190,6 +190,88 @@
       if (p.cables && /一体/.test(p.cables)) return "ケーブル一体型";
       return "—";
     }
+    // 公式ページ由来の文字に残った文字参照（例：&times;）を直す。古いデータ向けの保険
+    function fixText(s) {
+      return String(s ?? "").replace(/&times;/g, "×").replace(/&amp;/g, "&").replace(/&nbsp;/g, " ").replace(/&reg;/g, "®").replace(/&trade;/g, "™");
+    }
+    const plugName = (c) => c === "A" ? "USB-A" : c === "C" ? "USB-C" : c;
+    // 規格名から「USB 20Gbps（USB 3.2 Gen2×2）」のような最初の速度表記だけを取り出す
+    function mainSpeed(p) {
+      const t = fixText(p.interface || "").split(/[／\/]/)[0].trim();
+      return t || "";
+    }
+    function speedOnly(t) {
+      const s = String(t || "");
+      const m = s.match(/(USB\s*\d+\s*Gbps|Thunderbolt\s*\d+|USB4)/i);
+      if (m) return m[1].replace(/\s+/g, " ");
+      // 「USB 3.2 Gen 1」のように速度の数字が書かれていない古い表記は、規格名から速度に直す
+      if (/Gen\s*2\s*[x×]\s*2/i.test(s)) return "USB 20Gbps";
+      if (/Gen\s*2/i.test(s) || /USB\s*3\.1/i.test(s)) return "USB 10Gbps";
+      if (/Gen\s*1/i.test(s) || /USB\s*3\.0/i.test(s)) return "USB 5Gbps";
+      return /USB\s*2\.0/i.test(s) ? "USB 2.0" : "";
+    }
+    // 長さの表記をそろえる（「約100cm」→「約1m」）
+    function lenText(n, unit) {
+      const cm = /^m$/i.test(unit) ? Number(n) * 100 : Number(n);
+      return cm >= 100 ? `約${+(cm / 100).toFixed(1)}m` : `約${cm}cm`;
+    }
+    // 本体側の端子名の表記ゆれをそろえる（「USB-microB×1」「microB コネクター」→「USB microB」）
+    function deviceConnLabel(p) {
+      const dc = fixText(p.deviceConnector || "");
+      if (/micro\s*-?\s*B/i.test(dc)) return "USB microB";
+      if (/USB\s*-?\s*B\b|^B$|Bタイプ/i.test(dc)) return "USB-B";
+      return dc.replace(/[×x]\s*\d+\s*$/, "").trim();
+    }
+    // 付属ケーブルの説明から、「どの端子のケーブルが、どの速度・長さで付くか」を読み取る
+    // 例：「USBケーブル（A-C、USB 10Gbps）約50cm、USBケーブル（C-C、USB 20Gbps）約30cm」
+    function cableList(p) {
+      const text = fixText(p.cables || "");
+      if (!text) return [];
+      const parts = text.split(/[、，,\n]|(?=USBケーブル)|(?=[AC]\s*[-－–]\s*micro)/).map((x) => x.trim()).filter(Boolean);
+      const out = [];
+      let last = null;
+      for (const seg of parts) {
+        const m = seg.match(/(?:USB-?)?\b([AC])\s*[-－–]\s*(?:micro\s*-?\s*B|B|C|A)/i) || seg.match(/USB-?([AC])\b/i);
+        const sp = seg.match(/USB\s*(\d+)\s*Gbps/i);
+        const len = seg.match(/約?\s*([\d.]+)\s*(cm|m)(?![a-z])/i);
+        if (m) {
+          last = { plug: m[1].toUpperCase(), speed: sp ? `USB ${sp[1]}Gbps` : speedOnly(seg), len: len ? lenText(len[1], len[2]) : "" };
+          if (!out.some((c) => c.plug === last.plug)) out.push(last);
+        } else if (last && !last.len && len) {
+          last.len = lenText(len[1], len[2]); // 「（C-microB USB 5Gbps）約30cm」のように長さが後ろに来る書き方
+        }
+      }
+      return out.sort((a, b) => (a.plug === "C" ? -1 : 1) - (b.plug === "C" ? -1 : 1));
+    }
+    // 「接続」欄の表示：端子ごとに、ケーブルの有無・速度・長さをまとめる
+    function connLines(p) {
+      const fallbackSpeed = speedOnly(mainSpeed(p));
+      if (p.formFactor === "stick" || p.formFactor === "compact") {
+        return (p.hostConnectors || []).map((c) => ({ head: `${plugName(c)} 直挿し`, body: fallbackSpeed }));
+      }
+      const cl = cableList(p);
+      if (cl.length) {
+        return cl.map((c) => ({ head: `${plugName(c.plug)}ケーブル`, body: [c.speed || fallbackSpeed, c.len].filter(Boolean).join("・") }));
+      }
+      if (p.cables && /一体/.test(p.cables)) return [{ head: `${connText(p)} ケーブル一体型`, body: fallbackSpeed }];
+      return [{ head: connText(p), body: [fallbackSpeed, cableText(p) !== "—" ? cableText(p) : ""].filter(Boolean).join("・") }];
+    }
+    // 本体側がmicroB／B端子なのに、USB-C で使える商品の注釈（「本体にUSB-C端子がある」と誤解されやすいため）
+    function microBNote(p) {
+      const dc = deviceConnLabel(p);
+      if (!/microB|USB-B/.test(dc)) return "";
+      if (!(p.hostConnectors || []).includes("C")) return "";
+      const plugs = cableList(p).map((c) => plugName(c.plug));
+      return `本体の端子は${dc}です（本体にUSB-C端子はありません）。付属の${(plugs.length ? plugs : (p.hostConnectors || []).map(plugName)).join("・")}ケーブルで接続します。`;
+    }
+    // パソコン専用の注意：USB-Cでつながるが、ロック解除にパソコン用アプリが必要なセキュリティモデル。
+    // data/overrides.json で "pcOnly": true / false を指定すれば個別に上書きできる。
+    function isPcOnly(p) {
+      if (typeof p.pcOnly === "boolean") return p.pcOnly;
+      return !!((p.encryptionHw || p.encryptionSw) && (p.hostConnectors || []).includes("C") && !p.smartphone);
+    }
+    const PC_ONLY_TEXT = "パソコン専用です。本体のセキュリティ機能（ロック解除）はパソコン用のアプリでしか操作できないため、USB-Cでスマホ・タブレットに直接つないでも使えません。";
+
     function connText(p) {
       return (p.hostConnectors || []).map((c) => c === "A" ? "USB-A" : "USB-C").join("／") || "—";
     }
@@ -209,6 +291,10 @@
       const priceBox = $('[data-filter="price"]');
       priceBox.innerHTML = PRICE_OPTIONS.map((o) => `<button type="button" data-value="${o.v}" aria-pressed="false">${o.label}<span class="cnt"></span></button>`).join("");
       for (const [k, g] of Object.entries(CHECK_GROUPS)) {
+        if (g.chips) {
+          $(`[data-filter="${k}"]`).innerHTML = g.options.map((o) => `<button type="button" data-value="${o.v}" aria-pressed="false">${o.label}<span class="cnt"></span></button>`).join("");
+          continue;
+        }
         $(`[data-filter="${k}"]`).innerHTML = g.options.map((o) => `
           <label class="check">
             <input type="checkbox" data-group="${k}" value="${o.v}">
@@ -220,6 +306,8 @@
         const group = btn.closest("[data-filter]").dataset.filter;
         btn.setAttribute("aria-pressed", "false");
         btn.addEventListener("click", () => {
+          const g = CHECK_GROUPS[group];
+          if (g && g.single && !state[group].has(btn.dataset.value)) state[group].clear();
           toggle(state[group], btn.dataset.value);
           onChange();
         });
@@ -277,7 +365,7 @@
       CAP_OPTIONS.forEach((o) => state.cap.has(o.v) && add("cap", o.v, o.label));
       PRICE_OPTIONS.forEach((o) => state.price.has(o.v) && add("price", o.v, o.label));
       state.conn.forEach((v) => add("conn", v, v === "A" ? "USB-A" : "USB-C"));
-      for (const [k, g] of Object.entries(CHECK_GROUPS)) g.options.forEach((o) => state[k].has(o.v) && add(k, o.v, o.label));
+      for (const [k, g] of Object.entries(CHECK_GROUPS)) g.options.forEach((o) => state[k].has(o.v) && add(k, o.v, k === "warranty" ? `保証${o.label}` : o.label));
       if (state.q) list.push({ group: "q", v: state.q, label: `「${state.q}」` });
       return list;
     }
@@ -341,13 +429,13 @@
       const kinds = [
         `<span class="kind kind--${p.mediaType === "SSD" ? "ssd" : "hdd"}">${p.mediaType}</span>`,
         `<span class="kind kind--hdd">${FORM_LABEL[p.formFactor] || ""}</span>`,
-        p.category === "biz" ? `<span class="kind kind--biz">法人向け</span>` : "",
         p.tvRecordingMain ? `<span class="kind kind--tv">録画用</span>` : ""
       ].join("");
 
       const badges = [];
       if (p.smartphone) badges.push(`<span class="badge badge--on">📱 スマホ・タブレット</span>`);
       if (p.tv) badges.push(`<span class="badge badge--on">📺 テレビ録画</span>`);
+      if (p.gameConsole) badges.push(`<span class="badge badge--on">🎮 ゲーム機</span>`);
       if (p.busPower) badges.push(`<span class="badge">バスパワー</span>`);
       badges.push(`<span class="badge">${connText(p)}</span>`);
       if (p.shockproof) badges.push(`<span class="badge badge--sec">耐衝撃</span>`);
@@ -372,7 +460,7 @@
           </div>
         </div>
         <div class="card__caps" role="group" aria-label="容量を選ぶ">
-          ${visible.map((x) => `<button type="button" class="cap-btn${okSkus.has(x.sku) ? "" : " is-out"}" data-sku="${escapeHtml(x.sku)}" aria-pressed="${x.sku === v.sku}" title="${escapeHtml(x.sku)}${okSkus.has(x.sku) ? "" : "（今の条件には合いません）"}">${capLabel(x.capacityGB)}${capCount[x.capacityGB] > 1 && x.color ? `<span class="cap-color">${escapeHtml(x.color)}</span>` : ""}</button>`).join("")}
+          ${visible.map((x) => `<button type="button" class="cap-btn${okSkus.has(x.sku) ? "" : " is-out"}" data-sku="${escapeHtml(x.sku)}" aria-pressed="${x.sku === v.sku}" title="${escapeHtml(x.sku)}${okSkus.has(x.sku) ? "" : "（今の条件には合いません）"}">${capLabel(x.capacityGB)}${capCount[x.capacityGB] > 1 ? `<span class="cap-color">${escapeHtml(x.color || variantSuffix(x.sku))}</span>` : ""}</button>`).join("")}
         </div>
         <div class="card__price">
           ${v.priceIncTax != null
@@ -382,15 +470,21 @@
         <div class="badges">${badges.join("")}</div>
         <dl class="spec-mini">
           <dt>JAN</dt><dd>${v.jan ? `${escapeHtml(v.jan)}<button type="button" class="copy-jan" data-copy="${escapeHtml(v.jan)}">コピー</button>` : "—"}</dd>
-          <dt>ケーブル</dt><dd>${escapeHtml(cableText(p))}</dd>
-          <dt>接続</dt><dd>${escapeHtml(shortInterface(p.interface))}</dd>
+          <dt>接続</dt><dd>${connLines(p).map((l) => `<span class="conn-line"><b>${escapeHtml(l.head)}</b>${l.body ? `：${escapeHtml(l.body)}` : ""}</span>`).join("")}</dd>
           <dt>保証</dt><dd>${p.warrantyYears ? p.warrantyYears + "年" : "—"}</dd>
         </dl>
+        ${isPcOnly(p) ? `<div class="alert alert--pc"><span class="alert__icon" aria-hidden="true">💻</span><span><b>パソコン専用</b>ロック解除にパソコン用アプリが必要なため、スマホ・タブレットでは使えません。</span></div>` : ""}
+        ${microBNote(p) ? `<p class="note-info"><span aria-hidden="true">ⓘ</span>${escapeHtml(microBNote(p))}</p>` : ""}
         <div class="card__foot">
           <a class="card__link" href="${escapeHtml(p.sourceUrl)}" target="_blank" rel="noopener noreferrer">商品ページ ↗</a>
           <label class="compare-check"><input type="checkbox" data-compare="${escapeHtml(v.sku)}"${inCompare ? " checked" : ""}> 比較に追加</label>
         </div>
       </article>`;
+    }
+    // 「SSCA-SUW500GR」→「GR」のように、容量の数字の後ろの記号だけを取り出す
+    function variantSuffix(sku) {
+      const m = String(sku).match(/\d+([A-Z]+(?:\/[A-Z]+)?)$/);
+      return m ? m[1] : sku;
     }
     function shortInterface(s) {
       if (!s) return "—";
@@ -475,26 +569,30 @@
         group("種類・使い方"),
         row("種類", (p) => p.mediaType),
         row("形", (p) => FORM_LABEL[p.formFactor] || "—"),
-        row("対象", (p) => p.category === "biz" ? "法人向け" : "個人向け"),
         row("パソコン", () => yesNo(true)),
-        row("スマホ・タブレット", (p) => p.smartphone ? `<span class="yes">対応</span>${p.smartphoneNote ? `<br><small>${escapeHtml(p.smartphoneNote)}</small>` : ""}` : yesNo(false), (p) => p.smartphone ? "対応" : "—"),
+        row("スマホ・タブレット", (p) => p.smartphone
+          ? `<span class="yes">対応</span>${p.smartphoneNote ? `<br><small>${escapeHtml(fixText(p.smartphoneNote))}</small>` : ""}`
+          : isPcOnly(p) ? `<span class="ng">使えません（パソコン専用）</span><br><small>${PC_ONLY_TEXT}</small>` : yesNo(false),
+          (p) => p.smartphone ? "対応" : isPcOnly(p) ? "PC専用" : "—"),
         row("テレビ録画", (p) => p.tvRecordingMain ? `<span class="yes">対応（録画用モデル）</span>` : yesNo(p.tv)),
+        row("ゲーム機", (p) => p.gameConsole ? `<span class="yes">対応</span>${p.gameNote ? `<br><small>${escapeHtml(fixText(p.gameNote))}</small>` : ""}` : yesNo(false), (p) => p.gameConsole ? "対応" : "—"),
+        row("その他の機器", (p) => escapeHtml(fixText(p.otherDevices || "—"))),
         row("Mac Time Machine", (p) => yesNo(p.macTimeMachine)),
         group("接続・電源"),
         row("パソコン・スマホ側の端子", (p) => connText(p)),
-        row("本体側の端子", (p) => escapeHtml(p.deviceConnector || "—")),
-        row("ケーブル長", (p) => escapeHtml(cableText(p))),
-        row("付属ケーブル", (p) => escapeHtml(p.cables || (p.formFactor === "stick" || p.formFactor === "compact" ? "なし（直挿し）" : "—"))),
-        row("インターフェイス", (p) => escapeHtml(p.interface || "—")),
+        row("接続方法・速度・ケーブル長", (p) => connLines(p).map((l) => `<b>${escapeHtml(l.head)}</b>${l.body ? `：${escapeHtml(l.body)}` : ""}`).join("<br>")),
+        row("本体側の端子", (p) => escapeHtml(deviceConnLabel(p) || "—") + (microBNote(p) ? `<br><small>${escapeHtml(microBNote(p))}</small>` : "")),
+        row("付属ケーブル", (p) => escapeHtml(fixText(p.cables || (p.formFactor === "stick" || p.formFactor === "compact" ? "なし（直挿し）" : "—")))),
+        row("インターフェイス", (p) => escapeHtml(fixText(p.interface || "—"))),
         row("電源", (p) => powerText(p)),
         group("安心・セキュリティ"),
-        row("耐衝撃", (p) => p.shockproof ? `<span class="yes">対応</span>${p.shockNote ? `<br><small>${escapeHtml(p.shockNote)}</small>` : ""}` : yesNo(false), (p) => p.shockproof ? "対応" : "—"),
-        row("ハードウェア暗号化", (p) => p.encryptionHw ? `<span class="yes">対応</span>${p.encryptionNote ? `<br><small>${escapeHtml(p.encryptionNote)}</small>` : ""}` : yesNo(false), (p) => p.encryptionHw ? "対応" : "—"),
+        row("耐衝撃", (p) => p.shockproof ? `<span class="yes">対応</span>${p.shockNote ? `<br><small>${escapeHtml(fixText(p.shockNote))}</small>` : ""}` : yesNo(false), (p) => p.shockproof ? "対応" : "—"),
+        row("ハードウェア暗号化", (p) => p.encryptionHw ? `<span class="yes">対応</span>${p.encryptionNote ? `<br><small>${escapeHtml(fixText(p.encryptionNote))}</small>` : ""}` : yesNo(false), (p) => p.encryptionHw ? "対応" : "—"),
         row("暗号化・管理ソフト", (p) => yesNo(p.encryptionSw)),
         row("保証期間", (p) => p.warrantyYears ? p.warrantyYears + "年" : "—"),
         group("本体"),
         row("重さ", (p) => p.weightG ? (p.weightG >= 1000 ? `約${(p.weightG / 1000).toFixed(1)}kg` : `約${p.weightG}g`) : "—"),
-        row("外形寸法", (p) => escapeHtml(p.dimensions || "—")),
+        row("外形寸法", (p) => escapeHtml(fixText(p.dimensions || "—"))),
         row("特長", (p) => (p.features || []).length ? (p.features || []).map(escapeHtml).join("<br>") : "—")
       ];
     }
@@ -675,6 +773,8 @@
       const days = (Date.now() - d.getTime()) / 86400000;
       el.textContent = `データ最終更新：${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日` + (days > STALE_DAYS ? `（${Math.floor(days)}日間更新されていません。価格・在庫は公式サイトでご確認ください）` : "");
       el.classList.toggle("is-stale", days > STALE_DAYS);
+      const top = $("#updated-top");
+      if (top) { top.textContent = el.textContent; top.classList.toggle("is-stale", days > STALE_DAYS); }
     }
 
     // ---------- 起動 ----------
