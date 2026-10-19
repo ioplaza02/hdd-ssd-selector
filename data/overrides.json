@@ -1,120 +1,22 @@
 {
-  "_説明": "自動取得で読み間違えた項目を、ここに正しい値で書いておくと毎回の自動更新で上書きされます。series の下に シリーズID（URLの末尾、例 u3-psh）を書き、直したい項目と値を並べます。セキュリティ機能は security、使える機器は os の下に書きます。型番ごとの値は variants の下に型番で書きます（\"exclude\": true でその型番を載せない）。シリーズごと載せたくない場合は \"exclude\": true。型番末尾の記号の色名がシリーズ独自のときは colorCodes に書きます（例 {\"B\": \"ライトブルー\"}）。_memo は自由メモ欄（画面には出ません）。",
+  "_説明": "自動取得で読み間違えた項目を、ここに正しい値で書いておくと毎回の自動更新で上書きされます。series の下に シリーズID（URLの末尾、例 hdpx-utscb）を書き、直したい項目と値を並べます。型番ごとの値は variants の下に型番で書きます。シリーズごと載せたくない場合は \"exclude\": true。_memo は自由メモ欄（画面には出ません）。",
   "_例": {
-    "u3-psh": {
-      "_memo": "ストラップホールの誤判定を修正",
-      "strapHole": true,
-      "security": {
-        "fileEncryptSoftware": true
-      },
-      "os": {
-        "mac": true
-      },
+    "hdpx-utscb": {
+      "_memo": "スマホ対応の誤判定を修正",
+      "smartphone": false,
+      "cableLengthCm": 30,
       "variants": {
-        "U3-PSH16G/W": {
+        "HDPX-UTSC1KB": {
           "jan": "4957180000000"
         }
       }
     }
   },
   "series": {
-    "eu3-str": {
-      "_memo": "公式の本文に「32／64GBモデルはブラックのみ」とあるため、価格欄が空のブルー32／64GBは載せない",
-      "variants": {
-        "EU3-ST/32GRB": {
-          "exclude": true
-        },
-        "EU3-ST/64GRB": {
-          "exclude": true
-        }
-      }
-    },
-    "ed-svt4": {
-      "_memo": "スライド式は仕様表の「スライドスイッチ含む」からの判定。SUHManager対応（別売）／ストラップホールは公式の文章に記載が無いが、商品写真で確認済み（2026-10-19）",
-      "bodyStyle": "slide",
-      "security": {
-        "adminSoftware": true,
-        "retryLimit": 5
-      },
-      "strapHole": true
-    },
-    "ed-vt4": {
-      "_memo": "比較表にSUHManagerの名前が出るが、ED-VT4自体は非対応（比較表で×）／ストラップホールは公式の文章に記載が無いが、商品写真で確認済み（2026-10-19）",
-      "bodyStyle": "slide",
-      "security": {
-        "adminSoftware": false,
-        "retryLimit": 100
-      },
-      "strapHole": true
-    },
-    "ed-v4r": {
-      "_memo": "スライド式はmeta descriptionのみに記載。旧エンジン（トレンドマイクロ）。後継はED-VT4／ストラップホールは公式の文章に記載が無いが、商品写真で確認済み（2026-10-19）／書き込み禁止でログインする機能あり（公式本文）",
-      "bodyStyle": "slide",
-      "security": {
-        "adminSoftware": false,
-        "antivirusEngine": "トレンドマイクロ",
-        "retryLimit": 100,
-        "writeProtect": true
-      },
-      "strapHole": true
-    },
-    "ed-s4r": {
-      "_memo": "スライド式はmeta descriptionのみに記載。SUHManager対応（別売）／ストラップホールは公式の文章に記載が無いが、商品写真で確認済み（2026-10-19）",
-      "bodyStyle": "slide",
-      "security": {
-        "adminSoftware": true,
-        "antivirus": false,
-        "retryLimit": 5
-      },
-      "strapHole": true
-    },
-    "ed-e4r": {
-      "_memo": "スライド式はmeta descriptionのみに記載。SUHManagerは非対応（比較表で×）／ストラップホールは公式の文章に記載が無いが、商品写真で確認済み（2026-10-19）",
-      "bodyStyle": "slide",
-      "security": {
-        "adminSoftware": false,
-        "antivirus": false,
-        "retryLimit": 100
-      },
-      "strapHole": true
-    },
-    "ed-hb3": {
-      "_memo": "本体のボタンでパスワード認証するため、パソコンのソフト不要（対応機種はWindows・Mac・Chromebook）",
-      "bodyStyle": "cap",
-      "security": {
-        "retryLimit": 10
-      }
-    },
-    "u3-clp": {
-      "_memo": "公式ページに暗号化ソフトの記載なし",
-      "lineup": "design",
-      "security": {
-        "fileEncryptSoftware": false
-      },
-      "colorCodes": {
-        "V": "ライラックパープル",
-        "P": "ベビーピンク",
-        "G": "ミントグリーン",
-        "B": "ライトブルー"
-      }
-    },
-    "u3-psh": {
-      "lineup": "design"
-    },
-    "u3-dash": {
-      "lineup": "speed"
-    },
-    "eu3-pwr": {
-      "_memo": "ストラップホールは公式の文章に記載が無いが、商品写真で確認済み（2026-10-19）",
-      "strapHole": true
-    },
-    "u3-stdr": {
-      "_memo": "アクセスランプは生産終了のスケルトンカラーのみのため「なし」。/B・/BR はスケルトンカラー",
-      "accessLamp": false,
-      "colorCodes": {
-        "B": "スケルトンブルー",
-        "BR": "スケルトンブラウン"
-      }
+    "ssca-suw": {
+      "_memo": "ノーマルモードならパスワード・アプリ不要（公式マニュアル 002guide/001shoki.html）。スマホは動作未検証の言い方にする",
+      "pcOnly": true,
+      "pcOnlyText": "セキュリティロックアプリは解除可能ですが、スマホ・タブレットでは動作未検証です。"
     }
   }
 }
