@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T02:37:51.425Z",
+  "updatedAt": "2026-10-19T03:07:29.190Z",
   "products": [
     {
       "id": "avhd-asu",
@@ -14,6 +14,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": true,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
@@ -29,7 +32,7 @@
       "macTimeMachine": false,
       "warrantyYears": 1,
       "weightG": 910,
-      "dimensions": "約180（W）&times;180（D）&times;45（H）mm（ゴム足含む、突起部含まず）",
+      "dimensions": "約180（W）×180（D）×45（H）mm（ゴム足含む、突起部含まず）",
       "features": [
         "24時間連続稼働",
         "タイムシフト録画対応",
@@ -66,7 +69,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:37:11.954Z"
+      "lastCheckedAt": "2026-10-19T03:06:49.826Z"
     },
     {
       "id": "avhd-usu",
@@ -81,6 +84,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": true,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
@@ -96,7 +102,7 @@
       "macTimeMachine": false,
       "warrantyYears": 1,
       "weightG": 910,
-      "dimensions": "約180（W）&times;180（D）&times;45（H）mm ※ゴム足含む、突起物含まず",
+      "dimensions": "約180（W）×180（D）×45（H）mm ※ゴム足含む、突起物含まず",
       "features": [
         "24時間連続稼働",
         "タイムシフト録画対応",
@@ -133,7 +139,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:37:16.877Z"
+      "lastCheckedAt": "2026-10-19T03:06:54.711Z"
     },
     {
       "id": "avhd-wru",
@@ -148,12 +154,15 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": true,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
-      "deviceConnector": "USB（Micro Bコネクタ）&times;1",
+      "deviceConnector": "USB（Micro Bコネクタ）×1",
       "hostConnectors": [
         "A"
       ],
@@ -163,7 +172,7 @@
       "macTimeMachine": false,
       "warrantyYears": 1,
       "weightG": 1400,
-      "dimensions": "約215（W）&times;187（D）&times;35.5（H）mm ※ゴム足を含む、コネクタ・突起物含まず",
+      "dimensions": "約215（W）×187（D）×35.5（H）mm ※ゴム足を含む、コネクタ・突起物含まず",
       "features": [
         "24時間連続稼働",
         "タイムシフト録画対応",
@@ -200,7 +209,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:37:07.195Z"
+      "lastCheckedAt": "2026-10-19T03:06:44.943Z"
     },
     {
       "id": "avssd-rs",
@@ -215,6 +224,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": true,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
@@ -230,7 +242,7 @@
       "macTimeMachine": false,
       "warrantyYears": 1,
       "weightG": 11,
-      "dimensions": "約20（W）&times;62（D）&times;8（H）mm",
+      "dimensions": "約20（W）×62（D）×8（H）mm",
       "features": [
         "24時間連続稼働",
         "タイムシフト録画対応",
@@ -257,7 +269,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:36:23.115Z"
+      "lastCheckedAt": "2026-10-19T03:06:01.576Z"
     },
     {
       "id": "hd4-utn",
@@ -272,6 +284,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
@@ -358,7 +373,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:37:51.425Z"
+      "lastCheckedAt": "2026-10-19T03:07:29.190Z"
     },
     {
       "id": "hd4-utnc",
@@ -373,12 +388,15 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": "当社製LAN DISK",
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
-      "deviceConnector": "USB-B&times;1",
+      "deviceConnector": "USB-B×1",
       "hostConnectors": [
         "A"
       ],
@@ -388,7 +406,7 @@
       "macTimeMachine": false,
       "warrantyYears": 3,
       "weightG": 3800,
-      "dimensions": "約163&times;210&times;160mm（ゴム足含む、突起部を含まず）",
+      "dimensions": "約163×210×160mm（ゴム足含む、突起部を含まず）",
       "features": [
         "24時間連続稼働",
         "グリーン購入法適合"
@@ -459,7 +477,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:37:46.617Z"
+      "lastCheckedAt": "2026-10-19T03:07:24.221Z"
     },
     {
       "id": "hdcx-utp",
@@ -474,6 +492,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
@@ -489,7 +510,7 @@
       "macTimeMachine": false,
       "warrantyYears": 1,
       "weightG": 850,
-      "dimensions": "約34（W）&times;172（D）&times;115（H）mm ※突起部分含まず 約35（W）&times;172（D）&times;116（H）mm ※ゴム足部分含む",
+      "dimensions": "約34（W）×172（D）×115（H）mm ※突起部分含まず 約35（W）×172（D）×116（H）mm ※ゴム足部分含む",
       "features": [
         "静音設計",
         "グリーン購入法適合"
@@ -533,7 +554,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:34:12.057Z"
+      "lastCheckedAt": "2026-10-19T03:03:51.033Z"
     },
     {
       "id": "hdd-utb",
@@ -548,6 +569,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
@@ -563,7 +587,7 @@
       "macTimeMachine": false,
       "warrantyYears": 1,
       "weightG": 560,
-      "dimensions": "約35（W）&times;172（D）&times;115（H）mm（ゴム足・コネクターおよび突起物含まず）",
+      "dimensions": "約35（W）×172（D）×115（H）mm（ゴム足・コネクターおよび突起物含まず）",
       "features": [
         "静音設計",
         "グリーン購入法適合"
@@ -634,7 +658,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:34:26.588Z"
+      "lastCheckedAt": "2026-10-19T03:04:05.514Z"
     },
     {
       "id": "hdd-utc",
@@ -649,12 +673,15 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": "当社製LAN DISK",
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
-      "deviceConnector": "USB-microB&times;1",
+      "deviceConnector": "USB-microB×1",
       "hostConnectors": [
         "A"
       ],
@@ -664,7 +691,7 @@
       "macTimeMachine": false,
       "warrantyYears": 1,
       "weightG": 800,
-      "dimensions": "約35&times;172&times;115mm（突起部を含まず）",
+      "dimensions": "約35×172×115mm（突起部を含まず）",
       "features": [
         "静音設計",
         "データ移行アプリ内蔵",
@@ -736,7 +763,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:34:21.750Z"
+      "lastCheckedAt": "2026-10-19T03:04:00.705Z"
     },
     {
       "id": "hdja-sutc",
@@ -751,6 +778,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": true,
@@ -766,7 +796,7 @@
       "macTimeMachine": false,
       "warrantyYears": 3,
       "weightG": 1000,
-      "dimensions": "約45（W）&times;216（D）&times;155（H）mm（ゴム足、コネクタ及び突起物含まず）",
+      "dimensions": "約45（W）×216（D）×155（H）mm（ゴム足、コネクタ及び突起物含まず）",
       "features": [
         "静音設計",
         "グリーン購入法適合"
@@ -819,7 +849,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:34:56.064Z"
+      "lastCheckedAt": "2026-10-19T03:04:34.732Z"
     },
     {
       "id": "hdja-utb",
@@ -834,12 +864,15 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": "当社製LAN DISK",
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
-      "deviceConnector": "USB-B&times;1",
+      "deviceConnector": "USB-B×1",
       "hostConnectors": [
         "A"
       ],
@@ -849,7 +882,7 @@
       "macTimeMachine": false,
       "warrantyYears": 1,
       "weightG": 1300,
-      "dimensions": "約45&times;216&times;155mm（突起部を含まず）",
+      "dimensions": "約45×216×155mm（突起部を含まず）",
       "features": [
         "静音設計",
         "グリーン購入法適合"
@@ -893,7 +926,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:34:02.493Z"
+      "lastCheckedAt": "2026-10-19T03:03:41.179Z"
     },
     {
       "id": "hdja-utnb",
@@ -908,12 +941,15 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
-      "deviceConnector": "USB-B コネクター &times;1",
+      "deviceConnector": "USB-B コネクター ×1",
       "hostConnectors": [
         "A"
       ],
@@ -923,7 +959,7 @@
       "macTimeMachine": false,
       "warrantyYears": 5,
       "weightG": 1000,
-      "dimensions": "約45（W）&times;216（D）&times;155（H）mm （突起部分を除く）",
+      "dimensions": "約45（W）×216（D）×155（H）mm （突起部分を除く）",
       "features": [
         "24時間連続稼働",
         "静音設計",
@@ -1031,7 +1067,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:34:41.014Z"
+      "lastCheckedAt": "2026-10-19T03:04:20.062Z"
     },
     {
       "id": "hdja-utnc",
@@ -1046,12 +1082,15 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": "当社製LAN DISK",
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
-      "deviceConnector": "USB-B&times;1",
+      "deviceConnector": "USB-B×1",
       "hostConnectors": [
         "A"
       ],
@@ -1061,7 +1100,7 @@
       "macTimeMachine": false,
       "warrantyYears": 3,
       "weightG": 1000,
-      "dimensions": "約45&times;216&times;155mm（突起部を含まず）",
+      "dimensions": "約45×216×155mm（突起部を含まず）",
       "features": [
         "24時間連続稼働",
         "グリーン購入法適合"
@@ -1168,7 +1207,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:34:31.339Z"
+      "lastCheckedAt": "2026-10-19T03:04:10.297Z"
     },
     {
       "id": "hdja-utnldb",
@@ -1183,12 +1222,15 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
-      "deviceConnector": "USB-Bコネクター&times;1",
+      "deviceConnector": "USB-Bコネクター×1",
       "hostConnectors": [
         "A"
       ],
@@ -1198,7 +1240,7 @@
       "macTimeMachine": false,
       "warrantyYears": 5,
       "weightG": 1000,
-      "dimensions": "約45（W）&times;216（D）&times;155（H）mm （突起部分を除く）",
+      "dimensions": "約45（W）×216（D）×155（H）mm （突起部分を除く）",
       "features": [
         "24時間連続稼働",
         "静音設計",
@@ -1307,7 +1349,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:34:46.034Z"
+      "lastCheckedAt": "2026-10-19T03:04:24.817Z"
     },
     {
       "id": "hdja-utnldc",
@@ -1322,12 +1364,15 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": "当社製LAN DISK",
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
-      "deviceConnector": "USB-B&times;1",
+      "deviceConnector": "USB-B×1",
       "hostConnectors": [
         "A"
       ],
@@ -1337,7 +1382,7 @@
       "macTimeMachine": false,
       "warrantyYears": 3,
       "weightG": 1000,
-      "dimensions": "約45&times;216&times;155mm（突起部を含まず）",
+      "dimensions": "約45×216×155mm（突起部を含まず）",
       "features": [
         "24時間連続稼働",
         "静音設計",
@@ -1446,7 +1491,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:34:51.121Z"
+      "lastCheckedAt": "2026-10-19T03:04:29.930Z"
     },
     {
       "id": "hdja-utr",
@@ -1461,6 +1506,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
@@ -1476,7 +1524,7 @@
       "macTimeMachine": false,
       "warrantyYears": 1,
       "weightG": 1300,
-      "dimensions": "約45（W）&times;216（D）&times;155（H）mm （突起部分を除く）",
+      "dimensions": "約45（W）×216（D）×155（H）mm （突起部分を除く）",
       "features": [
         "静音設計",
         "グリーン購入法適合"
@@ -1529,7 +1577,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:34:07.275Z"
+      "lastCheckedAt": "2026-10-19T03:03:46.076Z"
     },
     {
       "id": "hdja-utu",
@@ -1544,6 +1592,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": "当社製LAN DISK ※1",
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
@@ -1559,7 +1610,7 @@
       "macTimeMachine": false,
       "warrantyYears": 5,
       "weightG": 1300,
-      "dimensions": "約45&times;216&times;155mm（突起部を含まず）",
+      "dimensions": "約45×216×155mm（突起部を含まず）",
       "features": [
         "24時間連続稼働",
         "グリーン購入法適合"
@@ -1603,7 +1654,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:34:36.232Z"
+      "lastCheckedAt": "2026-10-19T03:04:15.174Z"
     },
     {
       "id": "hdpd-sutc",
@@ -1618,6 +1669,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": true,
       "shockNote": "ハードウェア自動暗号化＆耐衝撃ポータブルHDD HDPD-SUTCシリーズ 仕様書印刷 概",
       "encryptionHw": true,
@@ -1634,7 +1688,7 @@
       "macTimeMachine": false,
       "warrantyYears": 3,
       "weightG": 180,
-      "dimensions": "1・2TB：約84（W）&times;130（D）&times;19（H）mm 3・4TB：約84（W）&times;130（D）&times;25（H）mm",
+      "dimensions": "1・2TB：約84（W）×130（D）×19（H）mm 3・4TB：約84（W）×130（D）×25（H）mm",
       "features": [],
       "imageUrl": "https://www.iodata.jp/image/hdpd-sutc_l.jpg",
       "variants": [
@@ -1675,7 +1729,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:35:43.941Z"
+      "lastCheckedAt": "2026-10-19T03:05:22.737Z"
     },
     {
       "id": "hdpd-sutcs",
@@ -1690,6 +1744,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": true,
       "shockNote": "①落下の衝撃からデータを守る耐衝撃ボディ 衝撃からデータを守る耐衝撃ボディ 頻繁に持ち歩くポー",
       "encryptionHw": true,
@@ -1706,7 +1763,7 @@
       "macTimeMachine": false,
       "warrantyYears": 3,
       "weightG": 180,
-      "dimensions": "1・2TB：約84（W）&times;130（D）&times;19（H）mm 4TB：約84（W）&times;130（D）&times;25（H）mm",
+      "dimensions": "1・2TB：約84（W）×130（D）×19（H）mm 4TB：約84（W）×130（D）×25（H）mm",
       "features": [
         "データ移行アプリ内蔵"
       ],
@@ -1740,7 +1797,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:35:48.935Z"
+      "lastCheckedAt": "2026-10-19T03:05:27.584Z"
     },
     {
       "id": "hdph-uts",
@@ -1755,6 +1812,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
@@ -1770,7 +1830,7 @@
       "macTimeMachine": false,
       "warrantyYears": 1,
       "weightG": 230,
-      "dimensions": null,
+      "dimensions": "約76（W）×114（D）×20（H）mm ※突起部含まず",
       "features": [
         "静音設計",
         "データ移行アプリ内蔵"
@@ -1796,7 +1856,7 @@
           "status": "生産終了"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:35:29.817Z"
+      "lastCheckedAt": "2026-10-19T03:05:08.254Z"
     },
     {
       "id": "hdph-utv",
@@ -1811,12 +1871,15 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
-      "deviceConnector": "USB Micro-B&times;1",
+      "deviceConnector": "USB Micro-B×1",
       "hostConnectors": [
         "A"
       ],
@@ -1826,7 +1889,7 @@
       "macTimeMachine": false,
       "warrantyYears": 1,
       "weightG": 160,
-      "dimensions": "1・2TB：約76（W）&times;114（D）&times;15（H）mm（但し、突起物を除く） 4TB：約76（W）&times;114（D）&times;20（H）mm（但し、突起物を除く）",
+      "dimensions": "1・2TB：約76（W）×114（D）×15（H）mm（但し、突起物を除く） 4TB：約76（W）×114（D）×20（H）mm（但し、突起物を除く）",
       "features": [
         "静音設計",
         "データ移行アプリ内蔵"
@@ -1897,7 +1960,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:35:34.515Z"
+      "lastCheckedAt": "2026-10-19T03:05:12.963Z"
     },
     {
       "id": "hdph-utv5dk",
@@ -1912,12 +1975,15 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
-      "deviceConnector": "USB Micro-B&times;1",
+      "deviceConnector": "USB Micro-B×1",
       "hostConnectors": [
         "A"
       ],
@@ -1927,7 +1993,7 @@
       "macTimeMachine": false,
       "warrantyYears": 1,
       "weightG": 230,
-      "dimensions": "5TB：約76（W）&times;114（D）&times;20（H）mm（但し、突起物を除く）",
+      "dimensions": "5TB：約76（W）×114（D）×20（H）mm（但し、突起物を除く）",
       "features": [
         "静音設計",
         "データ移行アプリ内蔵"
@@ -1944,7 +2010,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:35:20.331Z"
+      "lastCheckedAt": "2026-10-19T03:04:58.606Z"
     },
     {
       "id": "hdph-utv5dkb",
@@ -1959,12 +2025,15 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
-      "deviceConnector": "USB-microB&times;1",
+      "deviceConnector": "USB-microB×1",
       "hostConnectors": [
         "A"
       ],
@@ -1974,7 +2043,7 @@
       "macTimeMachine": false,
       "warrantyYears": 1,
       "weightG": 230,
-      "dimensions": "約76&times;114&times;20mm（突起部を含まず）",
+      "dimensions": "約76×114×20mm（突起部を含まず）",
       "features": [
         "静音設計",
         "データ移行アプリ内蔵",
@@ -1992,7 +2061,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:35:25.029Z"
+      "lastCheckedAt": "2026-10-19T03:05:03.401Z"
     },
     {
       "id": "hdph-utvb",
@@ -2007,12 +2076,15 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
-      "deviceConnector": "USB-microB&times;1",
+      "deviceConnector": "USB-microB×1",
       "hostConnectors": [
         "A"
       ],
@@ -2022,7 +2094,7 @@
       "macTimeMachine": false,
       "warrantyYears": 1,
       "weightG": 160,
-      "dimensions": "1・2TB：約76&times;114&times;15mm（突起部を含まず） 4TB：約76&times;114&times;20mm（突起部を含まず）",
+      "dimensions": "1・2TB：約76×114×15mm（突起部を含まず） 4TB：約76×114×20mm（突起部を含まず）",
       "features": [
         "静音設計",
         "データ移行アプリ内蔵",
@@ -2094,7 +2166,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:35:39.231Z"
+      "lastCheckedAt": "2026-10-19T03:05:17.715Z"
     },
     {
       "id": "hdpl-utab",
@@ -2109,6 +2181,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": true,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
@@ -2124,7 +2199,7 @@
       "macTimeMachine": false,
       "warrantyYears": 1,
       "weightG": 210,
-      "dimensions": "約35（W）&times;112（D）&times;133（H）mm （スタンド付き、ゴム足含む）",
+      "dimensions": "約35（W）×112（D）×133（H）mm （スタンド付き、ゴム足含む）",
       "features": [
         "静音設計"
       ],
@@ -2158,7 +2233,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:37:21.616Z"
+      "lastCheckedAt": "2026-10-19T03:06:59.541Z"
     },
     {
       "id": "hdpx-uts",
@@ -2173,6 +2248,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
@@ -2188,7 +2266,7 @@
       "macTimeMachine": true,
       "warrantyYears": 1,
       "weightG": 130,
-      "dimensions": "約76（W）&times;114（D）&times;8.6（H）mm",
+      "dimensions": "約76（W）×114（D）×8.6（H）mm",
       "features": [
         "Mac Time Machine対応",
         "静音設計"
@@ -2232,7 +2310,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:35:15.598Z"
+      "lastCheckedAt": "2026-10-19T03:04:53.875Z"
     },
     {
       "id": "hdpx-utsb",
@@ -2247,12 +2325,15 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
-      "deviceConnector": "USB-microB&times;1",
+      "deviceConnector": "USB-microB×1",
       "hostConnectors": [
         "A"
       ],
@@ -2262,7 +2343,7 @@
       "macTimeMachine": true,
       "warrantyYears": 1,
       "weightG": 130,
-      "dimensions": "約76&times;114&times;8.6mm",
+      "dimensions": "約76×114×8.6mm",
       "features": [
         "Mac Time Machine対応",
         "静音設計",
@@ -2307,7 +2388,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:35:05.838Z"
+      "lastCheckedAt": "2026-10-19T03:04:44.149Z"
     },
     {
       "id": "hdpx-utsc",
@@ -2322,6 +2403,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
@@ -2338,7 +2422,7 @@
       "macTimeMachine": true,
       "warrantyYears": 1,
       "weightG": 130,
-      "dimensions": "約76（W）&times; 114（D）&times; 8.6（H）mm",
+      "dimensions": "約76（W）× 114（D）× 8.6（H）mm",
       "features": [
         "Mac Time Machine対応",
         "静音設計"
@@ -2382,7 +2466,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:35:10.748Z"
+      "lastCheckedAt": "2026-10-19T03:04:49.011Z"
     },
     {
       "id": "hdpx-utscb",
@@ -2397,12 +2481,15 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
-      "deviceConnector": "USB-microB&times;1",
+      "deviceConnector": "USB-microB×1",
       "hostConnectors": [
         "A",
         "C"
@@ -2413,7 +2500,7 @@
       "macTimeMachine": true,
       "warrantyYears": 1,
       "weightG": 130,
-      "dimensions": "約76&times;114&times;8.6mm",
+      "dimensions": "約76×114×8.6mm",
       "features": [
         "Mac Time Machine対応",
         "静音設計",
@@ -2458,7 +2545,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:35:00.947Z"
+      "lastCheckedAt": "2026-10-19T03:04:39.448Z"
     },
     {
       "id": "hdpz-utb",
@@ -2473,6 +2560,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": true,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
@@ -2488,7 +2578,7 @@
       "macTimeMachine": false,
       "warrantyYears": 1,
       "weightG": 310,
-      "dimensions": "2TBモデル&hellip;約130（W）&times;125（D）&times;25（H）mm 4TBモデル&hellip;約130（W）&times;125（D）&times;30（H）mm ※突起部分含まず",
+      "dimensions": "2TBモデル…約130（W）×125（D）×25（H）mm 4TBモデル…約130（W）×125（D）×30（H）mm ※突起部分含まず",
       "features": [
         "静音設計"
       ],
@@ -2513,7 +2603,7 @@
           "status": "生産終了"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:37:26.440Z"
+      "lastCheckedAt": "2026-10-19T03:07:04.385Z"
     },
     {
       "id": "hdw-utcs",
@@ -2528,6 +2618,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
@@ -2596,7 +2689,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:34:16.979Z"
+      "lastCheckedAt": "2026-10-19T03:03:55.934Z"
     },
     {
       "id": "hdw-utnb",
@@ -2611,12 +2704,15 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": "当社製LAN DISK",
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
-      "deviceConnector": "USB-B&times;1",
+      "deviceConnector": "USB-B×1",
       "hostConnectors": [
         "A"
       ],
@@ -2626,7 +2722,7 @@
       "macTimeMachine": false,
       "warrantyYears": 5,
       "weightG": 1800,
-      "dimensions": "約85&times;145&times;192mm（突起部を含まず）",
+      "dimensions": "約85×145×192mm（突起部を含まず）",
       "features": [
         "24時間連続稼働",
         "グリーン購入法適合"
@@ -2733,7 +2829,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:37:41.646Z"
+      "lastCheckedAt": "2026-10-19T03:07:19.301Z"
     },
     {
       "id": "hdw-utnc",
@@ -2748,12 +2844,15 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": "当社製LAN DISK",
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
-      "deviceConnector": "USB-B&times;1",
+      "deviceConnector": "USB-B×1",
       "hostConnectors": [
         "A"
       ],
@@ -2763,7 +2862,7 @@
       "macTimeMachine": false,
       "warrantyYears": 3,
       "weightG": 1800,
-      "dimensions": "約85&times;145&times;192mm（ゴム足含む、突起部を含まず）",
+      "dimensions": "約85×145×192mm（ゴム足含む、突起部を含まず）",
       "features": [
         "24時間連続稼働",
         "グリーン購入法適合"
@@ -2870,7 +2969,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:37:36.584Z"
+      "lastCheckedAt": "2026-10-19T03:07:14.264Z"
     },
     {
       "id": "hdw-utu",
@@ -2885,12 +2984,15 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": "当社製LAN DISK",
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
-      "deviceConnector": "USB-B&times;1",
+      "deviceConnector": "USB-B×1",
       "hostConnectors": [
         "A"
       ],
@@ -2900,7 +3002,7 @@
       "macTimeMachine": false,
       "warrantyYears": 5,
       "weightG": 2300,
-      "dimensions": "約85&times;145&times;192mm（突起部を含まず）",
+      "dimensions": "約85×145×192mm（突起部を含まず）",
       "features": [
         "24時間連続稼働",
         "グリーン購入法適合"
@@ -2944,7 +3046,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:37:31.423Z"
+      "lastCheckedAt": "2026-10-19T03:07:09.234Z"
     },
     {
       "id": "r-sspt-uf",
@@ -2959,6 +3061,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": true,
       "shockNote": "コンパクト・軽量・衝撃に強い！持ち運びに◎ コ",
       "encryptionHw": false,
@@ -2970,11 +3075,11 @@
       ],
       "cables": "USBケーブル（C-C USB 40Gbps 約18cm）",
       "cableLengthCm": 18,
-      "interface": "USB 40Gbps（USB4&reg;） USB 20Gbps（USB 3.2 Gen2x2） USB 10Gbps（USB 3.2 Gen2） USB 5Gbps（USB 3.2 Gen1） USB 2.0",
+      "interface": "USB 40Gbps（USB4®） USB 20Gbps（USB 3.2 Gen2x2） USB 10Gbps（USB 3.2 Gen2） USB 5Gbps（USB 3.2 Gen1） USB 2.0",
       "macTimeMachine": true,
       "warrantyYears": 1,
       "weightG": 42,
-      "dimensions": "約64（W）&times;64（D）&times;12（H）mm",
+      "dimensions": "約64（W）×64（D）×12（H）mm",
       "features": [
         "Mac Time Machine対応",
         "静音設計"
@@ -3009,7 +3114,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:36:47.521Z"
+      "lastCheckedAt": "2026-10-19T03:06:25.750Z"
     },
     {
       "id": "ssca-suw",
@@ -3024,23 +3129,26 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": true,
       "shockNote": "はSSDを採用しており、可動するディスク駆動部品がないため、衝撃や振動に強く、安心してお持ち運",
       "encryptionHw": true,
       "encryptionSw": true,
       "encryptionNote": "また、ハードウェア自動暗号化",
-      "deviceConnector": "USB-C&trade;",
+      "deviceConnector": "USB-C™",
       "hostConnectors": [
         "A",
         "C"
       ],
       "cables": "USB ケーブル（A-C USB10Gbps 約50cm）、USB ケーブル（C-C USB20Gbps 約30cm）",
       "cableLengthCm": 50,
-      "interface": "USB 20Gbps（USB 3.2 Gen2&times;2）／USB 10Gbps（USB 3.2 Gen2）／USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "interface": "USB 20Gbps（USB 3.2 Gen2×2）／USB 10Gbps（USB 3.2 Gen2）／USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
       "macTimeMachine": false,
       "warrantyYears": 5,
       "weightG": 59,
-      "dimensions": "約55&times;92&times;12mm",
+      "dimensions": "約55×92×12mm",
       "features": [],
       "imageUrl": "https://www.iodata.jp/image/ssca-suw_l.jpg",
       "variants": [
@@ -3117,7 +3225,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:36:32.779Z"
+      "lastCheckedAt": "2026-10-19T03:06:11.128Z"
     },
     {
       "id": "ssmg-uwcb",
@@ -3132,12 +3240,15 @@
       "smartphoneNote": "iPhone、iPad",
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": true,
       "shockNote": "衝撃・振動に強く、軽量！ 衝撃・振動に強く、軽量！ SSDは",
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
-      "deviceConnector": "USB-C&reg;",
+      "deviceConnector": "USB-C®",
       "hostConnectors": [
         "C"
       ],
@@ -3147,7 +3258,7 @@
       "macTimeMachine": true,
       "warrantyYears": 1,
       "weightG": 32,
-      "dimensions": "約70&times;62&times;8.2mm",
+      "dimensions": "約70×62×8.2mm",
       "features": [
         "Mac Time Machine対応",
         "MagSafe対応"
@@ -3182,7 +3293,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:36:42.674Z"
+      "lastCheckedAt": "2026-10-19T03:06:21.015Z"
     },
     {
       "id": "sspa-usc",
@@ -3197,8 +3308,11 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": true,
-      "shockNote": "&times;11mmと手のひらに収まるコンパクトな筐体は、耐衝撃性や耐振動性を兼ね備えており、持ち運びにも最適！ exFAT",
+      "shockNote": "約46×72×11mmと手のひらに収まるコンパクトな筐体は、耐衝撃性や耐振動性を兼ね備えており、持ち運びにも最適！ exFAT",
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
@@ -3213,7 +3327,7 @@
       "macTimeMachine": true,
       "warrantyYears": 1,
       "weightG": 22,
-      "dimensions": "約46（W）&times;72（D）&times;11（H）mm（突起物含まず）",
+      "dimensions": "約46（W）×72（D）×11（H）mm（突起物含まず）",
       "features": [
         "Mac Time Machine対応",
         "静音設計"
@@ -3248,7 +3362,7 @@
           "status": "生産終了"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:36:52.378Z"
+      "lastCheckedAt": "2026-10-19T03:06:30.471Z"
     },
     {
       "id": "sspd-sutcb",
@@ -3263,6 +3377,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": true,
       "shockNote": "持ち運び時の落下によるデータ消失リスクを軽減する耐衝撃構造を採用し、雨やホコリの侵入を防ぐキャップも装備",
       "encryptionHw": true,
@@ -3279,7 +3396,7 @@
       "macTimeMachine": true,
       "warrantyYears": 5,
       "weightG": 150,
-      "dimensions": "約84&times;130&times;19mm",
+      "dimensions": "約84×130×19mm",
       "features": [
         "Mac Time Machine対応"
       ],
@@ -3331,7 +3448,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:37:02.298Z"
+      "lastCheckedAt": "2026-10-19T03:06:40.079Z"
     },
     {
       "id": "sspd-sutcs",
@@ -3346,6 +3463,9 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": true,
       "shockNote": "①落下の衝撃からデータを守る耐衝撃ボディ 衝撃からデータを守る耐衝撃ボディ 頻繁に持ち歩くポー",
       "encryptionHw": true,
@@ -3362,7 +3482,7 @@
       "macTimeMachine": false,
       "warrantyYears": 3,
       "weightG": 150,
-      "dimensions": "約84（W）&times;130（D）&times;19（H）mm",
+      "dimensions": "約84（W）×130（D）×19（H）mm",
       "features": [
         "データ移行アプリ内蔵"
       ],
@@ -3414,7 +3534,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:36:57.297Z"
+      "lastCheckedAt": "2026-10-19T03:06:35.354Z"
     },
     {
       "id": "sspj-utc",
@@ -3429,6 +3549,9 @@
       "smartphoneNote": "iPhone（※1、2） iPad（※1、2） Androidスマートフォン・タブレット（※1、2、3）",
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
@@ -3444,7 +3567,7 @@
       "macTimeMachine": true,
       "warrantyYears": 1,
       "weightG": 4,
-      "dimensions": "約23（W）&times;8.5（D）&times;14（H）mm（コネクター含まず） 約23（W）&times;15（D）&times;14（H）mm（コネクター含む）",
+      "dimensions": "約23（W）×8.5（D）×14（H）mm（コネクター含まず） 約23（W）×15（D）×14（H）mm（コネクター含む）",
       "features": [
         "Mac Time Machine対応"
       ],
@@ -3469,7 +3592,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:35:58.488Z"
+      "lastCheckedAt": "2026-10-19T03:05:37.290Z"
     },
     {
       "id": "sspj-utcb",
@@ -3484,12 +3607,15 @@
       "smartphoneNote": "iPhone、iPad、Androidスマートフォン・タブレット",
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
-      "deviceConnector": "USB-C&reg;",
+      "deviceConnector": "USB-C®",
       "hostConnectors": [
         "C"
       ],
@@ -3499,7 +3625,7 @@
       "macTimeMachine": true,
       "warrantyYears": 1,
       "weightG": 4,
-      "dimensions": "約23&times;8.5&times;14mm（コネクター含まず） 約23&times;15&times;14mm（コネクター含む）",
+      "dimensions": "約23×8.5×14mm（コネクター含まず） 約23×15×14mm（コネクター含む）",
       "features": [
         "Mac Time Machine対応"
       ],
@@ -3524,7 +3650,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:35:53.678Z"
+      "lastCheckedAt": "2026-10-19T03:05:32.403Z"
     },
     {
       "id": "sspq-usc",
@@ -3539,6 +3665,9 @@
       "smartphoneNote": "iPhone、iPad、Androidスマートフォン・タブレット",
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": true,
+      "gameNote": "PlayStation®5、PlayStation®5 Pro",
+      "otherDevices": null,
       "shockproof": true,
       "shockNote": "耐衝撃・耐振動性能 耐衝撃・耐振動性能 破損しやすいディスク駆動部",
       "encryptionHw": false,
@@ -3555,7 +3684,7 @@
       "macTimeMachine": true,
       "warrantyYears": 1,
       "weightG": 12,
-      "dimensions": "約20&times;78&times;7.8mm",
+      "dimensions": "約20×78×7.8mm",
       "features": [
         "Mac Time Machine対応"
       ],
@@ -3598,7 +3727,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:36:18.143Z"
+      "lastCheckedAt": "2026-10-19T03:05:56.785Z"
     },
     {
       "id": "sspr-suscb",
@@ -3613,12 +3742,15 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": true,
       "shockNote": "耐衝撃・耐振動性能 耐衝撃・耐振動性能 破損しやすいディスク駆動部",
       "encryptionHw": true,
       "encryptionSw": true,
       "encryptionNote": "パスワードロック＆自動暗号化",
-      "deviceConnector": "USB-C&reg;",
+      "deviceConnector": "USB-C®",
       "hostConnectors": [
         "C"
       ],
@@ -3628,7 +3760,7 @@
       "macTimeMachine": true,
       "warrantyYears": 5,
       "weightG": 58,
-      "dimensions": "約35&times;120&times;12mm（突起部を含まず）",
+      "dimensions": "約35×120×12mm（突起部を含まず）",
       "features": [
         "Mac Time Machine対応"
       ],
@@ -3662,7 +3794,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:36:37.654Z"
+      "lastCheckedAt": "2026-10-19T03:06:15.934Z"
     },
     {
       "id": "ssps-us",
@@ -3677,6 +3809,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
@@ -3692,7 +3827,7 @@
       "macTimeMachine": true,
       "warrantyYears": 1,
       "weightG": 13,
-      "dimensions": "約23.5（W）&times;68.8（D）&times;11.3（H）mm ※コネクター収納時、突起部含む",
+      "dimensions": "約23.5（W）×68.8（D）×11.3（H）mm ※コネクター収納時、突起部含む",
       "features": [
         "Mac Time Machine対応",
         "静音設計"
@@ -3754,7 +3889,7 @@
           "status": "生産終了"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:36:08.343Z"
+      "lastCheckedAt": "2026-10-19T03:05:47.067Z"
     },
     {
       "id": "ssps-usb",
@@ -3769,6 +3904,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": false,
+      "gameConsole": true,
+      "gameNote": "PlayStation®5、PlayStation®5 Digital Edition、PlayStation®5 Pro",
+      "otherDevices": null,
       "shockproof": true,
       "shockNote": "耐衝撃・耐振動性能 耐衝撃・耐振動性能 破損しやすいディスク駆動部",
       "encryptionHw": false,
@@ -3784,7 +3922,7 @@
       "macTimeMachine": true,
       "warrantyYears": 1,
       "weightG": 13,
-      "dimensions": "約23.5&times;68.8&times;11.3mm （コネクター収納時、スライドスイッチ含む）",
+      "dimensions": "約23.5×68.8×11.3mm （コネクター収納時、スライドスイッチ含む）",
       "features": [
         "Mac Time Machine対応",
         "静音設計"
@@ -3801,7 +3939,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:36:03.289Z"
+      "lastCheckedAt": "2026-10-19T03:05:42.077Z"
     },
     {
       "id": "ssps-uss",
@@ -3816,6 +3954,9 @@
       "smartphoneNote": null,
       "tv": true,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
@@ -3831,7 +3972,7 @@
       "macTimeMachine": false,
       "warrantyYears": 1,
       "weightG": 13,
-      "dimensions": "約23.5（W）&times;68.8（D）&times;11.3（H）mm ※コネクタ収納時、突起部含む",
+      "dimensions": "約23.5（W）×68.8（D）×11.3（H）mm ※コネクタ収納時、突起部含む",
       "features": [
         "静音設計",
         "データ移行アプリ内蔵"
@@ -3841,7 +3982,7 @@
         {
           "sku": "SSPS-US500GR/S",
           "capacityGB": 500,
-          "color": "グレー&times;ブラック",
+          "color": "グレー×ブラック",
           "priceIncTax": 35420,
           "priceExTax": 32200,
           "jan": "4957180181394",
@@ -3850,14 +3991,14 @@
         {
           "sku": "SSPS-US1GR/S",
           "capacityGB": 1000,
-          "color": "グレー&times;ブラック",
+          "color": "グレー×ブラック",
           "priceIncTax": 63690,
           "priceExTax": 57900,
           "jan": "4957180181400",
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:36:13.185Z"
+      "lastCheckedAt": "2026-10-19T03:05:51.852Z"
     },
     {
       "id": "sspu-tfcb",
@@ -3872,22 +4013,25 @@
       "smartphoneNote": null,
       "tv": false,
       "tvRecordingMain": false,
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
       "shockproof": false,
       "shockNote": null,
       "encryptionHw": false,
       "encryptionSw": false,
       "encryptionNote": null,
-      "deviceConnector": "USB-C&reg;",
+      "deviceConnector": "USB-C®",
       "hostConnectors": [
         "C"
       ],
       "cables": "ー",
       "cableLengthCm": null,
-      "interface": "Thunderbolt 5／Thunderbolt 4／Thunderbolt 3／USB 40Gbps（USB4&reg;）",
+      "interface": "Thunderbolt 5／Thunderbolt 4／Thunderbolt 3／USB 40Gbps（USB4®）",
       "macTimeMachine": true,
       "warrantyYears": 5,
       "weightG": 290,
-      "dimensions": "約150&times;58&times;19mm（突起部を含まず）",
+      "dimensions": "約150×58×19mm（突起部を含まず）",
       "features": [
         "Mac Time Machine対応"
       ],
@@ -3921,7 +4065,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-19T02:36:27.940Z"
+      "lastCheckedAt": "2026-10-19T03:06:06.385Z"
     }
   ]
 }
