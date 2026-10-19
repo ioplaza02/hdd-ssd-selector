@@ -359,6 +359,30 @@
         el.outerHTML = `<span class="conn-ico-svg">${plugIcon(el.classList.contains("conn-ico--a") ? "A" : "C", 1.4)}</span>`;
       });
 
+      // 蛇腹（アコーディオン）：各グループの見出しを押すと開閉する。NASセレクターと同じ操作感
+      const OPEN_BY_DEFAULT = ["media", "cap", "price"];
+      $$(".filter-panel .fgroup").forEach((g) => {
+        const title = g.querySelector(".fgroup__title");
+        const key = (g.querySelector("[data-filter]") || {}).dataset?.filter || "";
+        const body = document.createElement("div");
+        body.className = "fgroup__body";
+        body.id = `fg-body-${key}`;
+        [...g.children].filter((c) => c !== title).forEach((c) => body.appendChild(c));
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "fgroup__toggle";
+        btn.dataset.group = key;
+        btn.setAttribute("aria-controls", body.id);
+        btn.innerHTML = `<span class="fgroup__arrow" aria-hidden="true">▸</span><span class="fgroup__name">${title.textContent}</span><span class="fgroup__count" hidden></span>`;
+        title.replaceWith(btn);
+        g.appendChild(body);
+        g.dataset.group = key;
+        const open = OPEN_BY_DEFAULT.includes(key) || (state[key] && state[key].size > 0);
+        setGroupOpen(g, open);
+        btn.addEventListener("click", () => setGroupOpen(g, !g.classList.contains("is-open")));
+      });
+      $("#reset-btn-bottom").addEventListener("click", () => $("#reset-btn").click());
+
       // スマホ表示では絞り込みを折りたためるようにする
       const panel = $("#filter-panel");
       const tg = document.createElement("button");
@@ -372,9 +396,23 @@
         tg.textContent = panel.classList.contains("is-collapsed") ? "絞り込み条件をひらく" : "絞り込み条件をとじる";
       });
     }
+    function setGroupOpen(g, open) {
+      g.classList.toggle("is-open", open);
+      const btn = g.querySelector(".fgroup__toggle");
+      const body = g.querySelector(".fgroup__body");
+      if (btn) btn.setAttribute("aria-expanded", open ? "true" : "false");
+      if (body) body.hidden = !open;
+    }
     function toggle(set, v) { if (set.has(v)) set.delete(v); else set.add(v); }
 
     function syncFilterUi() {
+      // 閉じているグループでも、選んでいる数を見出しの横に出す
+      $$(".filter-panel .fgroup").forEach((g) => {
+        const key = g.dataset.group;
+        const n = key && state[key] ? state[key].size : 0;
+        const c = g.querySelector(".fgroup__count");
+        if (c) { c.hidden = n === 0; c.textContent = n ? `${n}件選択中` : ""; }
+      });
       $$("[data-filter] button[data-value]").forEach((btn) => {
         const group = btn.closest("[data-filter]").dataset.filter;
         const on = state[group].has(btn.dataset.value);
@@ -839,6 +877,8 @@
         });
         renderUpdatedAt(data.updatedAt);
         const open = readUrl();
+        // URLで条件が指定されているグループは、閉じたままだと気づけないので開いておく
+        $$(".filter-panel .fgroup").forEach((g) => { if (state[g.dataset.group] && state[g.dataset.group].size) setGroupOpen(g, true); });
         syncFilterUi();
         render();
         if (open && state.compare.length) openModal();

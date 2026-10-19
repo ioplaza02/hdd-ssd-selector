@@ -138,36 +138,34 @@ function discoverSeries(html, categoryKey, map) {
     if (!map.has(slug)) map.set(slug, { slug, folder, url, listedIn: new Set() });
     map.get(slug).listedIn.add(categoryKey);
   }
-  extractListingSpeeds(html, map);
 }
 
-// 一覧ページに各シリーズの「Read 約400MB/s」「Write 約400MB/s」の枠がある（主にSSD）。
-// シリーズへの最初のリンクから、別シリーズへの最初のリンクまでを「そのシリーズの区画」とみなし、
-// その中から読み書き速度と注記（例：「※1TBモデルはWrite3,500MB/sです。」）を拾う。
-function extractListingSpeeds(html, map) {
-  const re = /href=["'](?:https?:\/\/www\.iodata\.jp)?\/product\/hdd\/(?:hdd|portable|ssd|rokuga|bizhdd)\/([a-z0-9][a-z0-9-]*)\//gi;
-  const hits = [];
-  let m;
-  while ((m = re.exec(html)) !== null) hits.push({ slug: m[1].toLowerCase(), index: m.index });
-  const seen = new Set();
-  for (let i = 0; i < hits.length; i++) {
-    const { slug, index } = hits[i];
-    if (seen.has(slug)) continue;
-    seen.add(slug);
-    const next = hits.slice(i + 1).find((h) => h.slug !== slug);
-    const block = cellText(html.slice(index, next ? next.index : index + 8000));
-    const speed = parseSpeed(block);
-    if (speed && map.has(slug) && !map.get(slug).speed) map.get(slug).speed = speed;
-  }
-}
-
+// 商品ページ本文から読み書き速度を探す（仕様表に無い場合の予備）。
+// 書き方の例：「Read 約400MB/s」「読み込み 最大約2,000MB/s」「最大約400MB/sの読み込み速度と約400MB/sの書き込み速度」
 function parseSpeed(text) {
-  const num = (s) => Number(String(s).replace(/,/g, ""));
-  const r = text.match(/(?:Read|読み出し|リード)\s*[:：]?\s*(?:最大)?\s*約?\s*([\d,]+)\s*MB\/s/i);
-  const w = text.match(/(?:Write|書き込み|ライト)\s*[:：]?\s*(?:最大)?\s*約?\s*([\d,]+)\s*MB\/s/i);
+  const num = (x) => Number(String(x).replace(/,/g, ""));
+  const pick = (labelRe) => {
+    const after = text.match(new RegExp(`(?:${labelRe})[^\\d。]{0,12}?([\\d,]+)\\s*MB\\/s`, "i"));
+    if (after) return num(after[1]);
+    const before = text.match(new RegExp(`([\\d,]+)\\s*MB\\/s\\s*の\\s*(?:${labelRe})`, "i"));
+    return before ? num(before[1]) : null;
+  };
+  const r = pick("Read|読み込み|読み出し|読込");
+  const w = pick("Write|書き込み|書込");
   if (!r && !w) return null;
-  const note = (text.match(/※[^※]{0,40}(?:Read|Write|読み|書き)[^※]{0,40}?MB\/s[^※ ]{0,6}/i) || [])[0] || null;
-  return { readMBps: r ? num(r[1]) : null, writeMBps: w ? num(w[1]) : null, note: note ? note.trim() : null };
+  return { readMBps: r, writeMBps: w, note: null };
+}
+
+// 仕様表の「最大転送速度」欄（読み込み／書き込み）から速度を読む。
+// 値に「（1TBモデルは約3,500MB/s）」のような補足があれば注記として残す。
+function speedFromSpec(spec) {
+  const r = findSpec(spec, [/最大転送速度:読/, /^読み込み$/, /^読み出し$/, /読み込み速度/, /読み出し速度/]);
+  const w = findSpec(spec, [/最大転送速度:書/, /^書き込み$/, /書き込み速度/]);
+  const first = (t) => { const m = String(t || "").match(/([\d,]+)\s*MB\/s/i); return m ? Number(m[1].replace(/,/g, "")) : null; };
+  const readMBps = first(r), writeMBps = first(w);
+  if (!readMBps && !writeMBps) return null;
+  const extra = [r, w].filter((t) => t && (String(t).match(/MB\/s/gi) || []).length > 1).map((t) => t.replace(/^[^（(※]*/, "").trim()).filter(Boolean);
+  return { readMBps, writeMBps, note: extra.length ? extra.join(" ") : null };
 }
 
 // ---------- 2) 価格表（index.htm） ----------
@@ -341,8 +339,10 @@ function deriveFields({ slug, folder, listedIn, indexHtml, specHtml }) {
   // 「耐衝撃」と書かず「衝撃・振動に強い」と書く商品もある（例：R-SSPT-UF、SSMG-UWCB）
   const shockproof = /耐衝撃|衝撃(?:や|・|、)?(?:振動)?に強/.test(all);
   // 補足は規格（MIL-STD-810H 等）の記載があるときだけ。宣伝文の切れ端を出さないため
-  let shockNote = (all.match(/(?:米国)?MIL[-‐]?STD[-‐]?\d+[A-Z]?[^。、]{0,40}/) || [])[0] || null;
-  if (shockNote && !/[（(]/.test(shockNote)) shockNote = shockNote.replace(/[）)]/g, ""); // 括弧の片割れを除く
+  // 補足は「MIL-STD-810H（Method 516.8）準拠」の形に整える（宣伝文の切れ端を出さないため）
+  const milCode = all.match(/MIL[-‐－]?STD[-‐－]?(\d+[A-Z]?)/);
+  const milMethod = all.match(/Method\s*[:：]?\s*([\d.]+)/i);
+  const shockNote = milCode ? `MIL-STD-${milCode[1]}${milMethod ? `（Method ${milMethod[1]}）` : ""}準拠の落下試験を実施` : null;
 
   const encHw = /(ハードウェア暗号化|自動暗号化|AES\s*-?\s*\d{3}\s*bit[^。]{0,20}暗号化|暗号化チップ)/i.test(all);
   // 「パソコンの暗号化・管理ソフトに対応」：パソコン側のアプリ（I-O Security Lock App、
@@ -528,8 +528,9 @@ async function main() {
       continue;
     }
     const fields = deriveFields({ ...s, indexHtml, specHtml });
-    // 読み書き速度：一覧ページの枠を優先し、無ければ商品ページ本文から探す
-    fields.speed = s.speed || parseSpeed(bodyText(indexHtml)) || null;
+    // 読み書き速度：仕様表の「最大転送速度」を優先し、無ければ商品ページ本文から探す
+    // （一覧ページの「Read／Write」枠は画像のため読めない）
+    fields.speed = speedFromSpec(extractSpecMap(specHtml)) || parseSpeed(bodyText(indexHtml)) || null;
     // 価格表に色が無く、仕様表の「カラー」が1色だけのとき（例：SSPS-US/S）はそれを使う
     const specColor = findSpec(extractSpecMap(specHtml), [/^カラー$/, /本体色/]);
     if (specColor && !/[、,／\/]/.test(specColor)) variants.forEach((v) => { if (!v.color) v.color = specColor; });
