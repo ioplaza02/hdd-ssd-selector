@@ -1,0 +1,12 @@
+{
+  "_説明": "自動取得で読み間違えた項目を、ここに正しい値で書いておくと毎回の自動更新で上書きされます。series の下に シリーズID（URLの末尾、例 hdpx-utscb）を書き、直したい項目と値を並べます。型番ごとの値は variants の下に型番で書きます。シリーズごと載せたくない場合は \"exclude\": true。_memo は自由メモ欄（画面には出ません）。",
+  "_例": {
+    "hdpx-utscb": {
+      "_memo": "スマホ対応の誤判定を修正",
+      "smartphone": false,
+      "cableLengthCm": 30,
+      "variants": { "HDPX-UTSC1KB": { "jan": "4957180000000" } }
+    }
+  },
+  "series": {}
+}

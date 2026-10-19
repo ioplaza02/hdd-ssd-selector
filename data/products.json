@@ -1,0 +1,3988 @@
+{
+  "updatedAt": "2026-10-19T01:57:33.678098Z",
+  "products": [
+    {
+      "id": "avhd-asu",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/rokuga/avhd-asu/index.htm",
+      "seriesName": "AVHD-AS/Uシリーズ",
+      "category": "rokuga",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 1,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": true,
+      "tvRecordingMain": true,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-microB",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USB 3.2 Gen 1（USB 3.0）ケーブルA-Micro B（約1.5m）1本",
+      "cableLengthCm": 150,
+      "interface": "USB 3.2 Gen 1（USB 3.0）",
+      "macTimeMachine": false,
+      "warrantyYears": 1,
+      "weightG": 910,
+      "dimensions": "約180（W）×180（D）×45（H）mm（ゴム足含む、突起部含まず）",
+      "features": [
+        "パナソニック推奨",
+        "AVコマンド（ATA-7）対応",
+        "24時間連続録画対応",
+        "4K放送録画対応",
+        "ファンレス静音GOLD",
+        "日本製・返金保証付き"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/avhd-asu_l.jpg",
+      "variants": [
+        {
+          "sku": "AVHD-AS2/U",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 28050,
+          "priceExTax": 25500,
+          "jan": "4957180175683",
+          "status": "現行"
+        },
+        {
+          "sku": "AVHD-AS4/U",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 41580,
+          "priceExTax": 37800,
+          "jan": "4957180175690",
+          "status": "現行"
+        },
+        {
+          "sku": "AVHD-AS6/U",
+          "capacityGB": 6000,
+          "color": null,
+          "priceIncTax": 53790,
+          "priceExTax": 48900,
+          "jan": "4957180175706",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "avhd-usu",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/rokuga/avhd-usu/index.htm",
+      "seriesName": "AVHD-US/Uシリーズ",
+      "category": "rokuga",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 1,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": true,
+      "tvRecordingMain": true,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-microB",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USB 3.2 Gen 1（USB 3.0）ケーブルA-Micro B（約1.5m）1本",
+      "cableLengthCm": 150,
+      "interface": "USB 3.2 Gen 1（USB 3.0）",
+      "macTimeMachine": false,
+      "warrantyYears": 1,
+      "weightG": 910,
+      "dimensions": "約180（W）×180（D）×45（H）mm ※ゴム足含む、突起物含まず",
+      "features": [
+        "最大8TBで長時間録画",
+        "24時間連続録画対応",
+        "4K放送録画対応",
+        "タイムシフトマシン対応",
+        "静音ランクGOLD",
+        "日本製・返金保証付き"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/avhd-usu_l.jpg",
+      "variants": [
+        {
+          "sku": "AVHD-US4/U",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 32890,
+          "priceExTax": 29900,
+          "jan": "4957180175621",
+          "status": "生産終了"
+        },
+        {
+          "sku": "AVHD-US6/U",
+          "capacityGB": 6000,
+          "color": null,
+          "priceIncTax": 47630,
+          "priceExTax": 43300,
+          "jan": "4957180175638",
+          "status": "現行"
+        },
+        {
+          "sku": "AVHD-US8/U",
+          "capacityGB": 8000,
+          "color": null,
+          "priceIncTax": 58740,
+          "priceExTax": 53400,
+          "jan": "4957180175645",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "avhd-wru",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/rokuga/avhd-wru/index.htm",
+      "seriesName": "AVHD-WR/Uシリーズ",
+      "category": "rokuga",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 1,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": true,
+      "tvRecordingMain": true,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-microB",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USB 3.2 Gen 1ケーブル（A-Micro B）約2m",
+      "cableLengthCm": 200,
+      "interface": "USB 3.2 Gen 1（USB 3.0）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 1,
+      "weightG": 1400,
+      "dimensions": "約215×187×35.5mm（ゴム足含む、コネクター・突起部含まず）",
+      "features": [
+        "24時間連続録画対応",
+        "AVコマンド（ATA-7）対応",
+        "電源内蔵・最大4台積み重ね",
+        "BS/110度CS 4K録画対応",
+        "静音ランクGOLD",
+        "2mケーブル付属"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/avhd-wru_l.jpg",
+      "variants": [
+        {
+          "sku": "AVHD-WR3/U",
+          "capacityGB": 3000,
+          "color": null,
+          "priceIncTax": 29480,
+          "priceExTax": 26800,
+          "jan": "4957180175713",
+          "status": "生産終了"
+        },
+        {
+          "sku": "AVHD-WR4/U",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 47630,
+          "priceExTax": 43300,
+          "jan": "4957180175720",
+          "status": "現行"
+        },
+        {
+          "sku": "AVHD-WR6/U",
+          "capacityGB": 6000,
+          "color": null,
+          "priceIncTax": 59950,
+          "priceExTax": 54500,
+          "jan": "4957180175737",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "avssd-rs",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/rokuga/avssd-rs/index.htm",
+      "seriesName": "AVSSD-RSシリーズ",
+      "category": "rokuga",
+      "mediaType": "SSD",
+      "formFactor": "stick",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": true,
+      "tvRecordingMain": true,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-A",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": null,
+      "cableLengthCm": null,
+      "interface": "USB 10Gbps／USB 5Gbps／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 1,
+      "weightG": 11,
+      "dimensions": "約20（W）×62（D）×8（H）mm",
+      "features": [
+        "タイムシフトマシン対応",
+        "24時間連続録画",
+        "6チャンネル同時録画",
+        "4K放送録画対応",
+        "テレビ背面に挿すだけ",
+        "静音ランクPLATINUM"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/avssd-rs_l.jpg",
+      "variants": [
+        {
+          "sku": "AVSSD-RS1",
+          "capacityGB": 1000,
+          "color": null,
+          "priceIncTax": 98120,
+          "priceExTax": 89200,
+          "jan": "4957180147734",
+          "status": "現行"
+        },
+        {
+          "sku": "AVSSD-RS2",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 145090,
+          "priceExTax": 131900,
+          "jan": "4957180147741",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hd4-utn",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/bizhdd/hd4-utn/index.htm",
+      "seriesName": "法人向け 5年保証 USB 5Gbps＆RAID対応 4ドライブ外付ハードディスクHD4-UTNシリーズ",
+      "category": "biz",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 4,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-B",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-B USB 5Gbps 約1m）",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 5,
+      "weightG": 4900,
+      "dimensions": "約163（W）x 210（D）x 160（H）mm（ゴム足含む、突起部含まず）",
+      "features": [
+        "最大128TBの大容量",
+        "5年保証で長く安心",
+        "RAID 0/5/10対応",
+        "NAS用HDD搭載",
+        "HDDをかんたん交換",
+        "DAS CONNECT対応"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hd4-utn_l.jpg",
+      "variants": [
+        {
+          "sku": "HD4-UTN08",
+          "capacityGB": 8000,
+          "color": null,
+          "priceIncTax": 169730,
+          "priceExTax": 154300,
+          "jan": "4957180162096",
+          "status": "現行"
+        },
+        {
+          "sku": "HD4-UTN16",
+          "capacityGB": 16000,
+          "color": null,
+          "priceIncTax": 231220,
+          "priceExTax": 210200,
+          "jan": "4957180162102",
+          "status": "現行"
+        },
+        {
+          "sku": "HD4-UTN32",
+          "capacityGB": 32000,
+          "color": null,
+          "priceIncTax": 428120,
+          "priceExTax": 389200,
+          "jan": "4957180162126",
+          "status": "現行"
+        },
+        {
+          "sku": "HD4-UTN48",
+          "capacityGB": 48000,
+          "color": null,
+          "priceIncTax": 615120,
+          "priceExTax": 559200,
+          "jan": "4957180162133",
+          "status": "受注生産"
+        },
+        {
+          "sku": "HD4-UTN80",
+          "capacityGB": 80000,
+          "color": null,
+          "priceIncTax": 984170,
+          "priceExTax": 894700,
+          "jan": "4957180162157",
+          "status": "受注生産"
+        },
+        {
+          "sku": "HD4-UTN96",
+          "capacityGB": 96000,
+          "color": null,
+          "priceIncTax": 1168750,
+          "priceExTax": 1062500,
+          "jan": "4957180179346",
+          "status": "受注生産"
+        },
+        {
+          "sku": "HD4-UTN128",
+          "capacityGB": 128000,
+          "color": null,
+          "priceIncTax": 1476310,
+          "priceExTax": 1342100,
+          "jan": "4957180186085",
+          "status": "受注生産"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hd4-utnc",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/bizhdd/hd4-utnc/index.htm",
+      "seriesName": "HD4-UTNCシリーズ",
+      "category": "biz",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 4,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-B",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-B USB 5Gbps 約1m）",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 3,
+      "weightG": 4900,
+      "dimensions": "約163×210×160mm（ゴム足含む、突起部を含まず）",
+      "features": [
+        "4ドライブRAID 5対応",
+        "最大128TBの大容量",
+        "RAID 0/5/10対応",
+        "NAS用HDD搭載",
+        "HDDをかんたん交換",
+        "NarSuS対応"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hd4-utnc_l.jpg",
+      "variants": [
+        {
+          "sku": "HD4-UTN8C",
+          "capacityGB": 8000,
+          "color": null,
+          "priceIncTax": 177100,
+          "priceExTax": 161000,
+          "jan": "4957180193878",
+          "status": "現行"
+        },
+        {
+          "sku": "HD4-UTN16C",
+          "capacityGB": 16000,
+          "color": null,
+          "priceIncTax": 238590,
+          "priceExTax": 216900,
+          "jan": "4957180193885",
+          "status": "現行"
+        },
+        {
+          "sku": "HD4-UTN32C",
+          "capacityGB": 32000,
+          "color": null,
+          "priceIncTax": 440330,
+          "priceExTax": 400300,
+          "jan": "4957180193892",
+          "status": "現行"
+        },
+        {
+          "sku": "HD4-UTN48C",
+          "capacityGB": 48000,
+          "color": null,
+          "priceIncTax": 627330,
+          "priceExTax": 570300,
+          "jan": "4957180193908",
+          "status": "受注生産"
+        },
+        {
+          "sku": "HD4-UTN80C",
+          "capacityGB": 80000,
+          "color": null,
+          "priceIncTax": 996490,
+          "priceExTax": 905900,
+          "jan": "4957180193915",
+          "status": "受注生産"
+        },
+        {
+          "sku": "HD4-UTN96C",
+          "capacityGB": 96000,
+          "color": null,
+          "priceIncTax": 1180960,
+          "priceExTax": 1073600,
+          "jan": "4957180193922",
+          "status": "受注生産"
+        },
+        {
+          "sku": "HD4-UTN128C",
+          "capacityGB": 128000,
+          "color": null,
+          "priceIncTax": 1488520,
+          "priceExTax": 1353200,
+          "jan": "4957180193939",
+          "status": "受注生産"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdcx-utp",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/hdd/hdcx-utp/index.htm",
+      "seriesName": "HDCX-UTPシリーズ",
+      "category": "stationary",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 1,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-microB",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-Micro B USB 5Gbps）約1m",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 1,
+      "weightG": 850,
+      "dimensions": "約34（W）×172（D）×115（H）mm ※突起部分含まず",
+      "features": [
+        "最大24TBの大容量",
+        "CMRドライブ搭載",
+        "ファンレス静音設計",
+        "HDD診断アプリ診断ミレル",
+        "縦置き・横置き対応",
+        "日本製・全数通電検査"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdcx-utp_l.jpg",
+      "variants": [
+        {
+          "sku": "HDCX-UT12P",
+          "capacityGB": 12000,
+          "color": null,
+          "priceIncTax": 85800,
+          "priceExTax": 78000,
+          "jan": "4957180184593",
+          "status": "現行"
+        },
+        {
+          "sku": "HDCX-UT16P",
+          "capacityGB": 16000,
+          "color": null,
+          "priceIncTax": 110440,
+          "priceExTax": 100400,
+          "jan": "4957180184609",
+          "status": "現行"
+        },
+        {
+          "sku": "HDCX-UT20P",
+          "capacityGB": 20000,
+          "color": null,
+          "priceIncTax": 145090,
+          "priceExTax": 131900,
+          "jan": "4957180184616",
+          "status": "現行"
+        },
+        {
+          "sku": "HDCX-UT24P",
+          "capacityGB": 24000,
+          "color": null,
+          "priceIncTax": 182050,
+          "priceExTax": 165500,
+          "jan": "4957180184623",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdd-utb",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/hdd/hdd-utb/index.htm",
+      "seriesName": "HDD-UTBシリーズ",
+      "category": "stationary",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 1,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": true,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-microB",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "A-microB USB 5Gbps（USB 3.2 Gen1）ケーブル（約1m）×1",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 1,
+      "weightG": 560,
+      "dimensions": "約35（W）×172（D）×115（H）mm（ゴム足、コネクター、突起部含まず）",
+      "features": [
+        "ファンレス静音GOLD",
+        "LEDオフ機能",
+        "テレビ・PC電源連動",
+        "高速CMRドライブ搭載",
+        "4K放送録画対応",
+        "日本国内工場で組立"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdd-utb_l.jpg",
+      "variants": [
+        {
+          "sku": "HDD-UT1KB",
+          "capacityGB": 1000,
+          "color": "ブラック",
+          "priceIncTax": 23100,
+          "priceExTax": 21000,
+          "jan": "4957180171982",
+          "status": "現行"
+        },
+        {
+          "sku": "HDD-UT2KB",
+          "capacityGB": 2000,
+          "color": "ブラック",
+          "priceIncTax": 25520,
+          "priceExTax": 23200,
+          "jan": "4957180172002",
+          "status": "現行"
+        },
+        {
+          "sku": "HDD-UT4KB",
+          "capacityGB": 4000,
+          "color": "ブラック",
+          "priceIncTax": 32890,
+          "priceExTax": 29900,
+          "jan": "4957180172026",
+          "status": "現行"
+        },
+        {
+          "sku": "HDD-UT6KB",
+          "capacityGB": 6000,
+          "color": "ブラック",
+          "priceIncTax": 42790,
+          "priceExTax": 38900,
+          "jan": "4957180172040",
+          "status": "現行"
+        },
+        {
+          "sku": "HDD-UT8KB",
+          "capacityGB": 8000,
+          "color": "ブラック",
+          "priceIncTax": 55110,
+          "priceExTax": 50100,
+          "jan": "4957180172057",
+          "status": "現行"
+        },
+        {
+          "sku": "HDD-UT2WB",
+          "capacityGB": 2000,
+          "color": "ホワイト",
+          "priceIncTax": 25520,
+          "priceExTax": 23200,
+          "jan": "4957180172019",
+          "status": "現行"
+        },
+        {
+          "sku": "HDD-UT4WB",
+          "capacityGB": 4000,
+          "color": "ホワイト",
+          "priceIncTax": 32890,
+          "priceExTax": 29900,
+          "jan": "4957180172033",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdd-utc",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/hdd/hdd-utc/index.htm",
+      "seriesName": "HDD-UTCシリーズ",
+      "category": "stationary",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 1,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": true,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-microB",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-microB USB 5Gbps 約1m）",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 1,
+      "weightG": 560,
+      "dimensions": "約35×172×115mm（突起部を含まず）",
+      "features": [
+        "静音ランクGOLD",
+        "LEDオン/オフ切替",
+        "テレビ・PC電源連動",
+        "BS/110度CS 4K録画対応",
+        "縦置き・横置き対応",
+        "ケンジントンスロット搭載"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdd-utc_l.jpg",
+      "variants": [
+        {
+          "sku": "HDD-UT1KC",
+          "capacityGB": 1000,
+          "color": "ブラック",
+          "priceIncTax": 30470,
+          "priceExTax": 27700,
+          "jan": "4957180195520",
+          "status": "現行"
+        },
+        {
+          "sku": "HDD-UT2KC",
+          "capacityGB": 2000,
+          "color": "ブラック",
+          "priceIncTax": 35420,
+          "priceExTax": 32200,
+          "jan": "4957180195537",
+          "status": "現行"
+        },
+        {
+          "sku": "HDD-UT4KC",
+          "capacityGB": 4000,
+          "color": "ブラック",
+          "priceIncTax": 41580,
+          "priceExTax": 37800,
+          "jan": "4957180195544",
+          "status": "現行"
+        },
+        {
+          "sku": "HDD-UT6KC",
+          "capacityGB": 6000,
+          "color": "ブラック",
+          "priceIncTax": 52580,
+          "priceExTax": 47800,
+          "jan": "4957180195551",
+          "status": "現行"
+        },
+        {
+          "sku": "HDD-UT8KC",
+          "capacityGB": 8000,
+          "color": "ブラック",
+          "priceIncTax": 67320,
+          "priceExTax": 61200,
+          "jan": "4957180195568",
+          "status": "現行"
+        },
+        {
+          "sku": "HDD-UT2WC",
+          "capacityGB": 2000,
+          "color": "ホワイト",
+          "priceIncTax": 35420,
+          "priceExTax": 32200,
+          "jan": "4957180195575",
+          "status": "現行"
+        },
+        {
+          "sku": "HDD-UT4WC",
+          "capacityGB": 4000,
+          "color": "ホワイト",
+          "priceIncTax": 41580,
+          "priceExTax": 37800,
+          "jan": "4957180195582",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdja-sutc",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/hdd/hdja-sutc/index.htm",
+      "seriesName": "HDJA-SUTCシリーズ",
+      "category": "biz",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 1,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": true,
+      "encryptionSw": true,
+      "encryptionNote": "AES256bit ハードウェア自動暗号化＋パスワード認証（管理ソフトSUHManager別売対応）",
+      "deviceConnector": "USB-B",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-B USB 5Gbps）約1m",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 3,
+      "weightG": 1000,
+      "dimensions": "約45（W）×216（D）×155（H）mm（ゴム足、コネクター、突起部含まず）",
+      "features": [
+        "AES256bit自動暗号化",
+        "パスワード認証",
+        "安心の3年保証",
+        "電源内蔵でACアダプター不要",
+        "NarSuSクラウド管理対応",
+        "ケンジントンスロット搭載"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdja-sutc_l.jpg",
+      "variants": [
+        {
+          "sku": "HDJA-SUTC1",
+          "capacityGB": 1000,
+          "color": null,
+          "priceIncTax": 28050,
+          "priceExTax": 25500,
+          "jan": "4957180170220",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-SUTC2",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 31680,
+          "priceExTax": 28800,
+          "jan": "4957180170237",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-SUTC4",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 41580,
+          "priceExTax": 37800,
+          "jan": "4957180170244",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-SUTC6",
+          "capacityGB": 6000,
+          "color": null,
+          "priceIncTax": 51370,
+          "priceExTax": 46700,
+          "jan": "4957180170251",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-SUTC8",
+          "capacityGB": 8000,
+          "color": null,
+          "priceIncTax": 61160,
+          "priceExTax": 55600,
+          "jan": "4957180177335",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdja-utb",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/hdd/hdja-utb/index.htm",
+      "seriesName": "HDJA-UTBシリーズ",
+      "category": "stationary",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 1,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-B",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-B USB 5Gbps）約1m",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 1,
+      "weightG": 1300,
+      "dimensions": "約45×216×155mm（突起部を除く）",
+      "features": [
+        "電源内蔵でACアダプター不要",
+        "ヒートシンク＋静音ファン",
+        "縦置き・横置き対応",
+        "ケンジントンスロット搭載",
+        "PC電源連動機能",
+        "NarSuSクラウド監視対応"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdja-utb_l.jpg",
+      "variants": [
+        {
+          "sku": "HDJA-UT1B",
+          "capacityGB": 1000,
+          "color": null,
+          "priceIncTax": 34100,
+          "priceExTax": 31000,
+          "jan": "4957180195599",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UT2B",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 44000,
+          "priceExTax": 40000,
+          "jan": "4957180195605",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UT4B",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 52580,
+          "priceExTax": 47800,
+          "jan": "4957180195612",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UT8B",
+          "capacityGB": 8000,
+          "color": null,
+          "priceIncTax": 79640,
+          "priceExTax": 72400,
+          "jan": "4957180195629",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdja-utnb",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/bizhdd/hdja-utnb/index.htm",
+      "seriesName": "法人向け 5年保証 USB 5Gbps（USB 3.2 Gen1）対応 外付けハードディスクHDJA-UTNBシリーズ",
+      "category": "biz",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 1,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-B",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-B USB 5Gbps 約1m）1本",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 5,
+      "weightG": 1300,
+      "dimensions": "約45（W）×216（D）×155（H）mm （突起部分を除く）",
+      "features": [
+        "NAS用HDD搭載",
+        "長期5年保証",
+        "静音ランクBRONZE",
+        "電源内蔵で配線すっきり",
+        "RAIDeX対応",
+        "NarSuS対応"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdja-utnb_l.jpg",
+      "variants": [
+        {
+          "sku": "HDJA-UTN1B",
+          "capacityGB": 1000,
+          "color": null,
+          "priceIncTax": 29260,
+          "priceExTax": 26600,
+          "jan": "4957180165721",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN2B",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 34100,
+          "priceExTax": 31000,
+          "jan": "4957180165738",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN3B",
+          "capacityGB": 3000,
+          "color": null,
+          "priceIncTax": 40260,
+          "priceExTax": 36600,
+          "jan": "4957180165745",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN4B",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 48950,
+          "priceExTax": 44500,
+          "jan": "4957180165752",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN6B",
+          "capacityGB": 6000,
+          "color": null,
+          "priceIncTax": 78430,
+          "priceExTax": 71300,
+          "jan": "4957180165769",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN8B",
+          "capacityGB": 8000,
+          "color": null,
+          "priceIncTax": 91960,
+          "priceExTax": 83600,
+          "jan": "4957180165776",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN12B",
+          "capacityGB": 12000,
+          "color": null,
+          "priceIncTax": 145090,
+          "priceExTax": 131900,
+          "jan": "4957180165783",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN16B",
+          "capacityGB": 16000,
+          "color": null,
+          "priceIncTax": 182050,
+          "priceExTax": 165500,
+          "jan": "4957180165790",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN20B",
+          "capacityGB": 20000,
+          "color": null,
+          "priceIncTax": 206580,
+          "priceExTax": 187800,
+          "jan": "4957180165806",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN24B",
+          "capacityGB": 24000,
+          "color": null,
+          "priceIncTax": 243540,
+          "priceExTax": 221400,
+          "jan": "4957180177397",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN32B",
+          "capacityGB": 32000,
+          "color": null,
+          "priceIncTax": 317350,
+          "priceExTax": 288500,
+          "jan": "4957180186061",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdja-utnc",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/bizhdd/hdja-utnc/index.htm",
+      "seriesName": "法人向け 3年保証 USB 5Gbps＆電源内蔵 外付けハードディスク HDJA-UTNCシリーズ",
+      "category": "biz",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 1,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-B",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-B USB 5Gbps 約1m）",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 3,
+      "weightG": 1300,
+      "dimensions": "約45×216×155mm（突起部を含まず）",
+      "features": [
+        "NAS用HDD搭載",
+        "電源内蔵で配線すっきり",
+        "ヒートシンク＆ファン冷却",
+        "NarSuS対応",
+        "有償保守ISS対応",
+        "信頼の日本製"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdja-utnc_l.jpg",
+      "variants": [
+        {
+          "sku": "HDJA-UTN1C",
+          "capacityGB": 1000,
+          "color": null,
+          "priceIncTax": 36630,
+          "priceExTax": 33300,
+          "jan": "4957180193656",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN2C",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 46420,
+          "priceExTax": 42200,
+          "jan": "4957180193663",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN3C",
+          "capacityGB": 3000,
+          "color": null,
+          "priceIncTax": 50160,
+          "priceExTax": 45600,
+          "jan": "4957180193670",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN4C",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 55110,
+          "priceExTax": 50100,
+          "jan": "4957180193687",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN6C",
+          "capacityGB": 6000,
+          "color": null,
+          "priceIncTax": 91960,
+          "priceExTax": 83600,
+          "jan": "4957180193694",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN8C",
+          "capacityGB": 8000,
+          "color": null,
+          "priceIncTax": 104280,
+          "priceExTax": 94800,
+          "jan": "4957180193700",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN12C",
+          "capacityGB": 12000,
+          "color": null,
+          "priceIncTax": 157410,
+          "priceExTax": 143100,
+          "jan": "4957180193717",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN16C",
+          "capacityGB": 16000,
+          "color": null,
+          "priceIncTax": 194370,
+          "priceExTax": 176700,
+          "jan": "4957180193724",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN20C",
+          "capacityGB": 20000,
+          "color": null,
+          "priceIncTax": 218900,
+          "priceExTax": 199000,
+          "jan": "4957180193731",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN24C",
+          "capacityGB": 24000,
+          "color": null,
+          "priceIncTax": 255860,
+          "priceExTax": 232600,
+          "jan": "4957180193748",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN32C",
+          "capacityGB": 32000,
+          "color": null,
+          "priceIncTax": 329670,
+          "priceExTax": 299700,
+          "jan": "4957180193755",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdja-utnldb",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/bizhdd/hdja-utnldb/index.htm",
+      "seriesName": "法人向け 5年保証 USB 5Gbps（USB 3.2 Gen1）対応 外付けハードディスク（当社NAS「LAN DISK」バックアップ用）HDJA-UTN/LDBシリーズ",
+      "category": "biz",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 1,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-B",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-B USB 5Gbps 約1m）1本",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 5,
+      "weightG": 1300,
+      "dimensions": "約45（W）×216（D）×155（H）mm （突起部分を除く）",
+      "features": [
+        "NASバックアップ専用",
+        "LAN DISKバックアップ用",
+        "NAS用HDD搭載",
+        "長期5年保証",
+        "静音ランクBRONZE",
+        "RAIDeX対応"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdja-utnldb_l.jpg",
+      "variants": [
+        {
+          "sku": "HDJA-UTN1/LDB",
+          "capacityGB": 1000,
+          "color": null,
+          "priceIncTax": 40260,
+          "priceExTax": 36600,
+          "jan": "4957180165813",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN2/LDB",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 45100,
+          "priceExTax": 41000,
+          "jan": "4957180165820",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN3/LDB",
+          "capacityGB": 3000,
+          "color": null,
+          "priceIncTax": 51260,
+          "priceExTax": 46600,
+          "jan": "4957180165837",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN4/LDB",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 59950,
+          "priceExTax": 54500,
+          "jan": "4957180165844",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN6/LDB",
+          "capacityGB": 6000,
+          "color": null,
+          "priceIncTax": 89430,
+          "priceExTax": 81300,
+          "jan": "4957180165851",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN8/LDB",
+          "capacityGB": 8000,
+          "color": null,
+          "priceIncTax": 102960,
+          "priceExTax": 93600,
+          "jan": "4957180165868",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN12/LDB",
+          "capacityGB": 12000,
+          "color": null,
+          "priceIncTax": 156090,
+          "priceExTax": 141900,
+          "jan": "4957180165875",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN16/LDB",
+          "capacityGB": 16000,
+          "color": null,
+          "priceIncTax": 193050,
+          "priceExTax": 175500,
+          "jan": "4957180165882",
+          "status": "受注生産"
+        },
+        {
+          "sku": "HDJA-UTN20/LDB",
+          "capacityGB": 20000,
+          "color": null,
+          "priceIncTax": 217580,
+          "priceExTax": 197800,
+          "jan": "4957180165899",
+          "status": "受注生産"
+        },
+        {
+          "sku": "HDJA-UTN24/LDB",
+          "capacityGB": 24000,
+          "color": null,
+          "priceIncTax": 254540,
+          "priceExTax": 231400,
+          "jan": "4957180179216",
+          "status": "受注生産"
+        },
+        {
+          "sku": "HDJA-UTN32/LDB",
+          "capacityGB": 32000,
+          "color": null,
+          "priceIncTax": 328350,
+          "priceExTax": 298500,
+          "jan": "4957180186078",
+          "status": "受注生産"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdja-utnldc",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/bizhdd/hdja-utnldc/index.htm",
+      "seriesName": "法人向け3年保証 USB 5Gbps対応 外付けハードディスク （当社NAS「LAN DISK」バックアップ用）HDJA-UTN/LDCシリーズ",
+      "category": "biz",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 1,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-B",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-B USB 5Gbps 約1m）",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 3,
+      "weightG": 1300,
+      "dimensions": "約45×216×155mm（突起部を含まず）",
+      "features": [
+        "NASバックアップ専用",
+        "LAN DISKバックアップ用",
+        "クローン for Windows対応",
+        "最大7年に保証延長可",
+        "NarSuS対応",
+        "信頼の日本製"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdja-utnldc_l.jpg",
+      "variants": [
+        {
+          "sku": "HDJA-UTN1/LDC",
+          "capacityGB": 1000,
+          "color": null,
+          "priceIncTax": 47630,
+          "priceExTax": 43300,
+          "jan": "4957180193946",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN2/LDC",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 57420,
+          "priceExTax": 52200,
+          "jan": "4957180193953",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN3/LDC",
+          "capacityGB": 3000,
+          "color": null,
+          "priceIncTax": 61160,
+          "priceExTax": 55600,
+          "jan": "4957180193960",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN4/LDC",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 66110,
+          "priceExTax": 60100,
+          "jan": "4957180193977",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN6/LDC",
+          "capacityGB": 6000,
+          "color": null,
+          "priceIncTax": 102960,
+          "priceExTax": 93600,
+          "jan": "4957180193984",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN8/LDC",
+          "capacityGB": 8000,
+          "color": null,
+          "priceIncTax": 115280,
+          "priceExTax": 104800,
+          "jan": "4957180193991",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN12/LDC",
+          "capacityGB": 12000,
+          "color": null,
+          "priceIncTax": 168410,
+          "priceExTax": 153100,
+          "jan": "4957180194004",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTN16/LDC",
+          "capacityGB": 16000,
+          "color": null,
+          "priceIncTax": 205370,
+          "priceExTax": 186700,
+          "jan": "4957180194011",
+          "status": "受注生産"
+        },
+        {
+          "sku": "HDJA-UTN20/LDC",
+          "capacityGB": 20000,
+          "color": null,
+          "priceIncTax": 229900,
+          "priceExTax": 209000,
+          "jan": "4957180194028",
+          "status": "受注生産"
+        },
+        {
+          "sku": "HDJA-UTN24/LDC",
+          "capacityGB": 24000,
+          "color": null,
+          "priceIncTax": 266860,
+          "priceExTax": 242600,
+          "jan": "4957180194035",
+          "status": "受注生産"
+        },
+        {
+          "sku": "HDJA-UTN32/LDC",
+          "capacityGB": 32000,
+          "color": null,
+          "priceIncTax": 340670,
+          "priceExTax": 309700,
+          "jan": "4957180194042",
+          "status": "受注生産"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdja-utr",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/hdd/hdja-utr/index.htm",
+      "seriesName": "HDJA-UTRシリーズ",
+      "category": "stationary",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 1,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-B",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-B USB 5Gbps 約1m）1本",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 1,
+      "weightG": 1300,
+      "dimensions": "約45（W）×216（D）×155（H）mm（突起部分を除く）",
+      "features": [
+        "電源内蔵でACアダプター不要",
+        "ヒートシンク＋冷却ファン",
+        "静音ランクBRONZE",
+        "縦置き・横置き対応",
+        "RAIDeX対応（2台使用）",
+        "NarSuSクラウド監視対応"
+      ],
+      "imageUrl": "https://www.iodata.jp/product/hdd/hdd/hdja-ut/12dh9400001ot6oh-img/12dh9400001ot6tl.jpg",
+      "variants": [
+        {
+          "sku": "HDJA-UT1R",
+          "capacityGB": 1000,
+          "color": null,
+          "priceIncTax": 26730,
+          "priceExTax": 24300,
+          "jan": "4957180141695",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UT2R",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 30470,
+          "priceExTax": 27700,
+          "jan": "4957180141701",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UT3R",
+          "capacityGB": 3000,
+          "color": null,
+          "priceIncTax": 34100,
+          "priceExTax": 31000,
+          "jan": "4957180141718",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDJA-UT4R",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 40260,
+          "priceExTax": 36600,
+          "jan": "4957180141725",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UT8R",
+          "capacityGB": 8000,
+          "color": null,
+          "priceIncTax": 59950,
+          "priceExTax": 54500,
+          "jan": "4957180182476",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdja-utu",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/bizhdd/hdja-utu/index.htm",
+      "seriesName": "HDJA-UTUシリーズ",
+      "category": "biz",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 1,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-B",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-B USB 5Gbps 約1m）、USBケーブル（A-B USB 5Gbps 約2m）",
+      "cableLengthCm": 200,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 5,
+      "weightG": 1300,
+      "dimensions": "約45×216×155mm（突起部を含まず）",
+      "features": [
+        "Ultrastar HDD搭載",
+        "長期5年保証",
+        "1m/2mケーブル添付",
+        "電源内蔵で配線すっきり",
+        "NarSuS対応",
+        "有償保守ISS対応"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdja-utu_l.jpg",
+      "variants": [
+        {
+          "sku": "HDJA-UTU8",
+          "capacityGB": 8000,
+          "color": null,
+          "priceIncTax": 112860,
+          "priceExTax": 102600,
+          "jan": "4957180186993",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTU16",
+          "capacityGB": 16000,
+          "color": null,
+          "priceIncTax": 194370,
+          "priceExTax": 176700,
+          "jan": "4957180187006",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTU20",
+          "capacityGB": 20000,
+          "color": null,
+          "priceIncTax": 218900,
+          "priceExTax": 199000,
+          "jan": "4957180187013",
+          "status": "現行"
+        },
+        {
+          "sku": "HDJA-UTU24",
+          "capacityGB": 24000,
+          "color": null,
+          "priceIncTax": 255860,
+          "priceExTax": 232600,
+          "jan": "4957180187020",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdpd-sutc",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/bizhdd/hdpd-sutc/index.htm",
+      "seriesName": "HDPD-SUTCシリーズ",
+      "category": "biz",
+      "mediaType": "HDD",
+      "formFactor": "portable",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": true,
+      "shockNote": "米国MIL規格（MIL-STD-810H Method 516.8 Procedure IV）準拠 122cm 26方向落下試験クリア（当社調べ）",
+      "encryptionHw": true,
+      "encryptionSw": false,
+      "encryptionNote": "AES256bit ハードウェア自動暗号化＋パスワードロック",
+      "deviceConnector": "USB-microB",
+      "hostConnectors": [
+        "A",
+        "C"
+      ],
+      "cables": "USBケーブル（A-microB USB 5Gbps 約100cm）、USBケーブル（C-microB USB 5Gbps 約30cm）",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 3,
+      "weightG": 180,
+      "dimensions": "1・2TB：約84（W）×130（D）×19（H）mm／3・4TB：約84（W）×130（D）×25（H）mm",
+      "features": [
+        "AES256bit自動暗号化",
+        "MIL規格準拠の耐衝撃",
+        "パスワードロック",
+        "IP52防塵防滴キャップ",
+        "盗難防止ロック穴",
+        "3年保証"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdpd-sutc_l.jpg",
+      "variants": [
+        {
+          "sku": "HDPD-SUTC1",
+          "capacityGB": 1000,
+          "color": null,
+          "priceIncTax": 23100,
+          "priceExTax": 21000,
+          "jan": "4957180171494",
+          "status": "現行"
+        },
+        {
+          "sku": "HDPD-SUTC2",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 28050,
+          "priceExTax": 25500,
+          "jan": "4957180171500",
+          "status": "現行"
+        },
+        {
+          "sku": "HDPD-SUTC3",
+          "capacityGB": 3000,
+          "color": null,
+          "priceIncTax": 30470,
+          "priceExTax": 27700,
+          "jan": "4957180171517",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDPD-SUTC4",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 40260,
+          "priceExTax": 36600,
+          "jan": "4957180171524",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdpd-sutcs",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/bizhdd/hdpd-sutcs/index.htm",
+      "seriesName": "HDPD-SUTC/Sシリーズ",
+      "category": "biz",
+      "mediaType": "HDD",
+      "formFactor": "portable",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": true,
+      "shockNote": "米国MIL規格（MIL-STD-810H Method 516.8 Procedure IV）準拠 122cm 26方向落下試験クリア（当社調べ）",
+      "encryptionHw": true,
+      "encryptionSw": false,
+      "encryptionNote": "AES256bit ハードウェア自動暗号化＋パスワードロック",
+      "deviceConnector": "USB-microB",
+      "hostConnectors": [
+        "A",
+        "C"
+      ],
+      "cables": "A-microB USB 5Gbpsケーブル 約100cm、C-microB USB 5Gbpsケーブル 約30cm",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 3,
+      "weightG": 180,
+      "dimensions": "1・2TB：約84（W）×130（D）×19（H）mm／4TB：約84（W）×130（D）×25（H）mm",
+      "features": [
+        "データ移行アプリ内蔵",
+        "AES256bit自動暗号化",
+        "MIL規格準拠の耐衝撃",
+        "ランサム対策オートロック",
+        "IP52防塵防滴キャップ",
+        "3年保証"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdpd-sutcs_l.jpg",
+      "variants": [
+        {
+          "sku": "HDPD-SUTC1/S",
+          "capacityGB": 1000,
+          "color": null,
+          "priceIncTax": 25520,
+          "priceExTax": 23200,
+          "jan": "4957180177342",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "HDPD-SUTC2/S",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 30470,
+          "priceExTax": 27700,
+          "jan": "4957180177359",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "HDPD-SUTC4/S",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 42790,
+          "priceExTax": 38900,
+          "jan": "4957180177366",
+          "status": "在庫限り"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdph-utv",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/portable/hdph-utv/index.htm",
+      "seriesName": "カクうす Lite（HDPH-UTVシリーズ）",
+      "category": "portable",
+      "mediaType": "HDD",
+      "formFactor": "portable",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": true,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-microB",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-microB USB 5Gbps 約1m）",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 1,
+      "weightG": 160,
+      "dimensions": "1TB/2TB：約76（W）×114（D）×15（H）mm／4TB：約76（W）×114（D）×20（H）mm（突起物を除く）",
+      "features": [
+        "テレビ録画もPCも使える",
+        "バスパワー駆動",
+        "約100cmロングケーブル",
+        "手のひらサイズ",
+        "静音ランクGOLD",
+        "返金保証"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdph-utv_l.jpg",
+      "variants": [
+        {
+          "sku": "HDPH-UTV1K",
+          "capacityGB": 1000,
+          "color": "ブラック",
+          "priceIncTax": 18150,
+          "priceExTax": 16500,
+          "jan": "4957180184364",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "HDPH-UTV2K",
+          "capacityGB": 2000,
+          "color": "ブラック",
+          "priceIncTax": 23100,
+          "priceExTax": 21000,
+          "jan": "4957180184371",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "HDPH-UTV4DK",
+          "capacityGB": 4000,
+          "color": "ブラック",
+          "priceIncTax": 34100,
+          "priceExTax": 31000,
+          "jan": "4957180184388",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "HDPH-UTV1W",
+          "capacityGB": 1000,
+          "color": "ホワイト",
+          "priceIncTax": 18150,
+          "priceExTax": 16500,
+          "jan": "4957180184401",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "HDPH-UTV2W",
+          "capacityGB": 2000,
+          "color": "ホワイト",
+          "priceIncTax": 23100,
+          "priceExTax": 21000,
+          "jan": "4957180184418",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "HDPH-UTV1NV",
+          "capacityGB": 1000,
+          "color": "ネイビー",
+          "priceIncTax": 18150,
+          "priceExTax": 16500,
+          "jan": "4957180184425",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "HDPH-UTV2NV",
+          "capacityGB": 2000,
+          "color": "ネイビー",
+          "priceIncTax": 23100,
+          "priceExTax": 21000,
+          "jan": "4957180184432",
+          "status": "在庫限り"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdph-utv5dk",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/portable/hdph-utv5dk/index.htm",
+      "seriesName": "カクうす Lite（HDPH-UTV5DK）",
+      "category": "portable",
+      "mediaType": "HDD",
+      "formFactor": "portable",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-microB",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-microB USB 5Gbps 約1m）",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）、USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 1,
+      "weightG": 230,
+      "dimensions": "5TB：約76（W）×114（D）×20（H）mm（突起物を除く）",
+      "features": [
+        "5TB大容量",
+        "バスパワー駆動",
+        "手のひらサイズ",
+        "Wave Fit Design",
+        "静音ランクGOLD",
+        "データ復旧無償サービス"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdph-utv5dk_l.jpg",
+      "variants": [
+        {
+          "sku": "HDPH-UTV5DK",
+          "capacityGB": 5000,
+          "color": null,
+          "priceIncTax": 48950,
+          "priceExTax": 44500,
+          "jan": "4957180184395",
+          "status": "在庫限り"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdph-utv5dkb",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/portable/hdph-utv5dkb/index.htm",
+      "seriesName": "カクうす Lite（HDPH-UTV5DKB）",
+      "category": "portable",
+      "mediaType": "HDD",
+      "formFactor": "portable",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-microB",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-microB USB 5Gbps 約1m）",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 1,
+      "weightG": 230,
+      "dimensions": "約76×114×20mm（突起部を含まず）",
+      "features": [
+        "5TB大容量",
+        "バスパワー駆動",
+        "手のひらサイズ",
+        "Wave Fit Design",
+        "診断ミレル対応",
+        "データ復旧無償サービス"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdph-utv5dkb_l.jpg",
+      "variants": [
+        {
+          "sku": "HDPH-UTV5DKB",
+          "capacityGB": 5000,
+          "color": null,
+          "priceIncTax": 61160,
+          "priceExTax": 55600,
+          "jan": "4957180194547",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdph-utvb",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/portable/hdph-utvb/index.htm",
+      "seriesName": "カクうす Lite（HDPH-UTVBシリーズ）",
+      "category": "portable",
+      "mediaType": "HDD",
+      "formFactor": "portable",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": true,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-microB",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-microB USB 5Gbps 約1m）",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 1,
+      "weightG": 160,
+      "dimensions": "1・2TB：約76×114×15mm（突起部を含まず）／4TB：約76×114×20mm（突起部を含まず）",
+      "features": [
+        "テレビ録画に対応",
+        "バスパワー駆動",
+        "約100cmロングケーブル",
+        "手のひらサイズ",
+        "静音ランクGOLD",
+        "返金保証・土日サポート"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdph-utvb_l.jpg",
+      "variants": [
+        {
+          "sku": "HDPH-UTV1KB",
+          "capacityGB": 1000,
+          "color": "ブラック",
+          "priceIncTax": 23100,
+          "priceExTax": 21000,
+          "jan": "4957180194516",
+          "status": "現行"
+        },
+        {
+          "sku": "HDPH-UTV2KB",
+          "capacityGB": 2000,
+          "color": "ブラック",
+          "priceIncTax": 29260,
+          "priceExTax": 26600,
+          "jan": "4957180194523",
+          "status": "現行"
+        },
+        {
+          "sku": "HDPH-UTV4DKB",
+          "capacityGB": 4000,
+          "color": "ブラック",
+          "priceIncTax": 40260,
+          "priceExTax": 36600,
+          "jan": "4957180194530",
+          "status": "現行"
+        },
+        {
+          "sku": "HDPH-UTV1WB",
+          "capacityGB": 1000,
+          "color": "ホワイト",
+          "priceIncTax": 23100,
+          "priceExTax": 21000,
+          "jan": "4957180194554",
+          "status": "現行"
+        },
+        {
+          "sku": "HDPH-UTV2WB",
+          "capacityGB": 2000,
+          "color": "ホワイト",
+          "priceIncTax": 29260,
+          "priceExTax": 26600,
+          "jan": "4957180194561",
+          "status": "現行"
+        },
+        {
+          "sku": "HDPH-UTV1NVB",
+          "capacityGB": 1000,
+          "color": "ネイビー",
+          "priceIncTax": 23100,
+          "priceExTax": 21000,
+          "jan": "4957180194578",
+          "status": "現行"
+        },
+        {
+          "sku": "HDPH-UTV2NVB",
+          "capacityGB": 2000,
+          "color": "ネイビー",
+          "priceIncTax": 29260,
+          "priceExTax": 26600,
+          "jan": "4957180194585",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdpl-utab",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/rokuga/hdpl-utab/index.htm",
+      "seriesName": "テレビ録画用ハードディスク「トロッカ」（HDPL-UTABシリーズ）",
+      "category": "rokuga",
+      "mediaType": "HDD",
+      "formFactor": "portable",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": true,
+      "tvRecordingMain": true,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-microB",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USB A-microB ケーブル（USB 5Gbps 約1m）",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps",
+      "macTimeMachine": false,
+      "warrantyYears": 1,
+      "weightG": 210,
+      "dimensions": "約35（W）×112（D）×133（H）mm（スタンド付き、ゴム足含む）",
+      "features": [
+        "USBケーブル1本でTV接続",
+        "コンセント不要",
+        "4K放送録画対応",
+        "縦置き・横置き対応",
+        "静音ランクGOLD",
+        "返金保証・土日サポート"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdpl-utab_l.jpg",
+      "variants": [
+        {
+          "sku": "HDPL-UTA1KB",
+          "capacityGB": 1000,
+          "color": null,
+          "priceIncTax": 20570,
+          "priceExTax": 18700,
+          "jan": "4957180171869",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "HDPL-UTA2KB",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 25520,
+          "priceExTax": 23200,
+          "jan": "4957180171876",
+          "status": "現行"
+        },
+        {
+          "sku": "HDPL-UTA4KB",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 37840,
+          "priceExTax": 34400,
+          "jan": "4957180171890",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdpx-uts",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/portable/hdpx-uts/index.htm",
+      "seriesName": "カクうす（HDPX-UTSシリーズ）",
+      "category": "portable",
+      "mediaType": "HDD",
+      "formFactor": "portable",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-microB",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USB 5Gbps（USB 3.2 Gen1）ケーブル（A - microBタイプ／30cm）",
+      "cableLengthCm": 30,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": true,
+      "warrantyYears": 1,
+      "weightG": 130,
+      "dimensions": "約76（W）×114（D）×8.6（H）mm",
+      "features": [
+        "Time Machine対応",
+        "厚さ約8.6mm・約130g",
+        "アルミボディ2色",
+        "バスパワー駆動",
+        "静音ランクGOLD",
+        "データ復旧無償サービス"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdpx-uts_l.jpg",
+      "variants": [
+        {
+          "sku": "HDPX-UTS1K",
+          "capacityGB": 1000,
+          "color": "Black×Red",
+          "priceIncTax": 20570,
+          "priceExTax": 18700,
+          "jan": "4957180130910",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "HDPX-UTS2K",
+          "capacityGB": 2000,
+          "color": "Black×Red",
+          "priceIncTax": 25520,
+          "priceExTax": 23200,
+          "jan": "4957180130934",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "HDPX-UTS1S",
+          "capacityGB": 1000,
+          "color": "Silver×Green",
+          "priceIncTax": 20570,
+          "priceExTax": 18700,
+          "jan": "4957180130927",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "HDPX-UTS2S",
+          "capacityGB": 2000,
+          "color": "Silver×Green",
+          "priceIncTax": 25520,
+          "priceExTax": 23200,
+          "jan": "4957180130941",
+          "status": "在庫限り"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdpx-utsb",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/portable/hdpx-utsb/index.htm",
+      "seriesName": "カクうす（HDPX-UTSBシリーズ）",
+      "category": "portable",
+      "mediaType": "HDD",
+      "formFactor": "portable",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-microB",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-microB USB 5Gbps 約30cm）",
+      "cableLengthCm": 30,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": true,
+      "warrantyYears": 1,
+      "weightG": 130,
+      "dimensions": "約76×114×8.6mm",
+      "features": [
+        "Time Machine対応",
+        "厚さ約8.6mm・約130g",
+        "アルミボディ2色",
+        "バスパワー駆動",
+        "青色アクセスLED",
+        "データ復旧無償サービス"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdpx-utsb_l.jpg",
+      "variants": [
+        {
+          "sku": "HDPX-UTS1KB",
+          "capacityGB": 1000,
+          "color": "Black×Red",
+          "priceIncTax": 25520,
+          "priceExTax": 23200,
+          "jan": "4957180194639",
+          "status": "現行"
+        },
+        {
+          "sku": "HDPX-UTS2KB",
+          "capacityGB": 2000,
+          "color": "Black×Red",
+          "priceIncTax": 31680,
+          "priceExTax": 28800,
+          "jan": "4957180194646",
+          "status": "現行"
+        },
+        {
+          "sku": "HDPX-UTS1SB",
+          "capacityGB": 1000,
+          "color": "Silver×Green",
+          "priceIncTax": 25520,
+          "priceExTax": 23200,
+          "jan": "4957180194653",
+          "status": "現行"
+        },
+        {
+          "sku": "HDPX-UTS2SB",
+          "capacityGB": 2000,
+          "color": "Silver×Green",
+          "priceIncTax": 31680,
+          "priceExTax": 28800,
+          "jan": "4957180194660",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdpx-utsc",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/portable/hdpx-utsc/index.htm",
+      "seriesName": "カクうす（HDPX-UTSCシリーズ）",
+      "category": "portable",
+      "mediaType": "HDD",
+      "formFactor": "portable",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-microB",
+      "hostConnectors": [
+        "A",
+        "C"
+      ],
+      "cables": "USBケーブル（USB-C - microB／30cm）、USBケーブル（A - microB／30cm）",
+      "cableLengthCm": 30,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": true,
+      "warrantyYears": 1,
+      "weightG": 130,
+      "dimensions": "約76（W）× 114（D）× 8.6（H）mm",
+      "features": [
+        "USB-C＆USB-Aケーブル付属",
+        "Time Machine対応",
+        "厚さ約8.6mm・約130g",
+        "アルミボディ2色",
+        "静音ランクGOLD",
+        "データ復旧無償サービス"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdpx-utsc_l.jpg",
+      "variants": [
+        {
+          "sku": "HDPX-UTSC1K",
+          "capacityGB": 1000,
+          "color": "Black×Red",
+          "priceIncTax": 21890,
+          "priceExTax": 19900,
+          "jan": "4957180154893",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "HDPX-UTSC2K",
+          "capacityGB": 2000,
+          "color": "Black×Red",
+          "priceIncTax": 26730,
+          "priceExTax": 24300,
+          "jan": "4957180154909",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "HDPX-UTSC1S",
+          "capacityGB": 1000,
+          "color": "Silver×Green",
+          "priceIncTax": 21890,
+          "priceExTax": 19900,
+          "jan": "4957180154916",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "HDPX-UTSC2S",
+          "capacityGB": 2000,
+          "color": "Silver×Green",
+          "priceIncTax": 26730,
+          "priceExTax": 24300,
+          "jan": "4957180154923",
+          "status": "在庫限り"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdpx-utscb",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/portable/hdpx-utscb/index.htm",
+      "seriesName": "カクうす（HDPX-UTSCBシリーズ）",
+      "category": "portable",
+      "mediaType": "HDD",
+      "formFactor": "portable",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-microB",
+      "hostConnectors": [
+        "A",
+        "C"
+      ],
+      "cables": "USBケーブル（A-microB USB 5Gbps 約30cm）、USBケーブル（C-microB USB 5Gbps 約30cm）",
+      "cableLengthCm": 30,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": true,
+      "warrantyYears": 1,
+      "weightG": 130,
+      "dimensions": "約76×114×8.6mm",
+      "features": [
+        "USB-C＆USB-Aケーブル付属",
+        "Time Machine対応",
+        "厚さ約8.6mm・約130g",
+        "アルミボディ2色",
+        "バスパワー駆動",
+        "データ復旧無償サービス"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdpx-utscb_l.jpg",
+      "variants": [
+        {
+          "sku": "HDPX-UTSC1KB",
+          "capacityGB": 1000,
+          "color": "Black×Red",
+          "priceIncTax": 26730,
+          "priceExTax": 24300,
+          "jan": "4957180194677",
+          "status": "現行"
+        },
+        {
+          "sku": "HDPX-UTSC2KB",
+          "capacityGB": 2000,
+          "color": "Black×Red",
+          "priceIncTax": 32890,
+          "priceExTax": 29900,
+          "jan": "4957180194684",
+          "status": "現行"
+        },
+        {
+          "sku": "HDPX-UTSC1SB",
+          "capacityGB": 1000,
+          "color": "Silver×Green",
+          "priceIncTax": 26730,
+          "priceExTax": 24300,
+          "jan": "4957180194691",
+          "status": "現行"
+        },
+        {
+          "sku": "HDPX-UTSC2SB",
+          "capacityGB": 2000,
+          "color": "Silver×Green",
+          "priceIncTax": 32890,
+          "priceExTax": 29900,
+          "jan": "4957180194707",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdpz-utb",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/rokuga/hdpz-utb/index.htm",
+      "seriesName": "テレビ録画用ハードディスク「トロッカ」（静音モデル）HDPZ-UTBシリーズ",
+      "category": "rokuga",
+      "mediaType": "HDD",
+      "formFactor": "portable",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": true,
+      "tvRecordingMain": true,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-microB",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "A-microB USB 5Gbps（USB 3.2 Gen1）ケーブル［約1.5m］1本",
+      "cableLengthCm": 150,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）",
+      "macTimeMachine": false,
+      "warrantyYears": 1,
+      "weightG": 310,
+      "dimensions": "2TBモデル…約130（W）×125（D）×25（H）mm／4TBモデル…約130（W）×125（D）×30（H）mm（※突起部分含まず）",
+      "features": [
+        "USBケーブル1本でTV接続",
+        "約1.5mロングケーブル",
+        "静音ランクGOLD",
+        "4K放送録画対応",
+        "消費電力約47%削減",
+        "返金保証・土日サポート"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdpz-utb_l.jpg",
+      "variants": [
+        {
+          "sku": "HDPZ-UT2KB",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 26730,
+          "priceExTax": 24300,
+          "jan": "4957180172132",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "HDPZ-UT4KDB",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 39050,
+          "priceExTax": 35500,
+          "jan": "4957180172156",
+          "status": "生産終了"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdw-utcs",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/hdd/hdw-utcs/index.htm",
+      "seriesName": "HDW-UTCSシリーズ（RAID対応 2ドライブ搭載ハードディスク）",
+      "category": "stationary",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 2,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": true,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-B",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-B）約1m",
+      "cableLengthCm": 100,
+      "interface": "USB 3.2 Gen 1（USB 3.0）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 1,
+      "weightG": 1800,
+      "dimensions": "約85（W）×145（D）×192（H）mm（ゴム足、コネクター、突起部含まず）",
+      "features": [
+        "2ドライブRAID 0で高速",
+        "RAID 1/RAIDeXミラー対応",
+        "テレビ録画・Mac対応",
+        "冷却ファン搭載",
+        "ドライブ交換可能",
+        "日本製・全数通電検査"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdw-utcs_l.jpg",
+      "variants": [
+        {
+          "sku": "HDW-UTCS2",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 36630,
+          "priceExTax": 33300,
+          "jan": "4957180164724",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDW-UTCS4",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 52580,
+          "priceExTax": 47800,
+          "jan": "4957180164731",
+          "status": "現行"
+        },
+        {
+          "sku": "HDW-UTCS8",
+          "capacityGB": 8000,
+          "color": null,
+          "priceIncTax": 95920,
+          "priceExTax": 87200,
+          "jan": "4957180164748",
+          "status": "現行"
+        },
+        {
+          "sku": "HDW-UTCS12",
+          "capacityGB": 12000,
+          "color": null,
+          "priceIncTax": 120560,
+          "priceExTax": 109600,
+          "jan": "4957180164755",
+          "status": "現行"
+        },
+        {
+          "sku": "HDW-UTCS16",
+          "capacityGB": 16000,
+          "color": null,
+          "priceIncTax": 145090,
+          "priceExTax": 131900,
+          "jan": "4957180164762",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdw-utnb",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/bizhdd/hdw-utnb/index.htm",
+      "seriesName": "法人向け 5年保証 RAID対応 2ドライブ 外付けハードディスク（USB 5Gbps）HDW-UTNBシリーズ",
+      "category": "biz",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 2,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-B",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-B USB 5Gbps 約1m）1本",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 5,
+      "weightG": 2300,
+      "dimensions": "約85×145×192mm（突起部を含まず）",
+      "features": [
+        "NAS用HDD搭載",
+        "長期5年保証",
+        "ハードウェアRAID 0/1",
+        "オートリビルド対応",
+        "HDDをかんたん交換",
+        "NarSuS対応"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdw-utnb_l.jpg",
+      "variants": [
+        {
+          "sku": "HDW-UTNB2",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 55110,
+          "priceExTax": 50100,
+          "jan": "4957180181080",
+          "status": "現行"
+        },
+        {
+          "sku": "HDW-UTNB4",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 68640,
+          "priceExTax": 62400,
+          "jan": "4957180181097",
+          "status": "現行"
+        },
+        {
+          "sku": "HDW-UTNB6",
+          "capacityGB": 6000,
+          "color": null,
+          "priceIncTax": 90970,
+          "priceExTax": 82700,
+          "jan": "4957180181103",
+          "status": "現行"
+        },
+        {
+          "sku": "HDW-UTNB8",
+          "capacityGB": 8000,
+          "color": null,
+          "priceIncTax": 110660,
+          "priceExTax": 100600,
+          "jan": "4957180181110",
+          "status": "現行"
+        },
+        {
+          "sku": "HDW-UTNB12",
+          "capacityGB": 12000,
+          "color": null,
+          "priceIncTax": 147620,
+          "priceExTax": 134200,
+          "jan": "4957180181127",
+          "status": "現行"
+        },
+        {
+          "sku": "HDW-UTNB16",
+          "capacityGB": 16000,
+          "color": null,
+          "priceIncTax": 172150,
+          "priceExTax": 156500,
+          "jan": "4957180181134",
+          "status": "現行"
+        },
+        {
+          "sku": "HDW-UTNB24",
+          "capacityGB": 24000,
+          "color": null,
+          "priceIncTax": 307560,
+          "priceExTax": 279600,
+          "jan": "4957180181141",
+          "status": "現行"
+        },
+        {
+          "sku": "HDW-UTNB32",
+          "capacityGB": 32000,
+          "color": null,
+          "priceIncTax": 405900,
+          "priceExTax": 369000,
+          "jan": "4957180181158",
+          "status": "現行"
+        },
+        {
+          "sku": "HDW-UTNB40",
+          "capacityGB": 40000,
+          "color": null,
+          "priceIncTax": 489610,
+          "priceExTax": 445100,
+          "jan": "4957180181165",
+          "status": "受注生産"
+        },
+        {
+          "sku": "HDW-UTNB48",
+          "capacityGB": 48000,
+          "color": null,
+          "priceIncTax": 588060,
+          "priceExTax": 534600,
+          "jan": "4957180181172",
+          "status": "受注生産"
+        },
+        {
+          "sku": "HDW-UTNB64",
+          "capacityGB": 64000,
+          "color": null,
+          "priceIncTax": 782100,
+          "priceExTax": 711000,
+          "jan": "4957180186955",
+          "status": "受注生産"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdw-utnc",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/bizhdd/hdw-utnc/index.htm",
+      "seriesName": "法人向け 3年保証 USB 5Gbps＆RAID 1（ミラーリング）対応 外付けハードディスクHDW-UTNCシリーズ",
+      "category": "biz",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 2,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-B",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-B USB 5Gbps 約1m）",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 3,
+      "weightG": 2300,
+      "dimensions": "約85×145×192mm（ゴム足含む、突起部を含まず）",
+      "features": [
+        "NAS用HDD搭載",
+        "ハードウェアRAID 0/1",
+        "HDDをかんたん交換",
+        "UPSに接続しやすい",
+        "NarSuS対応",
+        "信頼の日本製"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdw-utnc_l.jpg",
+      "variants": [
+        {
+          "sku": "HDW-UTN2C",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 62480,
+          "priceExTax": 56800,
+          "jan": "4957180193762",
+          "status": "現行"
+        },
+        {
+          "sku": "HDW-UTN4C",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 77220,
+          "priceExTax": 70200,
+          "jan": "4957180193779",
+          "status": "現行"
+        },
+        {
+          "sku": "HDW-UTN6C",
+          "capacityGB": 6000,
+          "color": null,
+          "priceIncTax": 98120,
+          "priceExTax": 89200,
+          "jan": "4957180193786",
+          "status": "現行"
+        },
+        {
+          "sku": "HDW-UTN8C",
+          "capacityGB": 8000,
+          "color": null,
+          "priceIncTax": 122980,
+          "priceExTax": 111800,
+          "jan": "4957180193793",
+          "status": "現行"
+        },
+        {
+          "sku": "HDW-UTN12C",
+          "capacityGB": 12000,
+          "color": null,
+          "priceIncTax": 159830,
+          "priceExTax": 145300,
+          "jan": "4957180193809",
+          "status": "現行"
+        },
+        {
+          "sku": "HDW-UTN16C",
+          "capacityGB": 16000,
+          "color": null,
+          "priceIncTax": 184470,
+          "priceExTax": 167700,
+          "jan": "4957180193816",
+          "status": "現行"
+        },
+        {
+          "sku": "HDW-UTN24C",
+          "capacityGB": 24000,
+          "color": null,
+          "priceIncTax": 319770,
+          "priceExTax": 290700,
+          "jan": "4957180193823",
+          "status": "現行"
+        },
+        {
+          "sku": "HDW-UTN32C",
+          "capacityGB": 32000,
+          "color": null,
+          "priceIncTax": 418220,
+          "priceExTax": 380200,
+          "jan": "4957180193830",
+          "status": "現行"
+        },
+        {
+          "sku": "HDW-UTN40C",
+          "capacityGB": 40000,
+          "color": null,
+          "priceIncTax": 504350,
+          "priceExTax": 458500,
+          "jan": "4957180193847",
+          "status": "受注生産"
+        },
+        {
+          "sku": "HDW-UTN48C",
+          "capacityGB": 48000,
+          "color": null,
+          "priceIncTax": 602800,
+          "priceExTax": 548000,
+          "jan": "4957180193854",
+          "status": "受注生産"
+        },
+        {
+          "sku": "HDW-UTN64C",
+          "capacityGB": 64000,
+          "color": null,
+          "priceIncTax": 794750,
+          "priceExTax": 722500,
+          "jan": "4957180193861",
+          "status": "受注生産"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "hdw-utu",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/bizhdd/hdw-utu/index.htm",
+      "seriesName": "HDW-UTUシリーズ",
+      "category": "biz",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 2,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-B",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-B 約1m）1本、USBケーブル（A-B 約2m）1本",
+      "cableLengthCm": 200,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 5,
+      "weightG": 2300,
+      "dimensions": "約85×145×192mm（突起部を含まず）",
+      "features": [
+        "Ultrastar HDD搭載",
+        "ハードウェアRAID 0/1",
+        "安心の長期5年保証",
+        "HDDをかんたん交換",
+        "DAS CONNECT対応",
+        "信頼の日本製"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdw-utu_l.jpg",
+      "variants": [
+        {
+          "sku": "HDW-UTU16",
+          "capacityGB": 16000,
+          "color": null,
+          "priceIncTax": 220550,
+          "priceExTax": 200500,
+          "jan": "4957180187037",
+          "status": "現行"
+        },
+        {
+          "sku": "HDW-UTU32",
+          "capacityGB": 32000,
+          "color": null,
+          "priceIncTax": 454300,
+          "priceExTax": 413000,
+          "jan": "4957180187044",
+          "status": "受注生産"
+        },
+        {
+          "sku": "HDW-UTU40",
+          "capacityGB": 40000,
+          "color": null,
+          "priceIncTax": 538010,
+          "priceExTax": 489100,
+          "jan": "4957180187051",
+          "status": "受注生産"
+        },
+        {
+          "sku": "HDW-UTU48",
+          "capacityGB": 48000,
+          "color": null,
+          "priceIncTax": 636460,
+          "priceExTax": 578600,
+          "jan": "4957180187068",
+          "status": "受注生産"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "r-sspt-uf",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/ssd/r-sspt-uf/index.htm",
+      "seriesName": "R-SSPT-UFシリーズ",
+      "category": "ssd",
+      "mediaType": "SSD",
+      "formFactor": "portable",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": true,
+      "smartphoneNote": "iPhone、iPad、Android",
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": true,
+      "shockNote": "衝撃・振動に強く、軽量（駆動部なし）",
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-C",
+      "hostConnectors": [
+        "C"
+      ],
+      "cables": "USBケーブル（C-C、USB 40Gbps）約18cm",
+      "cableLengthCm": 18,
+      "interface": "USB 40Gbps（USB4）／USB 20Gbps（USB 3.2 Gen2x2）／USB 10Gbps（USB 3.2 Gen2）／USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": true,
+      "warrantyYears": 1,
+      "weightG": 42,
+      "dimensions": "約64（W）×64（D）×12（H）mm",
+      "features": [
+        "USB4 40Gbps対応",
+        "読込最大約4,000MB/s",
+        "ファンレスで静音",
+        "温度上昇を自動制御",
+        "約42gの小型軽量",
+        "iPhone・Time Machine対応"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/r-sspt-uf_l.jpg",
+      "variants": [
+        {
+          "sku": "R-SSPT-UF1",
+          "capacityGB": 1000,
+          "color": null,
+          "priceIncTax": 72270,
+          "priceExTax": 65700,
+          "jan": "4957180183800",
+          "status": "現行"
+        },
+        {
+          "sku": "R-SSPT-UF2",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 126610,
+          "priceExTax": 115100,
+          "jan": "4957180183817",
+          "status": "現行"
+        },
+        {
+          "sku": "R-SSPT-UF4",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 243540,
+          "priceExTax": 221400,
+          "jan": "4957180183824",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "ssca-suw",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/ssd/ssca-suw/index.htm",
+      "seriesName": "floworks（SSCA-SUWシリーズ）",
+      "category": "ssd",
+      "mediaType": "SSD",
+      "formFactor": "portable",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": true,
+      "shockNote": "MIL-STD-810H Method 516.8 Procedure IV準拠の落下試験（当社調べ）",
+      "encryptionHw": true,
+      "encryptionSw": true,
+      "encryptionNote": "AES256bit ハードウェア暗号化＋パスワードロック（I-O Security Lock App for SSCA-SUW）",
+      "deviceConnector": "USB-C",
+      "hostConnectors": [
+        "A",
+        "C"
+      ],
+      "cables": "USBケーブル（A-C、USB 10Gbps）約50cm、USBケーブル（C-C、USB 20Gbps）約30cm",
+      "cableLengthCm": 50,
+      "interface": "USB 20Gbps（USB 3.2 Gen2x2）／USB 10Gbps／USB 5Gbps／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 5,
+      "weightG": 59,
+      "dimensions": "約55（W）×92（D）×12（H）mm",
+      "features": [
+        "USB 20Gbps対応",
+        "読込最大約2,000MB/s",
+        "AES256bit HW暗号化",
+        "パスワードロック",
+        "MIL規格落下試験合格",
+        "IP65防塵防水・5年保証"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/ssca-suw_l.jpg",
+      "variants": [
+        {
+          "sku": "SSCA-SUW500GR",
+          "capacityGB": 500,
+          "color": "ダークグレー",
+          "priceIncTax": 48950,
+          "priceExTax": 44500,
+          "jan": "4957180192864",
+          "status": "現行"
+        },
+        {
+          "sku": "SSCA-SUW1GR",
+          "capacityGB": 1000,
+          "color": "ダークグレー",
+          "priceIncTax": 91960,
+          "priceExTax": 83600,
+          "jan": "4957180192871",
+          "status": "現行"
+        },
+        {
+          "sku": "SSCA-SUW2GR",
+          "capacityGB": 2000,
+          "color": "ダークグレー",
+          "priceIncTax": 182050,
+          "priceExTax": 165500,
+          "jan": "4957180192888",
+          "status": "現行"
+        },
+        {
+          "sku": "SSCA-SUW4GR",
+          "capacityGB": 4000,
+          "color": "ダークグレー",
+          "priceIncTax": 366520,
+          "priceExTax": 333200,
+          "jan": "4957180192895",
+          "status": "受注生産"
+        },
+        {
+          "sku": "SSCA-SUW500CP",
+          "capacityGB": 500,
+          "color": "シャンパンゴールド",
+          "priceIncTax": 48950,
+          "priceExTax": 44500,
+          "jan": "4957180192918",
+          "status": "現行"
+        },
+        {
+          "sku": "SSCA-SUW1CP",
+          "capacityGB": 1000,
+          "color": "シャンパンゴールド",
+          "priceIncTax": 91960,
+          "priceExTax": 83600,
+          "jan": "4957180192925",
+          "status": "現行"
+        },
+        {
+          "sku": "SSCA-SUW2CP",
+          "capacityGB": 2000,
+          "color": "シャンパンゴールド",
+          "priceIncTax": 182050,
+          "priceExTax": 165500,
+          "jan": "4957180192932",
+          "status": "現行"
+        },
+        {
+          "sku": "SSCA-SUW4CP",
+          "capacityGB": 4000,
+          "color": "シャンパンゴールド",
+          "priceIncTax": 366520,
+          "priceExTax": 333200,
+          "jan": "4957180192949",
+          "status": "受注生産"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "ssmg-uwcb",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/ssd/ssmg-uwcb/index.htm",
+      "seriesName": "SSMG-UWCBシリーズ",
+      "category": "ssd",
+      "mediaType": "SSD",
+      "formFactor": "portable",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": true,
+      "smartphoneNote": "iPhone、iPad",
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": true,
+      "shockNote": "駆動部がなく衝撃・振動に強い",
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-C",
+      "hostConnectors": [
+        "C"
+      ],
+      "cables": "USBケーブル（C-C、USB 20Gbps）約15cm",
+      "cableLengthCm": 15,
+      "interface": "USB 20Gbps（USB 3.2 Gen2x2）／USB 10Gbps／USB 5Gbps／USB 2.0",
+      "macTimeMachine": true,
+      "warrantyYears": 1,
+      "weightG": 32,
+      "dimensions": "約70（W）×62（D）×8.2（H）mm",
+      "features": [
+        "MagSafeでiPhone背面に装着",
+        "USB 20Gbps対応",
+        "ProRes動画を直接保存",
+        "exFATでスマホ・PC共用",
+        "Time Machine対応",
+        "約32gの軽量設計"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/ssmg-uwcb_l.jpg",
+      "variants": [
+        {
+          "sku": "SSMG-UWC1B",
+          "capacityGB": 1000,
+          "color": null,
+          "priceIncTax": 66110,
+          "priceExTax": 60100,
+          "jan": "4957180190235",
+          "status": "現行"
+        },
+        {
+          "sku": "SSMG-UWC2B",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 122760,
+          "priceExTax": 111600,
+          "jan": "4957180190242",
+          "status": "現行"
+        },
+        {
+          "sku": "SSMG-UWC4B",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 218900,
+          "priceExTax": 199000,
+          "jan": "4957180190259",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "sspd-sutcb",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/bizhdd/sspd-sutcb/index.htm",
+      "seriesName": "SSPD-SUTCBシリーズ",
+      "category": "biz",
+      "mediaType": "SSD",
+      "formFactor": "portable",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": true,
+      "shockNote": "耐衝撃構造：MIL-STD-810H Method 516.8 ProcedureⅣ 122cm落下試験（当社調べ）",
+      "encryptionHw": true,
+      "encryptionSw": true,
+      "encryptionNote": "AES256bit ハードウェア自動暗号化＋パスワードロック（SUHManagerで一元管理可）",
+      "deviceConnector": "USB-microB",
+      "hostConnectors": [
+        "A",
+        "C"
+      ],
+      "cables": "USBケーブル（A-microB）約1m、USBケーブル（C-microB）約30cm",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": true,
+      "warrantyYears": 5,
+      "weightG": 150,
+      "dimensions": "約84（W）×130（D）×19（H）mm",
+      "features": [
+        "HW自動暗号化＋PWロック",
+        "MIL規格耐衝撃構造",
+        "IP52防滴防塵キャップ",
+        "ケンジントンスロット",
+        "長期5年保証",
+        "SUHManagerで一元管理"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/sspd-sutcb_l.jpg",
+      "variants": [
+        {
+          "sku": "SSPD-SUTC500B",
+          "capacityGB": 500,
+          "color": null,
+          "priceIncTax": 63800,
+          "priceExTax": 58000,
+          "jan": "4957180188317",
+          "status": "現行"
+        },
+        {
+          "sku": "SSPD-SUTC1B",
+          "capacityGB": 1000,
+          "color": null,
+          "priceIncTax": 74800,
+          "priceExTax": 68000,
+          "jan": "4957180188324",
+          "status": "現行"
+        },
+        {
+          "sku": "SSPD-SUTC2B",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 162800,
+          "priceExTax": 148000,
+          "jan": "4957180188331",
+          "status": "現行"
+        },
+        {
+          "sku": "SSPD-SUTC4B",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": null,
+          "priceExTax": null,
+          "jan": "4957180188348",
+          "status": "受注生産"
+        },
+        {
+          "sku": "SSPD-SUTC8B",
+          "capacityGB": 8000,
+          "color": null,
+          "priceIncTax": null,
+          "priceExTax": null,
+          "jan": "4957180188362",
+          "status": "受注生産"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "sspd-sutcs",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/bizhdd/sspd-sutcs/index.htm",
+      "seriesName": "SSPD-SUTC/Sシリーズ",
+      "category": "biz",
+      "mediaType": "SSD",
+      "formFactor": "portable",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": true,
+      "shockNote": "耐衝撃ボディ：MIL-STD-810H Method 516.8 ProcedureⅣ 122cm落下試験（当社調べ）",
+      "encryptionHw": true,
+      "encryptionSw": false,
+      "encryptionNote": "AES256bit ハードウェア自動暗号化＋パスワードロック、あんしんオートロック",
+      "deviceConnector": "USB-microB",
+      "hostConnectors": [
+        "A",
+        "C"
+      ],
+      "cables": "USBケーブル（A-microB、USB 5Gbps）約100cm、（C-microB、USB 5Gbps）約30cm",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 3,
+      "weightG": 150,
+      "dimensions": "約84（W）×130（D）×19（H）mm",
+      "features": [
+        "データ移行アプリ内蔵",
+        "HW自動暗号化＋PWロック",
+        "あんしんオートロック",
+        "MIL規格耐衝撃ボディ",
+        "IP52防滴防塵キャップ",
+        "長期3年保証"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/sspd-sutcs_l.jpg",
+      "variants": [
+        {
+          "sku": "SSPD-SUTC500/S",
+          "capacityGB": 500,
+          "color": null,
+          "priceIncTax": 37840,
+          "priceExTax": 34400,
+          "jan": "4957180177649",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "SSPD-SUTC1/S",
+          "capacityGB": 1000,
+          "color": null,
+          "priceIncTax": 62480,
+          "priceExTax": 56800,
+          "jan": "4957180177601",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "SSPD-SUTC2/S",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 110220,
+          "priceExTax": 100200,
+          "jan": "4957180177618",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "SSPD-SUTC4/S",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": null,
+          "priceExTax": null,
+          "jan": "4957180177625",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "SSPD-SUTC8/S",
+          "capacityGB": 8000,
+          "color": null,
+          "priceIncTax": null,
+          "priceExTax": null,
+          "jan": "4957180177632",
+          "status": "在庫限り"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "sspj-utc",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/ssd/sspj-utc/index.htm",
+      "seriesName": "SSPJ-UTCシリーズ",
+      "category": "ssd",
+      "mediaType": "SSD",
+      "formFactor": "compact",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": true,
+      "smartphoneNote": "iPhone、iPad、Androidスマートフォン・タブレット",
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-C",
+      "hostConnectors": [
+        "C"
+      ],
+      "cables": null,
+      "cableLengthCm": null,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": true,
+      "warrantyYears": 1,
+      "weightG": 4,
+      "dimensions": "約23（W）×8.5（D）×14（H）mm（コネクター含まず）／約23（W）×15（D）×14（H）mm（コネクター含む）",
+      "features": [
+        "出っ張り約8.5mmの小型",
+        "読込約450MB/s",
+        "iPhone・Androidに直挿し",
+        "exFATでスマホ・PC共用",
+        "Time Machine対応",
+        "メタリック＋アクセスLED"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/sspj-utc_l.jpg",
+      "variants": [
+        {
+          "sku": "SSPJ-UTC256",
+          "capacityGB": 256,
+          "color": null,
+          "priceIncTax": 9570,
+          "priceExTax": 8700,
+          "jan": "4957180184999",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "SSPJ-UTC512",
+          "capacityGB": 512,
+          "color": null,
+          "priceIncTax": 15730,
+          "priceExTax": 14300,
+          "jan": "4957180185002",
+          "status": "在庫限り"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "sspj-utcb",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/ssd/sspj-utcb/index.htm",
+      "seriesName": "SSPJ-UTCBシリーズ",
+      "category": "ssd",
+      "mediaType": "SSD",
+      "formFactor": "compact",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": true,
+      "smartphoneNote": "iPhone、iPad、Androidスマートフォン・タブレット",
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-C",
+      "hostConnectors": [
+        "C"
+      ],
+      "cables": null,
+      "cableLengthCm": null,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": true,
+      "warrantyYears": 1,
+      "weightG": 4,
+      "dimensions": "約23（W）×8.5（D）×14（H）mm（コネクター含まず）／約23（W）×15（D）×14（H）mm（コネクター含む）",
+      "features": [
+        "出っ張り約8.5mmの超小型",
+        "読込・書込 約400MB/s",
+        "iPhone・Androidに直挿し",
+        "iPhone 17で動作確認済み",
+        "exFATでスマホ・PC共用",
+        "Time Machine対応"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/sspj-utcb_l.jpg",
+      "variants": [
+        {
+          "sku": "SSPJ-UTC256B",
+          "capacityGB": 256,
+          "color": null,
+          "priceIncTax": 23100,
+          "priceExTax": 21000,
+          "jan": "4957180190198",
+          "status": "現行"
+        },
+        {
+          "sku": "SSPJ-UTC512B",
+          "capacityGB": 512,
+          "color": null,
+          "priceIncTax": 41580,
+          "priceExTax": 37800,
+          "jan": "4957180190204",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "sspq-usc",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/ssd/sspq-usc/index.htm",
+      "seriesName": "SSPQ-USCシリーズ",
+      "category": "ssd",
+      "mediaType": "SSD",
+      "formFactor": "stick",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": true,
+      "smartphoneNote": "iPhone、iPad、Androidスマートフォン・タブレット",
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": true,
+      "shockNote": "ディスク駆動部品がなく衝撃や振動に強い（耐衝撃・耐振動性能）",
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-A／USB-C",
+      "hostConnectors": [
+        "A",
+        "C"
+      ],
+      "cables": null,
+      "cableLengthCm": null,
+      "interface": "USB 10Gbps（USB 3.2 Gen2）／USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": true,
+      "warrantyYears": 1,
+      "weightG": 12,
+      "dimensions": "約20（W）×78（D）×7.8（H）mm",
+      "features": [
+        "USB-AとUSB-C両対応",
+        "読込約1,000MB/s",
+        "スマホ・タブレット対応",
+        "ケーブル不要で持ち運び",
+        "衝撃・振動に強い",
+        "Time Machine対応"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/sspq-usc_l.jpg",
+      "variants": [
+        {
+          "sku": "SSPQ-USC250",
+          "capacityGB": 250,
+          "color": null,
+          "priceIncTax": 15730,
+          "priceExTax": 14300,
+          "jan": "4957180189369",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "SSPQ-USC500",
+          "capacityGB": 500,
+          "color": null,
+          "priceIncTax": 26730,
+          "priceExTax": 24300,
+          "jan": "4957180186122",
+          "status": "現行"
+        },
+        {
+          "sku": "SSPQ-USC1",
+          "capacityGB": 1000,
+          "color": null,
+          "priceIncTax": 48950,
+          "priceExTax": 44500,
+          "jan": "4957180186139",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "SSPQ-USC2",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 95700,
+          "priceExTax": 87000,
+          "jan": "4957180186146",
+          "status": "在庫限り"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "sspr-suscb",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/ssd/sspr-suscb/index.htm",
+      "seriesName": "SSPR-SUSCBシリーズ",
+      "category": "ssd",
+      "mediaType": "SSD",
+      "formFactor": "portable",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": true,
+      "shockNote": "ディスク駆動部がなく衝撃や振動に強い（耐衝撃・耐振動性能）",
+      "encryptionHw": true,
+      "encryptionSw": true,
+      "encryptionNote": "AES256bit ハードウェア自動暗号化＋パスワードロック（I-O Security Lock App）",
+      "deviceConnector": "USB-C",
+      "hostConnectors": [
+        "C"
+      ],
+      "cables": "USBケーブル（C-C、USB 10Gbps）約50cm",
+      "cableLengthCm": 50,
+      "interface": "USB 10Gbps（USB 3.2 Gen2）／USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": true,
+      "warrantyYears": 5,
+      "weightG": 58,
+      "dimensions": "約35（W）×120（D）×12（H）mm（突起部除く）",
+      "features": [
+        "USB 10Gbps対応",
+        "読込最大約1,050MB/s",
+        "パスワードロック",
+        "AES256bit自動暗号化",
+        "長期5年保証",
+        "衝撃・振動に強い"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/sspr-suscb_l.jpg",
+      "variants": [
+        {
+          "sku": "SSPR-SUSC1B",
+          "capacityGB": 1000,
+          "color": null,
+          "priceIncTax": 66110,
+          "priceExTax": 60100,
+          "jan": "4957180188393",
+          "status": "現行"
+        },
+        {
+          "sku": "SSPR-SUSC2B",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 122760,
+          "priceExTax": 111600,
+          "jan": "4957180188409",
+          "status": "現行"
+        },
+        {
+          "sku": "SSPR-SUSC4B",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 218900,
+          "priceExTax": 199000,
+          "jan": "4957180188416",
+          "status": "在庫限り"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "ssps-us",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/ssd/ssps-us/index.htm",
+      "seriesName": "SSPS-USシリーズ",
+      "category": "ssd",
+      "mediaType": "SSD",
+      "formFactor": "stick",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": true,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-A",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": null,
+      "cableLengthCm": null,
+      "interface": "USB 10Gbps（USB 3.2 Gen2）",
+      "macTimeMachine": true,
+      "warrantyYears": 1,
+      "weightG": 13,
+      "dimensions": "約23.5（W）×68.8（D）×11.3（H）mm（コネクター収納時、突起部含む）",
+      "features": [
+        "ケーブル不要のスティック型",
+        "読込最大約500MB/s",
+        "最大2TB",
+        "テレビ録画対応",
+        "PS5対応",
+        "静音ランクPLATINUM"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/ssps-us_l.jpg",
+      "variants": [
+        {
+          "sku": "SSPS-US500GR",
+          "capacityGB": 500,
+          "color": "グレー×ブラック",
+          "priceIncTax": 34100,
+          "priceExTax": 31000,
+          "jan": "4957180171289",
+          "status": "受注停止"
+        },
+        {
+          "sku": "SSPS-US1GR",
+          "capacityGB": 1000,
+          "color": "グレー×ブラック",
+          "priceIncTax": 62480,
+          "priceExTax": 56800,
+          "jan": "4957180171296",
+          "status": "受注停止"
+        },
+        {
+          "sku": "SSPS-US2GR",
+          "capacityGB": 2000,
+          "color": "グレー×ブラック",
+          "priceIncTax": 40260,
+          "priceExTax": 36600,
+          "jan": "4957180171302",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "SSPS-US500W",
+          "capacityGB": 500,
+          "color": "ホワイト×ブラック",
+          "priceIncTax": 34100,
+          "priceExTax": 31000,
+          "jan": "4957180171258",
+          "status": "現行"
+        },
+        {
+          "sku": "SSPS-US1W",
+          "capacityGB": 1000,
+          "color": "ホワイト×ブラック",
+          "priceIncTax": 62480,
+          "priceExTax": 56800,
+          "jan": "4957180171265",
+          "status": "現行"
+        },
+        {
+          "sku": "SSPS-US2W",
+          "capacityGB": 2000,
+          "color": "ホワイト×ブラック",
+          "priceIncTax": 40260,
+          "priceExTax": 36600,
+          "jan": "4957180171272",
+          "status": "生産終了"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "ssps-usb",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/ssd/ssps-usb/index.htm",
+      "seriesName": "SSPS-USBシリーズ",
+      "category": "ssd",
+      "mediaType": "SSD",
+      "formFactor": "stick",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": true,
+      "tvRecordingMain": false,
+      "shockproof": true,
+      "shockNote": "ディスク駆動部品がなく衝撃や振動に強い（耐衝撃・耐振動性能）",
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-A",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": null,
+      "cableLengthCm": null,
+      "interface": "USB 10Gbps（USB 3.2 Gen2）／USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": true,
+      "warrantyYears": 1,
+      "weightG": 13,
+      "dimensions": "約23.5（W）×68.8（D）×11.3（H）mm（コネクター収納時、スライドスイッチ含む）",
+      "features": [
+        "読込最大約500MB/s",
+        "ケーブル不要のスティック型",
+        "スライド式でキャップ紛失なし",
+        "衝撃・振動に強い",
+        "静音ランクPLATINUM",
+        "テレビ録画・PS5対応"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/ssps-usb_l.jpg",
+      "variants": [
+        {
+          "sku": "SSPS-US2GRB",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 119020,
+          "priceExTax": 108200,
+          "jan": "4957180190266",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "ssps-uss",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/ssd/ssps-uss/index.htm",
+      "seriesName": "SSPS-US/Sシリーズ",
+      "category": "ssd",
+      "mediaType": "SSD",
+      "formFactor": "stick",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-A",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": null,
+      "cableLengthCm": null,
+      "interface": "USB 10Gbps（USB 3.2 Gen2）／USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 1,
+      "weightG": 13,
+      "dimensions": "約23.5（W）×68.8（D）×11.3（H）mm（コネクタ収納時、突起部含む）",
+      "features": [
+        "データ移行アプリ内蔵",
+        "旧PCにアプリ導入不要",
+        "読込最大約500MB/s",
+        "オフラインで移行可能",
+        "ケーブル不要のスティック型",
+        "移行後はバックアップに"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/ssps-uss_l.jpg",
+      "variants": [
+        {
+          "sku": "SSPS-US500GR/S",
+          "capacityGB": 500,
+          "color": "グレー×ブラック",
+          "priceIncTax": 35420,
+          "priceExTax": 32200,
+          "jan": "4957180181394",
+          "status": "在庫限り"
+        },
+        {
+          "sku": "SSPS-US1GR/S",
+          "capacityGB": 1000,
+          "color": "グレー×ブラック",
+          "priceIncTax": 63690,
+          "priceExTax": 57900,
+          "jan": "4957180181400",
+          "status": "在庫限り"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    },
+    {
+      "id": "sspu-tfcb",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/ssd/sspu-tfcb/index.htm",
+      "seriesName": "SSPU-TFCBシリーズ",
+      "category": "ssd",
+      "mediaType": "SSD",
+      "formFactor": "portable",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": false,
+      "tvRecordingMain": false,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-C",
+      "hostConnectors": [
+        "C"
+      ],
+      "cables": "Thunderbolt 5対応ケーブル一体型（長さ記載なし）",
+      "cableLengthCm": null,
+      "interface": "Thunderbolt 5／Thunderbolt 4／Thunderbolt 3、USB4 40Gbps",
+      "macTimeMachine": true,
+      "warrantyYears": 5,
+      "weightG": 290,
+      "dimensions": "約150（W）×58（D）×19（H）mm（突起部除く）",
+      "features": [
+        "Thunderbolt 5対応",
+        "読込最大約6,000MB/s",
+        "アルミ筐体＋温度感知ファン",
+        "ケーブル一体型",
+        "バスパワー駆動",
+        "長期5年保証"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/sspu-tfcb_l.jpg",
+      "variants": [
+        {
+          "sku": "SSPU-TFC2B",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 187000,
+          "priceExTax": 170000,
+          "jan": "4957180188379",
+          "status": "現行"
+        },
+        {
+          "sku": "SSPU-TFC4B",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 319000,
+          "priceExTax": 290000,
+          "jan": "4957180188386",
+          "status": "現行"
+        },
+        {
+          "sku": "SSPU-TFC8B",
+          "capacityGB": 8000,
+          "color": null,
+          "priceIncTax": 638000,
+          "priceExTax": 580000,
+          "jan": "4957180188423",
+          "status": "受注生産"
+        }
+      ],
+      "lastCheckedAt": "2026-10-19T01:57:33.678098Z"
+    }
+  ]
+}

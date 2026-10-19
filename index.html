@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>外付けHDD／SSDセレクター（試作）</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="password-gate" id="password-gate">
+  <form class="password-gate__box" id="password-form">
+    <p class="password-gate__title">外付けHDD／SSDセレクター（試作）</p>
+    <p class="password-gate__note">関係者限定の試作版です。パスワードを入力してください。</p>
+    <div class="password-gate__field">
+      <input type="password" id="password-input" class="password-gate__input" autocomplete="off" aria-label="パスワード">
+      <button type="button" id="password-toggle" class="password-gate__toggle" aria-label="パスワードを表示">👁</button>
+    </div>
+    <button type="submit" class="password-gate__submit">入る</button>
+    <p class="password-gate__error" id="password-error" hidden>パスワードが違います</p>
+  </form>
+</div>
+
+<div id="app-root" hidden>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <div class="site-header__brand">
+      <span class="site-header__logo">HDD／SSD</span>
+      <span class="site-header__badge">外付けストレージ セレクター</span>
+    </div>
+    <div class="search">
+      <input type="search" id="keyword-input" class="search__input" placeholder="型番・JANコードで探す（例：HDPX、SSPJ）" autocomplete="off" aria-label="型番・JANコードで探す">
+    </div>
+  </div>
+</header>
+
+<div class="page-title">
+  <div class="page-title__inner">
+    <div>
+      <h1 class="page-title__h">パソコン・スマホ・テレビにつなぐ外付けHDD／SSDを選ぶ</h1>
+      <p class="page-title__sub">容量・価格帯・つなぐ機器・端子などの条件で、I-O DATAの外付けHDD／SSDを絞り込んで比較できます。</p>
+    </div>
+    <a class="usbmem-link" id="usbmem-link" aria-disabled="true">
+      <span class="usbmem-link__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 2h8v6H8z M6 8h12v10a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10.5 4.5h1M12.5 4.5h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </span>
+      <span class="usbmem-link__text"><b>USBメモリーをお探しの方</b><span id="usbmem-link-sub">USBメモリーセレクター（準備中）</span></span>
+    </a>
+  </div>
+</div>
+
+<main class="layout">
+  <aside class="filter-panel" id="filter-panel" aria-label="絞り込み">
+    <div class="filter-panel__head">
+      <p class="filter-panel__heading">条件で絞り込む</p>
+      <button type="button" class="link-btn" id="reset-btn">すべてリセット</button>
+    </div>
+
+    <div class="fgroup">
+      <p class="fgroup__title">HDD か SSD か</p>
+      <div class="seg" data-filter="media" data-multi="1">
+        <button type="button" data-value="HDD">HDD<small>大容量・お手頃</small></button>
+        <button type="button" data-value="SSD">SSD<small>高速・軽い・衝撃に強い</small></button>
+      </div>
+    </div>
+
+    <div class="fgroup">
+      <p class="fgroup__title">容量</p>
+      <div class="chips" data-filter="cap" data-multi="1"></div>
+    </div>
+
+    <div class="fgroup">
+      <p class="fgroup__title">価格帯（税込）</p>
+      <div class="chips" data-filter="price" data-multi="1"></div>
+    </div>
+
+    <div class="fgroup">
+      <p class="fgroup__title">つなぐ機器・使い方</p>
+      <div class="checks" data-filter="use"></div>
+    </div>
+
+    <div class="fgroup">
+      <p class="fgroup__title">パソコン・スマホ側の端子</p>
+      <div class="seg seg--conn" data-filter="conn" data-multi="1">
+        <button type="button" data-value="A"><span class="conn-ico conn-ico--a" aria-hidden="true"></span>USB-A<small>長方形の端子</small></button>
+        <button type="button" data-value="C"><span class="conn-ico conn-ico--c" aria-hidden="true"></span>USB-C<small>楕円形の端子</small></button>
+      </div>
+      <p class="fgroup__note">付属ケーブル・変換アダプターで接続できる端子を含みます。</p>
+    </div>
+
+    <div class="fgroup">
+      <p class="fgroup__title">電源・持ち運び</p>
+      <div class="checks" data-filter="power"></div>
+    </div>
+
+    <div class="fgroup">
+      <p class="fgroup__title">安心・セキュリティ</p>
+      <div class="checks" data-filter="secure"></div>
+    </div>
+
+    <div class="fgroup">
+      <p class="fgroup__title">形</p>
+      <div class="checks" data-filter="form"></div>
+    </div>
+
+    <div class="fgroup">
+      <p class="fgroup__title">対象</p>
+      <div class="checks" data-filter="segment"></div>
+    </div>
+  </aside>
+
+  <section class="result-area" aria-live="polite">
+    <div class="result-head">
+      <div class="result-head__text">
+        <p class="result-count" id="result-count"></p>
+        <div class="active-chips" id="active-chips"></div>
+      </div>
+      <div class="result-head__tools">
+        <label class="sort">
+          <span>並び順</span>
+          <select id="sort-select">
+            <option value="recommend">おすすめ順</option>
+            <option value="price-asc">価格の安い順</option>
+            <option value="price-desc">価格の高い順</option>
+            <option value="cap-desc">容量の大きい順</option>
+            <option value="unit-price">1TBあたりが安い順</option>
+          </select>
+        </label>
+        <label class="result-toggle">
+          <span class="result-toggle__text">生産終了品も表示</span>
+          <span class="switch">
+            <input type="checkbox" id="include-eol">
+            <span class="switch__track"><span class="switch__thumb"></span></span>
+          </span>
+        </label>
+        <button type="button" class="share-btn" id="share-btn">結果のURLをコピー</button>
+      </div>
+    </div>
+
+    <div class="cards" id="cards"></div>
+
+    <div class="no-result" id="no-result" hidden>
+      <p class="no-result__title">条件に合う商品がありません</p>
+      <p class="no-result__body">条件をいくつか外すと候補が表示されます。</p>
+      <div class="no-result__chips" id="no-result-chips"></div>
+    </div>
+  </section>
+</main>
+
+<div class="compare-bar" id="compare-bar" hidden>
+  <div class="compare-bar__inner">
+    <div class="compare-bar__items" id="compare-bar-items"></div>
+    <div class="compare-bar__actions">
+      <button type="button" class="link-btn link-btn--light" id="compare-clear">選択を解除</button>
+      <button type="button" class="compare-bar__btn" id="compare-btn" disabled>詳細を比較する</button>
+    </div>
+  </div>
+</div>
+
+<div class="compare-modal" id="compare-modal" hidden role="dialog" aria-modal="true" aria-labelledby="compare-title">
+  <div class="compare-modal__overlay" data-close="1"></div>
+  <div class="compare-modal__box">
+    <button type="button" class="compare-modal__close" id="compare-close" aria-label="閉じる">×</button>
+    <div class="compare-modal__head">
+      <h2 class="compare-modal__title" id="compare-title">詳細比較</h2>
+      <label class="diff-toggle"><input type="checkbox" id="diff-only"> 違いがある項目だけ表示</label>
+      <div class="compare-modal__actions">
+        <button type="button" class="modal-btn" id="compare-share">この比較のURLをコピー</button>
+        <button type="button" class="modal-btn modal-btn--primary" id="compare-pdf">PDFで保存</button>
+      </div>
+    </div>
+    <div class="compare-modal__scroll">
+      <table class="compare-table" id="compare-table"></table>
+    </div>
+    <p class="compare-modal__note">色付きの行は、商品によって違う項目です。価格・在庫状況は変動する場合があります。</p>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<footer class="info-footer">
+  <div class="info-footer__inner">
+    <p class="info-footer__title">このツールについて</p>
+    <ul class="info-footer__list">
+      <li>価格はI-O DATA公式サイト掲載のメーカー希望小売価格です。<strong>価格・在庫状況は変動する場合があります。</strong></li>
+      <li>「スマホ・タブレットで使える」は、公式の仕様で対応機種にスマートフォン・タブレットが記載されている商品です。すべての機種での動作を保証するものではありません。対応機種は各商品ページでご確認ください。</li>
+      <li>「テレビ録画にも使える」は、テレビ・レコーダーでの録画に対応している商品です。お使いのテレビの対応状況は各商品ページの対応表でご確認ください。</li>
+      <li>暗号化は2種類あります。<strong>ハードウェア暗号化</strong>は本体だけで自動的に暗号化され、パソコンにソフトを入れる必要がありません。<strong>ソフトで暗号化</strong>はパソコンのソフトウェアで暗号化・パスワード設定を行うタイプです。</li>
+      <li>ケーブル長は付属ケーブルの長さです（ケーブルが無い直挿しタイプは「ケーブルなし」と表示します）。</li>
+    </ul>
+    <p class="info-footer__updated" id="updated-at"></p>
+  </div>
+</footer>
+
+</div>
+
+<div class="print-sheet" id="print-sheet" aria-hidden="true"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
