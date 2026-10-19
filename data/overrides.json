@@ -8,10 +8,11 @@
       "variants": { "HDPX-UTSC1KB": { "jan": "4957180000000" } }
     }
   },
-      "series": {
-       "ssca-suw": {
-         "_memo": "ノーマルモードならパスワード・アプリ不要（公式マニュアル 002guide/001shoki.html）。パソコン専用の注意は出さない",
-         "pcOnly": false
-       }
-     }
+  "series": {
+    "ssca-suw": {
+      "_memo": "ノーマルモードならパスワード・アプリ不要（公式マニュアル 002guide/001shoki.html）。スマホは動作未検証の言い方にする",
+      "pcOnly": true,
+      "pcOnlyText": "セキュリティロックアプリは解除可能ですが、スマホ・タブレットでは動作未検証です。"
+    }
+  }
 }
