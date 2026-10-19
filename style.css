@@ -55,12 +55,13 @@ img { max-width: 100%; }
 .page-title__h { margin: 0; font-size: 22px; line-height: 1.4; }
 .page-title__sub { margin: 4px 0 0; font-size: 14px; color: var(--text-soft); }
 
-.usbmem-link { display: flex; align-items: center; gap: 10px; padding: 9px 16px; border-radius: 12px; border: 1.5px dashed #a9b5c3; color: var(--text-soft); text-decoration: none; background: #f7f9fb; }
-.usbmem-link__text { display: flex; flex-direction: column; line-height: 1.35; font-size: 12.5px; }
-.usbmem-link__text b { font-size: 13.5px; color: var(--text); }
-.usbmem-link[aria-disabled="true"] { cursor: default; }
-.usbmem-link.is-active { border-style: solid; border-color: var(--accent); color: var(--accent-deep); background: var(--accent-bg); }
-.usbmem-link.is-active:hover { background: #cfe9ec; }
+/* 右上の「HDD／SSDセレクターへ」リンク */
+.sister-link { display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 12px; border: 1.5px solid var(--accent); color: var(--accent-deep); text-decoration: none; background: var(--accent-bg); box-shadow: 0 3px 0 #9fcfd6, 0 6px 14px rgba(15,125,140,.12); transition: transform .08s, box-shadow .08s, background .15s; }
+.sister-link:hover { background: #cfe9ec; }
+.sister-link:active { transform: translateY(3px); box-shadow: 0 0 0 #9fcfd6; }
+.sister-link__icon { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; background: #fff; flex: none; }
+.sister-link__text { display: flex; flex-direction: column; line-height: 1.35; font-size: 12.5px; font-weight: 700; }
+.sister-link__text b { font-size: 13.5px; color: var(--text); }
 
 /* ---------- Layout ---------- */
 .layout { max-width: 1280px; margin: 0 auto; padding: 22px 32px 120px; display: grid; grid-template-columns: 290px minmax(0, 1fr); gap: 24px; align-items: start; }
@@ -402,3 +403,79 @@ body { background: linear-gradient(180deg, #eef2f6 0%, #e4e9ef 100%); min-height
   .ps-table .ng { color: #b0381a; font-weight: 700; }
 }
 .badge--pc { background: #15233a; color: #fff; }
+
+/* =====================================================================
+   USBメモリーセレクター用の追加
+   ===================================================================== */
+.seg--3 { grid-template-columns: repeat(3, 1fr); }
+.seg--3 button { font-size: 13px; padding: 8px 4px; }
+.style-ico-svg, .conn-ico-svg { display: block; margin: 2px auto 4px; line-height: 0; }
+.style-svg { display: block; }
+
+.kind--standard { background: #e8edf4; color: #2b3e57; }
+.kind--design { background: #fbe8f1; color: #8c2a5c; }
+.kind--speed { background: #e3f1ff; color: #0b5394; }
+.kind--antibac { background: #e6f5ec; color: #1f6b3b; }
+.kind--biz { background: #efe9f8; color: #553c8b; }
+.kind--security { background: #15233a; color: #fff; }
+.kind--style { background: #f1f4f7; color: #2f3d4e; border: 1px solid var(--line); }
+.card__color { font-family: inherit; font-weight: 600; }
+
+.compare-table a { color: var(--accent-deep); font-weight: 700; }
+
+@media (max-width: 900px) {
+  .sister-link { width: 100%; }
+}
+
+/* 右上のリンクを、タイトルが長くても右上に置いたままにする */
+@media (min-width: 901px) {
+  .page-title__inner { flex-wrap: nowrap; align-items: flex-start; }
+  .page-title__inner > div:first-child { flex: 1; min-width: 0; }
+  .sister-link { flex: none; margin-top: 2px; }
+}
+
+/* =====================================================================
+   ヘッダーの帯：USBメモリーセレクターのイメージカラー（薄いピンク）
+   ===================================================================== */
+.site-header {
+  background:
+    radial-gradient(900px 260px at 88% -30%, rgba(255,255,255,.75), transparent 60%),
+    linear-gradient(115deg, #fff3f7 0%, #fde3ec 48%, #f9cfdf 100%);
+  color: #4a1f33;
+  box-shadow: 0 8px 24px rgba(214,120,160,.22);
+  border-bottom: 1px solid #f3c2d6;
+}
+/* 右側にだけ浮かぶ、やさしい水玉模様 */
+.site-header::after {
+  background-image: radial-gradient(rgba(214,92,142,.22) 1.4px, transparent 1.6px);
+  background-size: 16px 16px;
+  -webkit-mask-image: linear-gradient(90deg, transparent 30%, #000 85%);
+  mask-image: linear-gradient(90deg, transparent 30%, #000 85%);
+}
+.site-header__logo { color: #8a2350; text-shadow: 0 1px 0 rgba(255,255,255,.8); }
+.site-header__badge { color: #8a2350; background: rgba(255,255,255,.7); border-color: #e9a8c3; }
+.search__input { border: 1px solid #f0bfd3; box-shadow: 0 4px 14px rgba(214,120,160,.18); }
+.search__input:focus { box-shadow: 0 0 0 3px rgba(226,110,160,.30); }
+
+/* =====================================================================
+   左メニューのじゃばら（ほかのセレクターと同じく、見出しの ▸ で開閉）
+   ===================================================================== */
+details.fgroup { padding: 4px 0 6px; }
+details.fgroup[open] { padding-bottom: 14px; }
+details.fgroup > summary.fgroup__title {
+  display: flex; align-items: center; gap: 8px; margin: 0; padding: 9px 2px 9px 11px;
+  cursor: pointer; list-style: none; user-select: none; border-radius: 8px; transition: background .15s;
+}
+details.fgroup > summary.fgroup__title::-webkit-details-marker { display: none; }
+details.fgroup > summary.fgroup__title::before { top: 12px; bottom: 12px; }
+details.fgroup > summary.fgroup__title:hover { background: #f3f6f9; }
+.fgroup__name { flex: 1; }
+.fgroup__sel { font-size: 11px; font-weight: 800; color: #fff; background: var(--accent); border-radius: 999px; padding: 0 8px; line-height: 1.7; }
+.fgroup__sel:empty { display: none; }
+details.fgroup > summary.fgroup__title::after {
+  content: "▸"; flex: none; width: 18px; text-align: center; color: var(--accent); font-size: 14px;
+  transition: transform .25s ease;
+}
+details.fgroup[open] > summary.fgroup__title::after { transform: rotate(90deg); }
+details.fgroup[open] > :not(summary) { animation: fgOpen .25s both; }
+@keyframes fgOpen { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }

@@ -1,44 +1,44 @@
-// 外付けHDD／SSDセレクター（パソコン・スマホ・テレビ向け）のデータを取得するスクレイパー。
+// USBメモリーセレクターのデータを取得するスクレイパー。
 //
 // 使い方：
 //   node scripts/scrape.mjs
 //
 // しくみ：
-//   1) I-O DATA公式の「HDD／SSD」配下のカテゴリページ（据え置き・ポータブル・SSD・
-//      録画用・法人向け）を読み、そこに載っているシリーズのページURLを自動で集める。
+//   1) I-O DATA公式の「USBメモリー」「セキュリティUSBメモリー」のカテゴリページを読み、
+//      そこに載っているシリーズのページURLを自動で集める。
 //      → 新しいシリーズが公式に載れば、コードを触らなくても自動で増える。
-//   2) シリーズごとに index.htm（価格表：型番・容量・価格・JAN・在庫状況）と
-//      spec.htm（仕様表：コネクター・対応機種・付属品(ケーブル長)・保証 等）を読む。
-//   3) 読み取りミスがあった場合は data/overrides.json に「正しい値」を書いておけば、
+//   2) シリーズごとに index.htm（価格表：型番・容量・カラー・JAN・在庫状況）と
+//      spec.htm（仕様表：コネクター・対応OS・保証 等）を読む。
+//   3) 価格は公式のメーカー希望小売価格。「オープン価格」の型番は openPrice: true にする
+//      （価格が読めなかったのか、オープン価格なのかを区別するため）。
+//   4) 読み取りミスがあった場合は data/overrides.json に「正しい値」を書いておけば、
 //      毎回の自動更新のたびにその値で上書きされる（コード修正なしで直せる）。
 //
-// アクセスは1件ずつ2秒間隔（NAS/DASセレクターと同じ方針）。
+// アクセスは1件ずつ2秒間隔（他のセレクターと同じ方針）。
 
 import fs from "node:fs/promises";
 
 const BASE = "https://www.iodata.jp";
 
-// カテゴリページ → カテゴリ名。同じシリーズが複数のページに載ることがある
-// （例：HDD-UTBは「据え置き」と「録画用」の両方）ので、全部記録しておく。
+// 公式のカテゴリページ。セキュリティUSBメモリーのページにはスタンダード配下の
+// シリーズ（例：EU3-PW/R）も載っているので、両方から集める。
 const CATEGORY_PAGES = [
-  { key: "stationary", url: BASE + "/product/hdd/hdd/" },
-  { key: "portable", url: BASE + "/product/hdd/portable/" },
-  { key: "ssd", url: BASE + "/product/hdd/ssd/" },
-  { key: "rokuga", url: BASE + "/product/hdd/rokuga/" },
-  { key: "biz", url: BASE + "/product/hdd/bizhdd/" }
+  { key: "standard", url: BASE + "/product/usbmemory/standard/index.htm" },
+  { key: "security", url: BASE + "/product/usbmemory/security/index.htm" }
 ];
 
-// 対象外にするシリーズ（URLの末尾名で判定）。
-//  hvl-*   : LAN接続の録画用HDD（USB接続のDASではない）
-//  hd1-reut: カートリッジアダプター本体（容量を持たず、交換用カートリッジと組み合わせて使う）
-const EXCLUDE_SLUG_PATTERNS = [/^hvl-/, /^hd1-reut$/];
+// 対象外（容量を持たない商品）
+//  suhm   : 管理者用ソフトウェア
+//  ed-vlt : アンチウイルスのライセンス延長パック
+//  ed-vl  : サポートサービス更新ソフトウェア
+const EXCLUDE_SLUG_PATTERNS = [/^suhm$/, /^ed-vlt?$/, /^snservice/];
 
 const OUTPUT_PATH = new URL("../data/products.json", import.meta.url);
 const OVERRIDES_PATH = new URL("../data/overrides.json", import.meta.url);
 const REQUEST_INTERVAL_MS = 2000;
 const REQUEST_TIMEOUT_MS = 20000;
 const USER_AGENT =
-  "NasSelectorBot/1.0 (+https://github.com/ioplaza02/hdd-ssd-selector; " +
+  "NasSelectorBot/1.0 (+https://github.com/ioplaza02/usb-memory-selector; " +
   "daily price/spec check for internal comparison tool)";
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -49,7 +49,16 @@ async function fetchText(url) {
     signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS)
   });
   if (!res.ok) throw new Error(url + " -> " + res.status);
-  return res.text();
+  // Shift_JIS のページがあっても文字化けしないよう、文字コードを見て読み分ける
+  const buf = Buffer.from(await res.arrayBuffer());
+  const ctype = res.headers.get("content-type") || "";
+  const head = buf.subarray(0, 2048).toString("latin1");
+  const cs = (ctype.match(/charset=([\w-]+)/i) || head.match(/charset=["']?([\w-]+)/i) || [])[1] || "utf-8";
+  try {
+    return new TextDecoder(/shift_jis|sjis|x-sjis|windows-31j|cp932/i.test(cs) ? "shift_jis" : /euc-jp/i.test(cs) ? "euc-jp" : "utf-8").decode(buf);
+  } catch {
+    return buf.toString("utf8");
+  }
 }
 
 // ---------- HTMLユーティリティ ----------
@@ -64,7 +73,6 @@ function decodeEntities(s) {
     .replace(/&#39;/g, "'")
     .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)))
     .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCharCode(parseInt(n, 16)))
-    // 名前付きの文字参照。実例：「USB 3.2 Gen2&times;2」の「×」が化けて表示されていた
     .replace(/&(times|yen|reg|trade|copy|middot|hellip|minus|plusmn|deg|micro|sup2|sup3|frac12|rarr|larr|ndash|mdash);/g,
       (_, n) => ({ times: "×", yen: "￥", reg: "®", trade: "™", copy: "©", middot: "・", hellip: "…", minus: "−", plusmn: "±",
         deg: "°", micro: "µ", sup2: "²", sup3: "³", frac12: "½", rarr: "→", larr: "←", ndash: "–", mdash: "—" })[n]);
@@ -79,14 +87,11 @@ function cellText(html) {
     .trim();
 }
 
-// <head>・<script>・<style>を除いた本文テキスト。
-// meta keywords に「耐衝撃」が入っているだけの商品（例：SSPJ-UTC）を
-// 耐衝撃と誤判定しないよう、<head>は必ず除く。
+// <head>・<script>・<style>・ヘッダー／フッター／ナビを除いた本文テキスト
 function bodyText(html) {
   if (!html) return "";
   let h = html.replace(/<head[\s\S]*?<\/head>/i, " ");
   h = h.replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ");
-  // ヘッダー／フッター／ナビは他商品の名前やカテゴリ名（「セキュリティ」等）を含むので除く
   h = h.replace(/<(header|footer|nav)\b[\s\S]*?<\/\1>/gi, " ");
   return cellText(h);
 }
@@ -126,17 +131,28 @@ function parseTables(html) {
 }
 
 // ---------- 1) カテゴリページからシリーズURLを集める ----------
+// 公式のスタンダードページは「スタンダードモデル」「法人向けスタンダードモデル」
+// 「デザインモデル」「ハイスピードモデル」「抗菌モデル」の見出しで分かれているので、
+// リンク直前の見出しも一緒に記録しておく（ラインナップの判定に使う）。
 
 function discoverSeries(html, categoryKey, map) {
-  const re = /href=["']((?:https?:\/\/www\.iodata\.jp)?\/product\/hdd\/(hdd|portable|ssd|rokuga|bizhdd)\/([a-z0-9][a-z0-9-]*)\/(?:index\.htm)?)["']/gi;
+  const re = /<h[1-5][^>]*>([\s\S]*?)<\/h[1-5]>|href=["']((?:https?:\/\/www\.iodata\.jp)?\/product\/usbmemory\/(standard|security)\/([a-z0-9][a-z0-9-]*)\/(?:index\.htm)?)["']/gi;
+  let heading = "";
   let m;
   while ((m = re.exec(html)) !== null) {
-    const folder = m[2];
-    const slug = m[3].toLowerCase();
+    if (m[1] != null) {
+      const t = cellText(m[1]);
+      if (/モデル/.test(t) && t.length < 30) heading = t;
+      continue;
+    }
+    const folder = m[3];
+    const slug = m[4].toLowerCase();
     if (EXCLUDE_SLUG_PATTERNS.some((p) => p.test(slug))) continue;
-    const url = `${BASE}/product/hdd/${folder}/${slug}/index.htm`;
-    if (!map.has(slug)) map.set(slug, { slug, folder, url, listedIn: new Set() });
-    map.get(slug).listedIn.add(categoryKey);
+    const url = `${BASE}/product/usbmemory/${folder}/${slug}/index.htm`;
+    if (!map.has(slug)) map.set(slug, { slug, folder, url, listedIn: new Set(), heading: "" });
+    const s = map.get(slug);
+    s.listedIn.add(categoryKey);
+    if (!s.heading && heading && categoryKey === "standard") s.heading = heading;
   }
 }
 
@@ -147,13 +163,9 @@ function toGB(value, unit) {
   return unit.toUpperCase() === "TB" ? Math.round(n * 1000) : Math.round(n);
 }
 
-// 状態がアイコン画像だけ（alt属性が空）で示されている行がある
-// （実例：法人向けHDDの受注生産は icon_order.gif のみ）。画像ファイル名から補う。
 function iconStatusText(rowHtml) {
   const t = [];
   if (/icon_order/i.test(rowHtml)) t.push("受注生産");
-  // ※在庫限り・生産終了は公式では備考欄の文字で書かれている（アイコンでは判定しない。
-  //   推測でアイコン名を判定したら、在庫ありの型番を在庫限りと誤判定した実例があった）
   return t.join(" ");
 }
 
@@ -165,8 +177,34 @@ function detectStatus(text) {
   return "現行";
 }
 
-const COLOR_WORDS = ["ブラック×レッド", "シルバー×グリーン", "グレー×ブラック", "ホワイト×ブラック",
-  "ブラック", "ホワイト", "ネイビー", "シルバー", "グレー", "ピンク", "ブルー", "レッド", "ゴールド", "グラファイト", "クラウドピンク"];
+// 長い色名から先に当てる（「ピンク」より「ベビーピンク」を優先）
+const COLOR_WORDS = ["ライラックパープル", "ベビーピンク", "ミントグリーン", "ライトブルー", "スケルトンブルー", "スケルトンブラウン",
+  "ブラック", "ホワイト", "シルバー", "ピンク", "ブルー", "レッド", "グリーン", "ゴールド", "グレー"].sort((a, b) => b.length - a.length);
+
+// 型番の末尾の記号 → 色名（例：U3-PSH16G/K → ブラック）。
+// シリーズで色名が違う場合（例：U3-CLPの /B はライトブルー）は overrides.json の colorCodes で上書きする。
+const COLOR_CODES = { K: "ブラック", W: "ホワイト", S: "シルバー", B: "ブルー", R: "レッド", P: "ピンク", G: "グリーン", V: "パープル", BR: "ブラウン", GD: "ゴールド", GY: "グレー" };
+function colorSuffix(sku) {
+  const m = String(sku).match(/\/(?:\d+G)?R?([A-Z]{1,2})$/);
+  return m ? m[1] : null;
+}
+// 価格表から色が読めなかったときだけ、型番の記号から色名を補う。
+// シリーズ内で記号が1種類しかない場合（例：EU3-PW/8GR の R）は色ではないので補わない。
+function fillColorsFromSku(variants, codes) {
+  const suffixes = new Set(variants.map((v) => colorSuffix(v.sku)).filter(Boolean));
+  if (suffixes.size < 2) return;
+  for (const v of variants) {
+    if (v.color) continue;
+    const c = colorSuffix(v.sku);
+    v.color = (codes && codes[c]) || COLOR_CODES[c] || null;
+  }
+}
+
+// 型番の末尾で保証年数が変わるシリーズ（例：ED-SVT4/8G3 = 3年版、ED-V4/8GR5 = 5年版）
+function warrantyFromSku(sku) {
+  const m = String(sku).match(/\/\d+GR?([35])$/);
+  return m ? Number(m[1]) : null;
+}
 
 function extractVariants(indexHtml) {
   const bySku = new Map();
@@ -174,21 +212,23 @@ function extractVariants(indexHtml) {
     const flat = rows.map((r) => r.map((c) => c.text).join(" ")).join(" ");
     if (!/型番/.test(flat) || !/(￥|オープン価格)/.test(flat)) continue;
 
-    // 見出し行から「カラー」列の位置が分かれば使う
     let colorCol = -1;
     for (const r of rows) {
       const idx = r.findIndex((c) => /カラー|色/.test(c.text));
       if (idx >= 0 && r.length > 2) { colorCol = idx; break; }
     }
 
+    let groupColor = null; // 「ブラック」のように色名だけが書かれた見出し行の色
     for (const r of rows) {
       const texts = r.map((c) => c.text);
-      // 型番の判定用：アイコン画像のalt文字を含めないテキスト。
-      // 新商品の「NEW」アイコンのaltが型番にくっつく（例：HD4-UTN8CNEW）のを防ぐ
+      // 型番の判定は、アイコン画像のalt文字を含めないテキストで行う（「NEW」が型番にくっつくのを防ぐ）
       const plain = r.map((c) => decodeEntities(c.html.replace(/<img[^>]*>/gi, " ").replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim());
-      // 1列目（またはどこか）に型番らしいセルがある行だけ
       const skuIdx = plain.findIndex((t) => /^[A-Z][A-Z0-9-]*\d[A-Z0-9-\/]*$/.test(t.replace(/\s/g, "")));
-      if (skuIdx < 0) continue;
+      if (skuIdx < 0) {
+        const t = texts.join(" ");
+        if (t.length <= 30) groupColor = COLOR_WORDS.find((w) => t.includes(w)) || groupColor;
+        continue;
+      }
       const sku = plain[skuIdx].replace(/\s/g, "").replace(/NEW$/, "");
       const rowText = texts.join(" ");
       const cap = rowText.match(/(\d+(?:\.\d+)?)\s*(TB|GB)\b/i);
@@ -196,16 +236,18 @@ function extractVariants(indexHtml) {
       const price = rowText.match(/￥\s?([\d,]+)(?:[^￥\d]*税抜[^￥\d]*￥\s?([\d,]+))?/);
       const jan = rowText.match(/\b(4\d{12})\b/);
       let color = null;
-      if (colorCol >= 0 && texts[colorCol] && texts.length > colorCol) color = texts[colorCol];
-      if (!color) color = COLOR_WORDS.find((w) => rowText.includes(w)) || null;
+      if (colorCol >= 0 && texts[colorCol] && texts.length > colorCol && !/^(カラー|色)$/.test(texts[colorCol])) color = texts[colorCol];
+      if (!color) color = COLOR_WORDS.find((w) => rowText.includes(w)) || groupColor || null;
 
       if (bySku.has(sku)) continue;
       bySku.set(sku, {
         sku,
         capacityGB: toGB(cap[1], cap[2]),
         color,
+        warrantyYears: warrantyFromSku(sku),
         priceIncTax: price ? Number(price[1].replace(/,/g, "")) : null,
         priceExTax: price && price[2] ? Number(price[2].replace(/,/g, "")) : null,
+        openPrice: !price && /オープン価格/.test(rowText),
         jan: jan ? jan[1] : "",
         status: detectStatus(rowText + " " + iconStatusText(r.map((c) => c.html).join(" ")))
       });
@@ -216,10 +258,6 @@ function extractVariants(indexHtml) {
 
 // ---------- 3) 仕様表（spec.htm） ----------
 
-// 仕様表を「見出し → 値」の辞書にする。
-// 対応機種のように「対応機種｜スマートフォン・タブレット｜iPhone…」と
-// 見出しが2段（rowspan）になっている行は、後ろ側の見出しで登録する
-// （例：spec["スマートフォン・タブレット"]）。前側の見出しも「親:子」で残す。
 function extractSpecMap(specHtml) {
   const map = {};
   let parent = null;
@@ -228,11 +266,10 @@ function extractSpecMap(specHtml) {
       if (r.length < 2) continue;
       const value = r[r.length - 1].text;
       const label = r[r.length - 2].text.replace(/\s/g, "");
-      if (!label || label.length > 30) continue;
+      if (!label || label.length > 40) continue;
       if (r.length >= 3) parent = r[0].text.replace(/\s/g, "");
       if (!(label in map)) map[label] = value;
       if (r.length >= 3 && parent && !(parent + ":" + label in map)) map[parent + ":" + label] = value;
-      else if (r.length === 2 && parent && r[0].tag === "th" && !(label in map)) map[label] = value;
     }
   }
   return map;
@@ -247,180 +284,154 @@ function findSpec(spec, patterns) {
   return null;
 }
 
-const isDash = (v) => v == null || /^[\s－\-―ー–—]*$/.test(v) || /^(非対応|なし|ー)$/.test(v.trim());
-
 // ---------- 4) 各項目の判定 ----------
 
-function deriveFields({ slug, folder, listedIn, indexHtml, specHtml }) {
+function deriveFields({ slug, folder, listedIn, heading, indexHtml, specHtml }) {
   const spec = extractSpecMap(specHtml);
   const idxText = bodyText(indexHtml);
   const specText = bodyText(specHtml);
   const all = idxText + " " + specText;
-  const title = extractMeta(indexHtml, "property", "og:title") || (indexHtml.match(/<title>([^<]*)/i) || [])[1] || slug;
-
-  const seriesName = cleanSeriesName(title, slug);
+  // 本文に書かれず、meta description だけに「スライド式モデル」と書かれているシリーズがある（例：ED-S4/R）
+  const meta = [extractMeta(indexHtml, "name", "description"), extractMeta(indexHtml, "name", "keywords")].join(" ");
+  const title = extractMeta(indexHtml, "property", "og:title") || cellText((indexHtml.match(/<title>([\s\S]*?)<\/title>/i) || [])[1] || "") || slug;
+  const h1 = cellText((indexHtml.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i) || [])[1] || "");
+  const fullName = h1 || title;
+  const seriesName = cleanSeriesName(fullName, slug);
 
   const interfaceText = findSpec(spec, [/^インターフェ[イー]ス$/, /インターフェ/]) || "";
   const connectorText = findSpec(spec, [/コネクター形状/, /コネクタ/]) || "";
-  // 古いテンプレートは「添付品」、新しいテンプレートは「付属品」
-  const accessoryText = findSpec(spec, [/^付属品$/, /付属品/, /^添付品$/, /添付品/]) || "";
-  // 電源の見出しは「定格電圧」「電源」「定格」のいずれか（テンプレートにより異なる）
-  const powerText = [findSpec(spec, [/定格電圧/]), findSpec(spec, [/^電源/, /電源方式/]), findSpec(spec, [/^定格$/])].filter(Boolean).join(" ");
-  const phoneText = findSpec(spec, [/スマートフォン/, /タブレット/]);
-  const tvText = findSpec(spec, [/^テレビ$/, /対応機種:テレビ/]);
-  // 対応機種の「ゲーム機」「その他」欄（例：「PlayStation 5」「Windows／Mac以外のUSB機器」）
-  const gameText = findSpec(spec, [/^ゲーム機$/, /対応機種:ゲーム機/]);
-  const otherText = findSpec(spec, [/^対応機種:その他$/, /^その他$/]);
-  const warrantyText = findSpec(spec, [/保証期間/]) || "";
-  const weightText = findSpec(spec, [/質量/, /重さ/, /重量/]) || "";
+  const compatText = findSpec(spec, [/^対応機種$/, /^動作環境$/, /対応機種/]) || "";
+  const osText = findSpec(spec, [/^対応OS/, /対応OS/]) || "";
+  const warrantyText = findSpec(spec, [/^保証期間$/, /保証期間/]) || "";
+  const weightText = findSpec(spec, [/^質量$/, /質量/, /重さ/]) || "";
   const dimText = findSpec(spec, [/外形寸法/]) || "";
+  const tempText = findSpec(spec, [/使用温度範囲/, /動作温度/]) || "";
+  const lampText = findSpec(spec, [/アクセスランプ/, /^ランプ/]);
 
-  const mediaType = /^(ss|avssd|r-ss)/.test(slug) || /SSD/.test(seriesName) ? "SSD" : "HDD";
+  // 本体の形：ノック式 → スライド式 → キャップ式 の順に判定する
+  // （スライド式の説明に「キャップの紛失の心配なし」と書かれていることがあるため）
+  const styleText = all + " " + meta;
+  let bodyStyle = null;
+  if (/ノック式/.test(styleText)) bodyStyle = "knock";
+  else if (/スライド(式|機構|方式|スイッチ)|USB端子スライド/.test(styleText)) bodyStyle = "slide";
+  else if (/キャップ(式|付き|を後ろ|装着)|保護キャップ|キャップを含む/.test(styleText)) bodyStyle = "cap";
 
-  let formFactor = "stationary";
-  if (mediaType === "SSD" && (/^(ssps|sspq|avssd)/.test(slug) || /スティック/.test(title))) formFactor = "stick";
-  else if (/^sspj/.test(slug) || (mediaType === "SSD" && /小型SSD/.test(all) && !/ポータブルSSD/.test(seriesName))) formFactor = "compact";
-  else if (folder === "portable" || listedIn.has("portable") || mediaType === "SSD" || /^hdp/.test(slug)) formFactor = "portable";
-
-  const driveMatch = all.match(/(\d)\s*ドライブ/);
-  const driveCount = /^hd4-/.test(slug) ? 4 : /^hdw-/.test(slug) ? 2 : driveMatch ? Number(driveMatch[1]) : 1;
-
-  // バスパワー：定格電圧/電源欄に「バスパワー」。ACアダプター表記があれば非バスパワー
-  let busPower;
-  if (/バスパワー/.test(powerText)) busPower = true;
-  else if (/ACアダプター|AC100V|AC\s*100/.test(powerText)) busPower = false;
-  else busPower = /バスパワー/.test(all) && !/ACアダプター/.test(accessoryText);
-
-  // スマホ：専用の行が無いページ（例：R-SSPT-UF）は「対応機種」欄の中身で判定する
-  const compatText = findSpec(spec, [/^対応機種$/, /対応機種/]) || "";
-  // 対応機種の「パソコン」欄（例：「Windowsパソコン、Mac」）。専用の行が無いページは対応機種欄全体で判定
-  const pcText = findSpec(spec, [/^パソコン$/, /対応機種:パソコン/]) || compatText;
-  const smartphone = phoneText != null && !isDash(phoneText)
-    ? true
-    : /(iPhone|iPad|Android|スマートフォン)/.test(compatText);
-  // テレビ：専用の行が無いページ（例：HDPH-UTV）は「対応機種」欄の「録画に対応したAV機器」等で判定。
-  // 「テレビでは使えません」と明記されている商品（例：HDPH-UTV5DK）は必ず非対応にする。
-  const tvNegative = /テレビ.{0,12}(使用できません|使えません|非対応|ご利用いただけません|ご使用いただけません)/.test(all) || /AV機器は非対応/.test(all);
-  let tv;
-  if (listedIn.has("rokuga")) tv = true; // 例：HDD-UTB・SSPS-US（録画用ページ掲載＝テレビ録画対応）
-  else if (tvNegative) tv = false;
-  else if (tvText != null && !/^対応機種/.test(tvText)) tv = !isDash(tvText);
-  else tv = /(AV機器|テレビ|レコーダー)/.test(compatText) || folder === "rokuga";
-  const tvRecordingMain = folder === "rokuga" || /^(av|hdpl|hdpz)/.test(slug);
-
-  // 「耐衝撃」と書かず「衝撃・振動に強い」と書く商品もある（例：R-SSPT-UF、SSMG-UWCB）
-  const shockproof = /耐衝撃|衝撃(?:や|・|、)?(?:振動)?に強/.test(all);
-  const shockNote = (all.match(/[^。 ]{0,30}(MIL[^。]{0,40}|耐衝撃[^。]{0,30}|衝撃[^。]{0,20}に強[^。]{0,10})/) || [])[0] || null;
-
-  const encHw = /(ハードウェア暗号化|自動暗号化|AES\s*-?\s*\d{3}\s*bit[^。]{0,20}暗号化|暗号化チップ)/i.test(all);
-  // 「パソコンの暗号化・管理ソフトに対応」：パソコン側のアプリ（I-O Security Lock App、
-  // SUHManager 等）でパスワード設定・一元管理するタイプ。BitLocker対応の明記も含める。
-  const encSw = /(Security Lock App|SUHManager|暗号化ソフト|ソフトウェア暗号化|暗号化.{0,10}アプリ|BitLocker)/i.test(all);
-  const encNoteMatch = all.match(/[^。 ]{0,20}(AES\s*-?\s*\d{3}\s*bit|ハードウェア暗号化|自動暗号化|暗号化ソフト[^。]{0,20})/i);
-
-  // 端子：本体側コネクター＋付属ケーブルからパソコン／スマホ側の差し込み口を判定
-  const conn = (connectorText + " " + accessoryText + " " + interfaceText);
+  // 端子
+  const connAll = connectorText + " " + compatText + " " + interfaceText;
   const host = new Set();
-  // 「A-microB」「A - microB」「A－microB」など、空白や全角ハイフンのゆれを許容する
-  if (/(Type-?C|USB-?C|\bC\s*[-－–]\s*(micro\s*B|C|A)|USB4|Thunderbolt|C to|Cケーブル)/i.test(conn)) host.add("C");
-  if (/(Type-?A|USB-?A|\bA\s*[-－–]\s*(micro\s*B|B|C)|A to|Aケーブル|変換アダプター)/i.test(conn)) host.add("A");
-  if (/(C-C|USB-?C.{0,6}USB-?C)/i.test(accessoryText) && /(変換|アダプター).{0,10}(A|USB-A)/i.test(accessoryText)) host.add("A");
-  if (host.size === 0) host.add("A"); // 記載が無い古い据え置き機はUSB-A
+  if (/Type-?C|USB-?C/i.test(connAll)) host.add("C");
+  if (/Standard\s*-?\s*A|USB-?A|Type-?A/i.test(connAll)) host.add("A");
+  if (host.size === 0) host.add("A");
 
-  // ケーブル長（付属品欄の「約○cm」「約○m」の最大値）
-  let cableLengthCm = null;
-  const lenRe = /約?\s*([\d.]+)\s*(cm|ｃｍ|m|ｍ)(?![a-zA-Zｍ])/g;
-  let lm;
-  while ((lm = lenRe.exec(accessoryText)) !== null) {
-    const n = Number(lm[1]);
-    const cm = /c/.test(lm[2]) || /ｃ/.test(lm[2]) ? n : n * 100;
-    if (cm >= 5 && cm <= 500) cableLengthCm = Math.max(cableLengthCm || 0, Math.round(cm));
-  }
+  // 使える機器（対応OS欄が基本。対応機種欄の「Windowsパソコン、Mac、Chromebook」も見る）
+  const osAll = osText + " " + compatText;
+  const os = {
+    windows: /Windows/i.test(osAll) || !osAll.trim(),
+    mac: /macOS|OS X|Mac/i.test(osAll),
+    chromeos: /Chrome\s*OS|ChromeOS|Chromebook/i.test(osAll),
+    ios: /iOS|iPadOS|iPhone|iPad/i.test(osAll),
+    android: /Android/i.test(osAll),
+    linux: /Ubuntu|Linux/i.test(osAll),
+    winServer: /Windows\s*Server/i.test(osAll)
+  };
+  // 変換ケーブル（別売）でAndroidに使える、と本文だけに書かれている商品（例：U3-PSH）
+  const androidViaAdapter = !os.android && /Android/.test(idxText) && /(OTG|変換ケーブル|変換アダプター)/.test(idxText);
+
+  // セキュリティ
+  const passwordButton = /パスワードボタン/.test(all);
+  const passwordLock = passwordButton || /パスワードロック|SUGate|パスワードで強制的にロック/.test(all);
+  const hwEncryption = /ハードウェア(?:で)?自動暗号化|ハードウェア暗号化|自動暗号化/.test(all);
+  // 「抗ウイルス」（抗菌モデル）と区別するため、「ウイルス」単独では判定しない
+  const antivirus = /アンチウイルス|ウイルスチェック|ウイルスパターン|USB\s*Security/i.test(all);
+  const antivirusEngine = /Trellix/i.test(all) ? "Trellix" : /Trend\s*Micro|トレンドマイクロ/i.test(all) ? "トレンドマイクロ" : null;
+  // 管理者用ソフト：他シリーズとの比較表にも名前が出るため、仕様ページの記載で判定する
+  const adminSoftware = /SUHManager/i.test(specText);
+  const fileEncryptSoftware = /QuickSecure/i.test(all);
+  const writeProtect = /書き?込み禁止|ライトプロテクト|読み取り専用/.test(all);
+  const retry = all.match(/(?:入力ミスの上限は|連続\s*)(\d+)\s*回/);
 
   const warrantyYears = (warrantyText.match(/(\d+)\s*年/) || all.match(/(\d)\s*年保証/) || [])[1];
   const weightG = (() => {
-    const kg = weightText.match(/([\d.]+)\s*kg/i);
-    if (kg) return Math.round(Number(kg[1]) * 1000);
     const g = weightText.match(/([\d.]+)\s*g/i);
-    return g ? Math.round(Number(g[1])) : null;
+    return g ? Number(g[1]) : null;
   })();
 
-  const imageUrl = extractImage(indexHtml, slug);
-
   const features = [];
-  if (/Time Machine/i.test(all)) features.push("Mac Time Machine対応");
-  if (/24時間.{0,6}(連続|常時)/.test(all)) features.push("24時間連続稼働");
-  if (/タイムシフト/.test(all)) features.push("タイムシフト録画対応");
-  if (/静音/.test(all)) features.push("静音設計");
-  if (/データ移行アプリ内蔵|かんたんデータ移行/.test(all)) features.push("データ移行アプリ内蔵");
-  if (/MagSafe/i.test(all)) features.push("MagSafe対応");
-  if (/グリーン購入法/.test(all)) features.push("グリーン購入法適合");
-  if (/バックアップ専用/.test(all) && /\/ld/i.test(seriesName + slug)) features.push("NASバックアップ専用");
+  if (/pSLC|LONG\s*LIFE/i.test(all)) features.push("書き換えに強い長寿命設計（pSLC）");
+  else if (/書き換え回数.{0,30}約?\d+倍/.test(all)) features.push("書き換え回数が従来モデルより多い長寿命タイプ");
+  if (/SIAA/.test(all) || /抗菌/.test(fullName)) features.push("抗菌・抗ウイルス加工（SIAA認証）");
+  if (/クリップ/.test(all)) features.push("クリップ付き");
+  if (/アルミ/.test(all)) features.push("アルミボディ");
+  if (/データ復旧サービス/.test(all)) features.push("データ復旧サービス（有料）");
+  if (/名入れ/.test(all)) features.push("名入れ対応");
+  if (/ISS/.test(specText) || /ISS-LIGHT/.test(all)) features.push("延長保証（ISS）対象");
+
+  const readM = all.match(/読み込み速度\s*(?:約|最大)?\s*([\d,]+)\s*MB\/s/);
 
   return {
     id: slug,
-    sourceUrl: `${BASE}/product/hdd/${folder}/${slug}/index.htm`,
+    sourceUrl: `${BASE}/product/usbmemory/${folder}/${slug}/index.htm`,
     seriesName,
-    // HDJA-SUTCのように「/hdd/hdd/」配下でも法人向けセキュリティモデルのものがあるため、
-    // 型番に「-SUTC」（セキュリティモデル共通の命名）を含むものは法人向けに寄せる
-    category: /-sutc/.test(slug) ? "biz" : folderToCategory(folder),
-    mediaType,
-    formFactor,
-    driveCount,
-    busPower,
-    smartphone,
-    smartphoneNote: smartphone && phoneText ? phoneText : null,
-    tv,
-    tvRecordingMain,
-    pcWindows: pcText ? /Windows/i.test(pcText) : null,
-    pcMac: pcText ? /Mac/i.test(pcText) : null,
-    pcNote: pcText && pcText.length < 120 ? pcText : null,
-    gameConsole: gameText != null && !isDash(gameText),
-    gameNote: gameText != null && !isDash(gameText) ? gameText : null,
-    otherDevices: otherText != null && !isDash(otherText) && otherText.length < 120 ? otherText : null,
-    shockproof,
-    shockNote: shockproof ? shockNote : null,
-    encryptionHw: encHw,
-    encryptionSw: encSw,
-    encryptionNote: (encHw || encSw) && encNoteMatch ? encNoteMatch[0].trim() : null,
-    deviceConnector: connectorText || null,
+    fullName,
+    lineup: detectLineup({ folder, listedIn, heading, fullName, passwordLock, antivirus }),
+    bodyStyle,
+    strapHole: /ストラップホール|ストラップ穴/.test(all),
+    clip: /クリップ/.test(all),
+    accessLamp: lampText == null ? null : /^(有|あり|有り)/.test(lampText.trim()),
     hostConnectors: ["A", "C"].filter((k) => host.has(k)),
-    cables: accessoryText || null,
-    cableLengthCm,
+    connectorText: connectorText || null,
     interface: interfaceText || null,
-    macTimeMachine: /Time Machine/i.test(all),
+    readMBps: readM ? Number(readM[1].replace(/,/g, "")) : null,
+    os,
+    androidViaAdapter,
+    osText: osText || null,
+    compatText: compatText || null,
+    security: {
+      passwordLock,
+      passwordButton,
+      hwEncryption,
+      antivirus,
+      antivirusEngine: antivirus ? antivirusEngine : null,
+      adminSoftware,
+      fileEncryptSoftware,
+      writeProtect,
+      retryLimit: passwordLock && retry ? Number(retry[1]) : null
+    },
+    longLife: /pSLC|LONG\s*LIFE/i.test(all),
+    antibacterial: /SIAA/.test(all) || /抗菌/.test(fullName),
     warrantyYears: warrantyYears ? Number(warrantyYears) : null,
     weightG,
     dimensions: dimText || null,
+    operatingTemp: tempText || null,
     features,
-    imageUrl
+    imageUrl: extractImage(indexHtml, slug)
   };
 }
 
-// 商品画像。og:imageが無いページが多い（据え置き系は全滅だった）ので、
-// ①og:image → ②「_l.jpg」で終わる画像 → ③ファイル名に型番（slug）を含む画像 の順で探す。
-// HDJA-UTRのように画像の置き場所が他と違うページもあるため、パスの決め打ちはしない。
+// ラインナップ（カードの左上に出す種類）
+function detectLineup({ folder, listedIn, heading, fullName, passwordLock, antivirus }) {
+  if (folder === "security" || passwordLock || antivirus || /セキュリティ/.test(fullName)) return "security";
+  if (/法人/.test(heading) || /法人/.test(fullName)) return "biz";
+  if (/抗菌/.test(heading) || /抗菌/.test(fullName)) return "antibac";
+  if (/ハイスピード|高速/.test(heading)) return "speed";
+  if (/デザイン/.test(heading)) return "design";
+  return "standard";
+}
+
 function extractImage(html, slug) {
   const og = extractMeta(html, "property", "og:image");
   if (og) return absUrl(og, BASE + "/");
   const body = html.replace(/<head[\s\S]*?<\/head>/i, "");
   const l = body.match(/<img[^>]+src=["']([^"']+_l\.(?:jpg|jpeg|png|webp))["']/i);
   if (l) return absUrl(l[1], BASE + "/");
-  const key = slug.replace(/-/g, "[-_]?");
-  const re = new RegExp(`<img[^>]+src=["']([^"']*${key}[^"']*\\.(?:jpg|jpeg|png|webp))["']`, "i");
-  const m = body.match(re);
-  if (m) return absUrl(m[1], BASE + "/");
-  // 最後の手段：公式の商品画像の標準的な置き場所（多くのシリーズがこの形）
   return `${BASE}/image/${slug}_l.jpg`;
 }
 
-function folderToCategory(folder) {
-  return { hdd: "stationary", portable: "portable", ssd: "ssd", rokuga: "rokuga", bizhdd: "biz" }[folder] || folder;
-}
-
+// 「USB 3.2 Gen 1（USB 3.0）対応 USBメモリーU3-PSHシリーズ」→「U3-PSHシリーズ」
 function cleanSeriesName(title, slug) {
-  let t = title.split(/[|｜]/)[0].replace(/\s*-\s*I-O DATA.*$/i, "").trim();
-  t = t.replace(/^.*?(?=(カクうす|トロッカ|floworks|[A-Z]{2,}[A-Z0-9-]*\/?[A-Z]*シリーズ|[A-Z]{2,}-[A-Z0-9]+))/, "");
+  const t = title.split(/[|｜]/)[0].replace(/\s*-\s*I-O DATA.*$/i, "").trim();
+  const m = t.match(/([A-Z][A-Z0-9]*-[A-Z0-9\/-]+シリーズ)/);
+  if (m) return m[1];
   return t || slug.toUpperCase();
 }
 
@@ -437,15 +448,18 @@ async function loadOverrides() {
 
 function applyOverride(product, ov) {
   if (!ov) return product;
-  const { variants: vOv, ...rest } = ov;
+  const { variants: vOv, security: sOv, os: oOv, ...rest } = ov;
   for (const [k, v] of Object.entries(rest)) {
     if (k.startsWith("_")) continue; // _memo などのメモ欄
     product[k] = v;
   }
+  if (sOv) Object.entries(sOv).forEach(([k, v]) => { if (!k.startsWith("_")) product.security[k] = v; });
+  if (oOv) Object.entries(oOv).forEach(([k, v]) => { if (!k.startsWith("_")) product.os[k] = v; });
   if (vOv) {
     for (const v of product.variants) {
       if (vOv[v.sku]) Object.assign(v, vOv[v.sku]);
     }
+    product.variants = product.variants.filter((v) => !v.exclude);
   }
   return product;
 }
@@ -480,23 +494,32 @@ async function main() {
 
     const variants = extractVariants(indexHtml);
     if (variants.length === 0) {
-      // 価格表の無いページ（シリーズの一覧ページ・アクセサリ等）は対象外
       console.log("  -> 容量付きの価格表が無いため対象外");
       continue;
     }
     const fields = deriveFields({ ...s, indexHtml, specHtml });
-    // 価格表に色が無く、仕様表の「カラー」が1色だけのとき（例：SSPS-US/S）はそれを使う
+    // 型番で年数が決まらない型番は、シリーズの保証年数を入れる
+    variants.forEach((v) => { if (v.warrantyYears == null) v.warrantyYears = fields.warrantyYears; });
     const specColor = findSpec(extractSpecMap(specHtml), [/^カラー$/, /本体色/]);
     if (specColor && !/[、,／\/]/.test(specColor)) variants.forEach((v) => { if (!v.color) v.color = specColor; });
-    const product = applyOverride({ ...fields, variants, lastCheckedAt: new Date().toISOString() }, overrides[s.slug]);
-    if (product.exclude) { console.log("  -> overrides.jsonで除外指定"); continue; }
-    delete product.exclude;
-    products.push(product);
+    products.push({ ...fields, variants, lastCheckedAt: new Date().toISOString(), _slug: s.slug });
   }
 
-  products.sort((a, b) => a.id.localeCompare(b.id));
-  await fs.writeFile(OUTPUT_PATH, JSON.stringify({ updatedAt: new Date().toISOString(), products }, null, 2) + "\n");
-  console.log("完了:", products.length, "シリーズ /", products.reduce((n, p) => n + p.variants.length, 0), "型番");
+  const finalList = [];
+  for (const p of products) {
+    const slug = p._slug;
+    delete p._slug;
+    fillColorsFromSku(p.variants, (overrides[slug] || {}).colorCodes);
+    const product = applyOverride(p, overrides[slug]);
+    delete product.colorCodes;
+    if (product.exclude) { console.log(`  -> ${slug}: overrides.jsonで除外指定`); continue; }
+    delete product.exclude;
+    if (product.variants.length) finalList.push(product);
+  }
+
+  finalList.sort((a, b) => a.id.localeCompare(b.id));
+  await fs.writeFile(OUTPUT_PATH, JSON.stringify({ updatedAt: new Date().toISOString(), products: finalList }, null, 2) + "\n");
+  console.log("完了:", finalList.length, "シリーズ /", finalList.reduce((n, p) => n + p.variants.length, 0), "型番");
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
