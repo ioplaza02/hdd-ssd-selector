@@ -195,6 +195,13 @@
       return String(s ?? "").replace(/&times;/g, "×").replace(/&amp;/g, "&").replace(/&nbsp;/g, " ").replace(/&reg;/g, "®").replace(/&trade;/g, "™");
     }
     const plugName = (c) => c === "A" ? "USB-A" : c === "C" ? "USB-C" : c;
+    // 差し込み口の形のイラスト。USB-A＝四角い口の中に板（舌）がある形、USB-C＝角の丸い楕円の口
+    function plugIcon(c, size = 1) {
+      const w = Math.round(30 * size), h = Math.round(14 * size);
+      if (c === "A") return `<svg class="plug-ico" width="${w}" height="${h}" viewBox="0 0 30 14" aria-hidden="true"><rect x="1" y="1" width="28" height="12" rx="1.2" fill="#fff" stroke="currentColor" stroke-width="1.6"/><rect x="4" y="3.4" width="22" height="4.2" rx=".5" fill="currentColor"/><g fill="#fff"><rect x="7" y="4.6" width="2.6" height="1.8"/><rect x="11.8" y="4.6" width="2.6" height="1.8"/><rect x="16.6" y="4.6" width="2.6" height="1.8"/><rect x="21.4" y="4.6" width="2.6" height="1.8"/></g></svg>`;
+      if (c === "C") return `<svg class="plug-ico" width="${w}" height="${h}" viewBox="0 0 30 14" aria-hidden="true"><rect x="2" y="1.5" width="26" height="11" rx="5.5" fill="#fff" stroke="currentColor" stroke-width="1.6"/><rect x="7" y="5.6" width="16" height="2.8" rx="1.4" fill="currentColor"/></svg>`;
+      return "";
+    }
     // 規格名から「USB 20Gbps（USB 3.2 Gen2×2）」のような最初の速度表記だけを取り出す
     function mainSpeed(p) {
       const t = fixText(p.interface || "").split(/[／\/]/)[0].trim();
@@ -247,14 +254,14 @@
     function connLines(p) {
       const fallbackSpeed = speedOnly(mainSpeed(p));
       if (p.formFactor === "stick" || p.formFactor === "compact") {
-        return (p.hostConnectors || []).map((c) => ({ head: `${plugName(c)} 直挿し`, body: fallbackSpeed }));
+        return (p.hostConnectors || []).map((c) => ({ plug: c, head: `${plugName(c)} 直挿し`, body: fallbackSpeed }));
       }
       const cl = cableList(p);
       if (cl.length) {
-        return cl.map((c) => ({ head: `${plugName(c.plug)}ケーブル`, body: [c.speed || fallbackSpeed, c.len].filter(Boolean).join("・") }));
+        return cl.map((c) => ({ plug: c.plug, head: `${plugName(c.plug)}ケーブル`, body: [c.speed || fallbackSpeed, c.len].filter(Boolean).join("・") }));
       }
-      if (p.cables && /一体/.test(p.cables)) return [{ head: `${connText(p)} ケーブル一体型`, body: fallbackSpeed }];
-      return [{ head: connText(p), body: [fallbackSpeed, cableText(p) !== "—" ? cableText(p) : ""].filter(Boolean).join("・") }];
+      if (p.cables && /一体/.test(p.cables)) return [{ plug: (p.hostConnectors || [])[0], head: `${connText(p)} ケーブル一体型`, body: fallbackSpeed }];
+      return [{ plug: (p.hostConnectors || []).length === 1 ? p.hostConnectors[0] : null, head: connText(p), body: [fallbackSpeed, cableText(p) !== "—" ? cableText(p) : ""].filter(Boolean).join("・") }];
     }
     // 本体側がmicroB／B端子なのに、USB-C で使える商品の注釈（「本体にUSB-C端子がある」と誤解されやすいため）
     function microBNote(p) {
@@ -272,6 +279,10 @@
       if (typeof p.pcOnly === "boolean") return p.pcOnly;
       return !!((p.encryptionHw || p.encryptionSw) && !p.smartphone);
     }
+    // 「パソコン専用」の説明文。商品ごとに data/overrides.json の "pcOnlyText" で差し替えられる
+    // （例：SSCA-SUW はノーマルモードがあるため、「動作未検証」という言い方にしている）
+    const PC_ONLY_CARD_TEXT = "ロック解除にパソコン用アプリが必要なため、スマホ・タブレットでは使えません。";
+    const pcOnlyCardText = (p) => p.pcOnlyText || PC_ONLY_CARD_TEXT;
     const PC_ONLY_TEXT = "パソコン専用です。専用ソフトでパスワード認証（ロック解除）しないとデータにアクセスできないため、スマホ・タブレットやテレビにつないでも使えません。";
 
     // 「Windows PC」「Mac」タグ。LAN DISK用バックアップ専用品は「LAN DISK専用」と出す
@@ -282,6 +293,18 @@
       if (p.pcWindows !== false) out.push("💻 Windows PC");
       if (p.pcMac === true) out.push("Mac");
       return out;
+    }
+
+    // 読み書き速度（公式の一覧ページの「Read／Write」枠）。記載のある商品だけ表示する
+    function speedHtml(p, compact) {
+      const sp = p.speed;
+      if (!sp || (!sp.readMBps && !sp.writeMBps)) return "";
+      const n = (x) => x ? `約${x.toLocaleString("ja-JP")}<small>MB/s</small>` : "—";
+      return `<div class="speed${compact ? " speed--compact" : ""}">
+        <div class="speed__tile"><span class="speed__label">Read<i>読み込み</i></span><span class="speed__val">${n(sp.readMBps)}</span></div>
+        <div class="speed__tile"><span class="speed__label">Write<i>書き込み</i></span><span class="speed__val">${n(sp.writeMBps)}</span></div>
+        ${sp.note ? `<p class="speed__note">${escapeHtml(fixText(sp.note))}</p>` : ""}
+      </div>`;
     }
 
     function connText(p) {
@@ -329,6 +352,11 @@
           if (cb.checked) state[cb.dataset.group].add(cb.value); else state[cb.dataset.group].delete(cb.value);
           onChange();
         });
+      });
+
+      // 端子ボタンのアイコンを、カードと同じ差し込み口のイラストに差し替える
+      $$('[data-filter="conn"] .conn-ico').forEach((el) => {
+        el.outerHTML = `<span class="conn-ico-svg">${plugIcon(el.classList.contains("conn-ico--a") ? "A" : "C", 1.4)}</span>`;
       });
 
       // スマホ表示では絞り込みを折りたためるようにする
@@ -451,7 +479,7 @@
       if (p.tv) badges.push(`<span class="badge badge--on">📺 テレビ録画</span>`);
       if (p.gameConsole) badges.push(`<span class="badge badge--on">🎮 ゲーム機</span>`);
       if (p.busPower) badges.push(`<span class="badge">バスパワー</span>`);
-      badges.push(`<span class="badge">${connText(p)}</span>`);
+      (p.hostConnectors || []).forEach((c) => badges.push(`<span class="badge badge--conn">${plugIcon(c, .8)}${plugName(c)}</span>`));
       if (p.shockproof) badges.push(`<span class="badge badge--sec">耐衝撃</span>`);
       if (p.encryptionHw) badges.push(`<span class="badge badge--sec">ハードウェア暗号化</span>`);
       if (p.encryptionSw) badges.push(`<span class="badge badge--sec">暗号化・管理ソフト対応</span>`);
@@ -481,13 +509,14 @@
             ? `<span class="price-inc">${yen(v.priceIncTax)}<small>（税込）</small></span>${v.priceExTax != null ? `<span class="price-ex">税抜 ${yen(v.priceExTax)}</span>` : ""}${up ? `<span class="unit-price">1TBあたり 約${yen(up)}</span>` : ""}`
             : `<span class="price-open">オープン価格</span>`}
         </div>
+        ${speedHtml(p)}
         <div class="badges">${badges.join("")}</div>
         <dl class="spec-mini">
           <dt>JAN</dt><dd>${v.jan ? `${escapeHtml(v.jan)}<button type="button" class="copy-jan" data-copy="${escapeHtml(v.jan)}">コピー</button>` : "—"}</dd>
-          <dt>接続</dt><dd>${connLines(p).map((l) => `<span class="conn-line"><b>${escapeHtml(l.head)}</b>${l.body ? `：${escapeHtml(l.body)}` : ""}</span>`).join("")}</dd>
+          <dt>接続</dt><dd>${connLines(p).map((l) => `<span class="conn-line">${l.plug ? plugIcon(l.plug, .75) : ""}<b>${escapeHtml(l.head)}</b>${l.body ? `：${escapeHtml(l.body)}` : ""}</span>`).join("")}</dd>
           <dt>保証</dt><dd>${p.warrantyYears ? p.warrantyYears + "年" : "—"}</dd>
         </dl>
-        ${isPcOnly(p) ? `<div class="alert alert--pc"><span class="alert__icon" aria-hidden="true">💻</span><span><b>パソコン専用</b>ロック解除にパソコン用アプリが必要なため、スマホ・タブレットでは使えません。</span></div>` : ""}
+        ${isPcOnly(p) ? `<div class="alert alert--pc"><span class="alert__icon" aria-hidden="true">💻</span><span><b>パソコン専用</b>${escapeHtml(pcOnlyCardText(p))}</span></div>` : ""}
         ${microBNote(p) ? `<p class="note-info"><span aria-hidden="true">ⓘ</span>${escapeHtml(microBNote(p))}</p>` : ""}
         <div class="card__foot">
           <a class="card__link" href="${escapeHtml(p.sourceUrl)}" target="_blank" rel="noopener noreferrer">商品ページ ↗</a>
@@ -589,21 +618,24 @@
           (p) => pcBadges(p).join("・")),
         row("スマホ・タブレット", (p) => p.smartphone
           ? `<span class="yes">対応</span>${p.smartphoneNote ? `<br><small>${escapeHtml(fixText(p.smartphoneNote))}</small>` : ""}`
-          : isPcOnly(p) ? `<span class="ng">使えません（パソコン専用）</span><br><small>${PC_ONLY_TEXT}</small>` : yesNo(false),
+          : isPcOnly(p) ? `<span class="ng">${p.pcOnlyText ? "パソコン専用" : "使えません（パソコン専用）"}</span><br><small>${escapeHtml(p.pcOnlyText || PC_ONLY_TEXT)}</small>` : yesNo(false),
           (p) => p.smartphone ? "対応" : isPcOnly(p) ? "PC専用" : "—"),
         row("テレビ録画", (p) => p.tvRecordingMain ? `<span class="yes">対応（録画用モデル）</span>` : yesNo(p.tv)),
         row("ゲーム機", (p) => p.gameConsole ? `<span class="yes">対応</span>${p.gameNote ? `<br><small>${escapeHtml(fixText(p.gameNote))}</small>` : ""}` : yesNo(false), (p) => p.gameConsole ? "対応" : "—"),
         row("その他の機器", (p) => escapeHtml(fixText(p.otherDevices || "—"))),
         row("Mac Time Machine", (p) => yesNo(p.macTimeMachine)),
         group("接続・電源"),
-        row("パソコン・スマホ側の端子", (p) => connText(p)),
-        row("接続方法・速度・ケーブル長", (p) => connLines(p).map((l) => `<b>${escapeHtml(l.head)}</b>${l.body ? `：${escapeHtml(l.body)}` : ""}`).join("<br>")),
+        row("パソコン・スマホ側の端子", (p) => (p.hostConnectors || []).map((c) => `<span class="ct-plug">${plugIcon(c)}${plugName(c)}</span>`).join(" "), (p) => connText(p)),
+        row("読み書き速度", (p) => p.speed && (p.speed.readMBps || p.speed.writeMBps)
+          ? `Read 約${(p.speed.readMBps || 0).toLocaleString("ja-JP")}MB/s<br>Write 約${(p.speed.writeMBps || 0).toLocaleString("ja-JP")}MB/s${p.speed.note ? `<br><small>${escapeHtml(fixText(p.speed.note))}</small>` : ""}`
+          : "—"),
+        row("接続方法・速度・ケーブル長", (p) => connLines(p).map((l) => `${l.plug ? plugIcon(l.plug, .75) : ""}<b>${escapeHtml(l.head)}</b>${l.body ? `：${escapeHtml(l.body)}` : ""}`).join("<br>")),
         row("本体側の端子", (p) => escapeHtml(deviceConnLabel(p) || "—") + (microBNote(p) ? `<br><small>${escapeHtml(microBNote(p))}</small>` : "")),
         row("付属ケーブル", (p) => escapeHtml(fixText(p.cables || (p.formFactor === "stick" || p.formFactor === "compact" ? "なし（直挿し）" : "—")))),
         row("インターフェイス", (p) => escapeHtml(fixText(p.interface || "—"))),
         row("電源", (p) => powerText(p)),
         group("安心・セキュリティ"),
-        row("耐衝撃", (p) => p.shockproof ? `<span class="yes">対応</span>${p.shockNote ? `<br><small>${escapeHtml(fixText(p.shockNote))}</small>` : ""}` : yesNo(false), (p) => p.shockproof ? "対応" : "—"),
+        row("耐衝撃", (p) => p.shockproof ? `<span class="yes">対応</span>${p.shockNote && /MIL/i.test(p.shockNote) ? `<br><small>${escapeHtml(fixText(p.shockNote))}</small>` : ""}` : yesNo(false), (p) => p.shockproof ? "対応" : "—"),
         row("ハードウェア暗号化", (p) => p.encryptionHw ? `<span class="yes">対応</span>${p.encryptionNote ? `<br><small>${escapeHtml(fixText(p.encryptionNote))}</small>` : ""}` : yesNo(false), (p) => p.encryptionHw ? "対応" : "—"),
         row("暗号化・管理ソフト", (p) => yesNo(p.encryptionSw)),
         row("保証期間", (p) => p.warrantyYears ? p.warrantyYears + "年" : "—"),
