@@ -8,5 +8,10 @@
       "variants": { "HDPX-UTSC1KB": { "jan": "4957180000000" } }
     }
   },
-  "series": {}
+      "series": {
+       "ssca-suw": {
+         "_memo": "ノーマルモードならパスワード・アプリ不要（公式マニュアル 002guide/001shoki.html）。パソコン専用の注意は出さない",
+         "pcOnly": false
+       }
+     }
 }
