@@ -1,6 +1,80 @@
 {
-  "updatedAt": "2026-10-20T21:22:06.098Z",
+  "updatedAt": "2026-10-21T21:21:59.288Z",
   "products": [
+    {
+      "id": "avhd-asb",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/rokuga/avhd-asb/index.htm",
+      "seriesName": "AVHD-ASBシリーズ",
+      "category": "rokuga",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 1,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": true,
+      "tvRecordingMain": true,
+      "pcWindows": true,
+      "pcMac": false,
+      "pcNote": "Windowsパソコン",
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-microB×1",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-microB USB 5Gbps 約1.5m）、ACアダプター",
+      "cableLengthCm": 150,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 1,
+      "weightG": 910,
+      "dimensions": "約180×180×45mm（ゴム足含む、突起部含まず）",
+      "features": [
+        "24時間連続稼働",
+        "タイムシフト録画対応",
+        "静音設計",
+        "グリーン購入法適合"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/avhd-asb_l.jpg",
+      "speed": null,
+      "variants": [
+        {
+          "sku": "AVHD-AS2B",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 48950,
+          "priceExTax": 44500,
+          "jan": "4957180195704",
+          "status": "現行"
+        },
+        {
+          "sku": "AVHD-AS4B",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 55110,
+          "priceExTax": 50100,
+          "jan": "4957180195711",
+          "status": "現行"
+        },
+        {
+          "sku": "AVHD-AS6B",
+          "capacityGB": 6000,
+          "color": null,
+          "priceIncTax": 73480,
+          "priceExTax": 66800,
+          "jan": "4957180195728",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-21T21:21:01.973Z"
+    },
     {
       "id": "avhd-asu",
       "sourceUrl": "https://www.iodata.jp/product/hdd/rokuga/avhd-asu/index.htm",
@@ -73,7 +147,72 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:21:26.499Z"
+      "lastCheckedAt": "2026-10-21T21:21:16.145Z"
+    },
+    {
+      "id": "avhd-usb",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/rokuga/avhd-usb/index.htm",
+      "seriesName": "AVHD-USBシリーズ",
+      "category": "rokuga",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 1,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": true,
+      "tvRecordingMain": true,
+      "pcWindows": true,
+      "pcMac": false,
+      "pcNote": "Windowsパソコン",
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-microB×1",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-microB USB 5Gbps 約1.5m）、ACアダプター",
+      "cableLengthCm": 150,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 1,
+      "weightG": 980,
+      "dimensions": "約180×180×45mm（ゴム足含む、突起部含まず）",
+      "features": [
+        "24時間連続稼働",
+        "タイムシフト録画対応",
+        "静音設計",
+        "グリーン購入法適合"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/avhd-usb_l.jpg",
+      "speed": null,
+      "variants": [
+        {
+          "sku": "AVHD-US6B",
+          "capacityGB": 6000,
+          "color": null,
+          "priceIncTax": 69850,
+          "priceExTax": 63500,
+          "jan": "4957180195650",
+          "status": "現行"
+        },
+        {
+          "sku": "AVHD-US8B",
+          "capacityGB": 8000,
+          "color": null,
+          "priceIncTax": 82170,
+          "priceExTax": 74700,
+          "jan": "4957180195667",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-21T21:21:06.687Z"
     },
     {
       "id": "avhd-usu",
@@ -147,7 +286,72 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:21:31.351Z"
+      "lastCheckedAt": "2026-10-21T21:21:20.883Z"
+    },
+    {
+      "id": "avhd-wrb",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/rokuga/avhd-wrb/index.htm",
+      "seriesName": "AVHD-WRBシリーズ",
+      "category": "rokuga",
+      "mediaType": "HDD",
+      "formFactor": "stationary",
+      "driveCount": 1,
+      "busPower": false,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": true,
+      "tvRecordingMain": true,
+      "pcWindows": true,
+      "pcMac": false,
+      "pcNote": "Windowsパソコン",
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-microB×1",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-microB USB 5Gbps 約2m）、テレビ接続ガイド",
+      "cableLengthCm": 200,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 1,
+      "weightG": 1400,
+      "dimensions": "約215×187×35.5mm（突起部を含まず）",
+      "features": [
+        "24時間連続稼働",
+        "タイムシフト録画対応",
+        "静音設計",
+        "グリーン購入法適合"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/avhd-wrb_l.jpg",
+      "speed": null,
+      "variants": [
+        {
+          "sku": "AVHD-WR4B",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 61160,
+          "priceExTax": 55600,
+          "jan": "4957180195636",
+          "status": "現行"
+        },
+        {
+          "sku": "AVHD-WR6B",
+          "capacityGB": 6000,
+          "color": null,
+          "priceIncTax": 79640,
+          "priceExTax": 72400,
+          "jan": "4957180195643",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-21T21:20:57.279Z"
     },
     {
       "id": "avhd-wru",
@@ -221,7 +425,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:21:21.712Z"
+      "lastCheckedAt": "2026-10-21T21:21:11.412Z"
     },
     {
       "id": "avssd-rs",
@@ -285,7 +489,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:20:38.041Z"
+      "lastCheckedAt": "2026-10-21T21:20:14.384Z"
     },
     {
       "id": "hd4-utn",
@@ -336,7 +540,7 @@
           "priceIncTax": 169730,
           "priceExTax": 154300,
           "jan": "4957180162096",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HD4-UTN16",
@@ -345,7 +549,7 @@
           "priceIncTax": 231220,
           "priceExTax": 210200,
           "jan": "4957180162102",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HD4-UTN32",
@@ -354,7 +558,7 @@
           "priceIncTax": 428120,
           "priceExTax": 389200,
           "jan": "4957180162126",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HD4-UTN48",
@@ -363,7 +567,7 @@
           "priceIncTax": 615120,
           "priceExTax": 559200,
           "jan": "4957180162133",
-          "status": "受注生産"
+          "status": "在庫限り"
         },
         {
           "sku": "HD4-UTN80",
@@ -372,7 +576,7 @@
           "priceIncTax": 984170,
           "priceExTax": 894700,
           "jan": "4957180162157",
-          "status": "受注生産"
+          "status": "在庫限り"
         },
         {
           "sku": "HD4-UTN96",
@@ -381,7 +585,7 @@
           "priceIncTax": 1168750,
           "priceExTax": 1062500,
           "jan": "4957180179346",
-          "status": "受注生産"
+          "status": "在庫限り"
         },
         {
           "sku": "HD4-UTN128",
@@ -390,10 +594,10 @@
           "priceIncTax": 1476310,
           "priceExTax": 1342100,
           "jan": "4957180186085",
-          "status": "受注生産"
+          "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:22:06.098Z"
+      "lastCheckedAt": "2026-10-21T21:21:59.288Z"
     },
     {
       "id": "hd4-utnc",
@@ -501,7 +705,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:22:01.119Z"
+      "lastCheckedAt": "2026-10-21T21:21:54.433Z"
     },
     {
       "id": "hdcx-utp",
@@ -582,7 +786,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:18:25.717Z"
+      "lastCheckedAt": "2026-10-21T21:18:06.404Z"
     },
     {
       "id": "hdd-utb",
@@ -690,7 +894,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:18:40.473Z"
+      "lastCheckedAt": "2026-10-21T21:18:20.988Z"
     },
     {
       "id": "hdd-utc",
@@ -799,7 +1003,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:18:35.524Z"
+      "lastCheckedAt": "2026-10-21T21:18:16.108Z"
     },
     {
       "id": "hdja-sutc",
@@ -889,7 +1093,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:19:10.355Z"
+      "lastCheckedAt": "2026-10-21T21:18:50.121Z"
     },
     {
       "id": "hdja-utb",
@@ -970,7 +1174,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:18:15.962Z"
+      "lastCheckedAt": "2026-10-21T21:17:56.924Z"
     },
     {
       "id": "hdja-utnb",
@@ -1022,7 +1226,7 @@
           "priceIncTax": 29260,
           "priceExTax": 26600,
           "jan": "4957180165721",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UTN2B",
@@ -1031,7 +1235,7 @@
           "priceIncTax": 34100,
           "priceExTax": 31000,
           "jan": "4957180165738",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UTN3B",
@@ -1040,7 +1244,7 @@
           "priceIncTax": 40260,
           "priceExTax": 36600,
           "jan": "4957180165745",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UTN4B",
@@ -1049,7 +1253,7 @@
           "priceIncTax": 48950,
           "priceExTax": 44500,
           "jan": "4957180165752",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UTN6B",
@@ -1058,7 +1262,7 @@
           "priceIncTax": 78430,
           "priceExTax": 71300,
           "jan": "4957180165769",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UTN8B",
@@ -1067,7 +1271,7 @@
           "priceIncTax": 91960,
           "priceExTax": 83600,
           "jan": "4957180165776",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UTN12B",
@@ -1076,7 +1280,7 @@
           "priceIncTax": 145090,
           "priceExTax": 131900,
           "jan": "4957180165783",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UTN16B",
@@ -1085,7 +1289,7 @@
           "priceIncTax": 182050,
           "priceExTax": 165500,
           "jan": "4957180165790",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UTN20B",
@@ -1094,7 +1298,7 @@
           "priceIncTax": 206580,
           "priceExTax": 187800,
           "jan": "4957180165806",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UTN24B",
@@ -1103,7 +1307,7 @@
           "priceIncTax": 243540,
           "priceExTax": 221400,
           "jan": "4957180177397",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UTN32B",
@@ -1112,10 +1316,10 @@
           "priceIncTax": 317350,
           "priceExTax": 288500,
           "jan": "4957180186061",
-          "status": "現行"
+          "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:18:55.607Z"
+      "lastCheckedAt": "2026-10-21T21:18:35.438Z"
     },
     {
       "id": "hdja-utnc",
@@ -1259,7 +1463,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:18:45.493Z"
+      "lastCheckedAt": "2026-10-21T21:18:25.641Z"
     },
     {
       "id": "hdja-utnldb",
@@ -1312,7 +1516,7 @@
           "priceIncTax": 40260,
           "priceExTax": 36600,
           "jan": "4957180165813",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UTN2/LDB",
@@ -1321,7 +1525,7 @@
           "priceIncTax": 45100,
           "priceExTax": 41000,
           "jan": "4957180165820",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UTN3/LDB",
@@ -1330,7 +1534,7 @@
           "priceIncTax": 51260,
           "priceExTax": 46600,
           "jan": "4957180165837",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UTN4/LDB",
@@ -1339,7 +1543,7 @@
           "priceIncTax": 59950,
           "priceExTax": 54500,
           "jan": "4957180165844",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UTN6/LDB",
@@ -1348,7 +1552,7 @@
           "priceIncTax": 89430,
           "priceExTax": 81300,
           "jan": "4957180165851",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UTN8/LDB",
@@ -1357,7 +1561,7 @@
           "priceIncTax": 102960,
           "priceExTax": 93600,
           "jan": "4957180165868",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UTN12/LDB",
@@ -1366,7 +1570,7 @@
           "priceIncTax": 156090,
           "priceExTax": 141900,
           "jan": "4957180165875",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UTN16/LDB",
@@ -1375,7 +1579,7 @@
           "priceIncTax": 193050,
           "priceExTax": 175500,
           "jan": "4957180165882",
-          "status": "受注生産"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UTN20/LDB",
@@ -1384,7 +1588,7 @@
           "priceIncTax": 217580,
           "priceExTax": 197800,
           "jan": "4957180165899",
-          "status": "受注生産"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UTN24/LDB",
@@ -1393,7 +1597,7 @@
           "priceIncTax": 254540,
           "priceExTax": 231400,
           "jan": "4957180179216",
-          "status": "受注生産"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UTN32/LDB",
@@ -1402,10 +1606,10 @@
           "priceIncTax": 328350,
           "priceExTax": 298500,
           "jan": "4957180186078",
-          "status": "受注生産"
+          "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:19:00.619Z"
+      "lastCheckedAt": "2026-10-21T21:18:40.471Z"
     },
     {
       "id": "hdja-utnldc",
@@ -1551,7 +1755,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:19:05.623Z"
+      "lastCheckedAt": "2026-10-21T21:18:45.364Z"
     },
     {
       "id": "hdja-utr",
@@ -1602,7 +1806,7 @@
           "priceIncTax": 26730,
           "priceExTax": 24300,
           "jan": "4957180141695",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UT2R",
@@ -1611,7 +1815,7 @@
           "priceIncTax": 30470,
           "priceExTax": 27700,
           "jan": "4957180141701",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UT3R",
@@ -1629,7 +1833,7 @@
           "priceIncTax": 40260,
           "priceExTax": 36600,
           "jan": "4957180141725",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDJA-UT8R",
@@ -1638,10 +1842,10 @@
           "priceIncTax": 59950,
           "priceExTax": 54500,
           "jan": "4957180182476",
-          "status": "現行"
+          "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:18:20.875Z"
+      "lastCheckedAt": "2026-10-21T21:18:01.591Z"
     },
     {
       "id": "hdja-utu",
@@ -1722,7 +1926,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:18:50.433Z"
+      "lastCheckedAt": "2026-10-21T21:18:30.385Z"
     },
     {
       "id": "hdpd-sutc",
@@ -1801,7 +2005,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:19:58.735Z"
+      "lastCheckedAt": "2026-10-21T21:19:36.593Z"
     },
     {
       "id": "hdpd-sutcs",
@@ -1873,7 +2077,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:20:03.697Z"
+      "lastCheckedAt": "2026-10-21T21:19:41.318Z"
     },
     {
       "id": "hdph-uts",
@@ -1936,7 +2140,7 @@
           "status": "生産終了"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:19:44.049Z"
+      "lastCheckedAt": "2026-10-21T21:19:22.732Z"
     },
     {
       "id": "hdph-utv",
@@ -2044,7 +2248,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:19:49.015Z"
+      "lastCheckedAt": "2026-10-21T21:19:27.317Z"
     },
     {
       "id": "hdph-utv5dk",
@@ -2098,7 +2302,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:19:34.531Z"
+      "lastCheckedAt": "2026-10-21T21:19:13.475Z"
     },
     {
       "id": "hdph-utv5dkb",
@@ -2153,7 +2357,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:19:39.217Z"
+      "lastCheckedAt": "2026-10-21T21:19:18.053Z"
     },
     {
       "id": "hdph-utvb",
@@ -2262,7 +2466,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:19:53.868Z"
+      "lastCheckedAt": "2026-10-21T21:19:31.980Z"
     },
     {
       "id": "hdpl-utab",
@@ -2333,7 +2537,70 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:21:36.191Z"
+      "lastCheckedAt": "2026-10-21T21:21:30.270Z"
+    },
+    {
+      "id": "hdpl-utac",
+      "sourceUrl": "https://www.iodata.jp/product/hdd/rokuga/hdpl-utac/index.htm",
+      "seriesName": "HDPL-UTACシリーズ",
+      "category": "rokuga",
+      "mediaType": "HDD",
+      "formFactor": "portable",
+      "driveCount": 1,
+      "busPower": true,
+      "smartphone": false,
+      "smartphoneNote": null,
+      "tv": true,
+      "tvRecordingMain": true,
+      "pcWindows": true,
+      "pcMac": false,
+      "pcNote": "Windowsパソコン",
+      "gameConsole": false,
+      "gameNote": null,
+      "otherDevices": null,
+      "shockproof": false,
+      "shockNote": null,
+      "encryptionHw": false,
+      "encryptionSw": false,
+      "encryptionNote": null,
+      "deviceConnector": "USB-microB×1",
+      "hostConnectors": [
+        "A"
+      ],
+      "cables": "USBケーブル（A-microB USB 5Gbps 約1m）、ゴム足（4個）、スタンド",
+      "cableLengthCm": 100,
+      "interface": "USB 5Gbps（USB 3.2 Gen1）／USB 2.0",
+      "macTimeMachine": false,
+      "warrantyYears": 1,
+      "weightG": 210,
+      "dimensions": "約35×112×133mm（スタンド付き、ゴム足含む）",
+      "features": [
+        "静音設計",
+        "グリーン購入法適合"
+      ],
+      "imageUrl": "https://www.iodata.jp/image/hdpl-utac_l.jpg",
+      "speed": null,
+      "variants": [
+        {
+          "sku": "HDPL-UTA2KC",
+          "capacityGB": 2000,
+          "color": null,
+          "priceIncTax": 31680,
+          "priceExTax": 28800,
+          "jan": "4957180195766",
+          "status": "現行"
+        },
+        {
+          "sku": "HDPL-UTA4KC",
+          "capacityGB": 4000,
+          "color": null,
+          "priceIncTax": 44000,
+          "priceExTax": 40000,
+          "jan": "4957180195773",
+          "status": "現行"
+        }
+      ],
+      "lastCheckedAt": "2026-10-21T21:21:25.560Z"
     },
     {
       "id": "hdpx-uts",
@@ -2414,7 +2681,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:19:29.803Z"
+      "lastCheckedAt": "2026-10-21T21:19:08.920Z"
     },
     {
       "id": "hdpx-utsb",
@@ -2496,7 +2763,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:19:20.158Z"
+      "lastCheckedAt": "2026-10-21T21:18:59.469Z"
     },
     {
       "id": "hdpx-utsc",
@@ -2578,7 +2845,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:19:24.979Z"
+      "lastCheckedAt": "2026-10-21T21:19:04.222Z"
     },
     {
       "id": "hdpx-utscb",
@@ -2661,7 +2928,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:19:15.102Z"
+      "lastCheckedAt": "2026-10-21T21:18:54.807Z"
     },
     {
       "id": "hdpz-utb",
@@ -2723,7 +2990,7 @@
           "status": "生産終了"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:21:40.981Z"
+      "lastCheckedAt": "2026-10-21T21:21:34.948Z"
     },
     {
       "id": "hdw-utcs",
@@ -2817,7 +3084,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:18:30.589Z"
+      "lastCheckedAt": "2026-10-21T21:18:11.191Z"
     },
     {
       "id": "hdw-utnb",
@@ -2868,7 +3135,7 @@
           "priceIncTax": 55110,
           "priceExTax": 50100,
           "jan": "4957180181080",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDW-UTNB4",
@@ -2877,7 +3144,7 @@
           "priceIncTax": 68640,
           "priceExTax": 62400,
           "jan": "4957180181097",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDW-UTNB6",
@@ -2886,7 +3153,7 @@
           "priceIncTax": 90970,
           "priceExTax": 82700,
           "jan": "4957180181103",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDW-UTNB8",
@@ -2895,7 +3162,7 @@
           "priceIncTax": 110660,
           "priceExTax": 100600,
           "jan": "4957180181110",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDW-UTNB12",
@@ -2904,7 +3171,7 @@
           "priceIncTax": 147620,
           "priceExTax": 134200,
           "jan": "4957180181127",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDW-UTNB16",
@@ -2913,7 +3180,7 @@
           "priceIncTax": 172150,
           "priceExTax": 156500,
           "jan": "4957180181134",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDW-UTNB24",
@@ -2922,7 +3189,7 @@
           "priceIncTax": 307560,
           "priceExTax": 279600,
           "jan": "4957180181141",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDW-UTNB32",
@@ -2931,7 +3198,7 @@
           "priceIncTax": 405900,
           "priceExTax": 369000,
           "jan": "4957180181158",
-          "status": "現行"
+          "status": "在庫限り"
         },
         {
           "sku": "HDW-UTNB40",
@@ -2940,7 +3207,7 @@
           "priceIncTax": 489610,
           "priceExTax": 445100,
           "jan": "4957180181165",
-          "status": "受注生産"
+          "status": "在庫限り"
         },
         {
           "sku": "HDW-UTNB48",
@@ -2949,7 +3216,7 @@
           "priceIncTax": 588060,
           "priceExTax": 534600,
           "jan": "4957180181172",
-          "status": "受注生産"
+          "status": "在庫限り"
         },
         {
           "sku": "HDW-UTNB64",
@@ -2958,10 +3225,10 @@
           "priceIncTax": 782100,
           "priceExTax": 711000,
           "jan": "4957180186955",
-          "status": "受注生産"
+          "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:21:56.188Z"
+      "lastCheckedAt": "2026-10-21T21:21:49.636Z"
     },
     {
       "id": "hdw-utnc",
@@ -3105,7 +3372,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:21:51.085Z"
+      "lastCheckedAt": "2026-10-21T21:21:44.710Z"
     },
     {
       "id": "hdw-utu",
@@ -3186,7 +3453,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:21:46.075Z"
+      "lastCheckedAt": "2026-10-21T21:21:39.672Z"
     },
     {
       "id": "r-sspt-uf",
@@ -3279,7 +3546,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:21:02.188Z"
+      "lastCheckedAt": "2026-10-21T21:20:38.246Z"
     },
     {
       "id": "ssca-suw",
@@ -3398,7 +3665,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:20:47.760Z",
+      "lastCheckedAt": "2026-10-21T21:20:23.983Z",
       "pcOnly": true,
       "pcOnlyText": "セキュリティロックアプリは解除可能ですが、スマホ・タブレットでは動作未検証です。"
     },
@@ -3476,7 +3743,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:20:57.316Z"
+      "lastCheckedAt": "2026-10-21T21:20:33.384Z"
     },
     {
       "id": "sspa-usc",
@@ -3553,7 +3820,7 @@
           "status": "生産終了"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:21:06.997Z"
+      "lastCheckedAt": "2026-10-21T21:20:43.048Z"
     },
     {
       "id": "sspd-sutcb",
@@ -3643,7 +3910,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:21:16.771Z"
+      "lastCheckedAt": "2026-10-21T21:20:52.594Z"
     },
     {
       "id": "sspd-sutcs",
@@ -3733,7 +4000,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:21:11.880Z"
+      "lastCheckedAt": "2026-10-21T21:20:47.862Z"
     },
     {
       "id": "sspj-utc",
@@ -3799,7 +4066,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:20:13.155Z"
+      "lastCheckedAt": "2026-10-21T21:19:50.738Z"
     },
     {
       "id": "sspj-utcb",
@@ -3865,7 +4132,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:20:08.418Z"
+      "lastCheckedAt": "2026-10-21T21:19:45.965Z"
     },
     {
       "id": "sspq-usc",
@@ -3972,7 +4239,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:20:33.156Z"
+      "lastCheckedAt": "2026-10-21T21:20:09.727Z"
     },
     {
       "id": "sspr-suscb",
@@ -4047,7 +4314,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:20:52.532Z"
+      "lastCheckedAt": "2026-10-21T21:20:28.660Z"
     },
     {
       "id": "ssps-us",
@@ -4150,7 +4417,7 @@
           "status": "生産終了"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:20:23.223Z"
+      "lastCheckedAt": "2026-10-21T21:20:00.044Z"
     },
     {
       "id": "ssps-usb",
@@ -4208,7 +4475,7 @@
           "status": "現行"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:20:18.030Z"
+      "lastCheckedAt": "2026-10-21T21:19:55.412Z"
     },
     {
       "id": "ssps-uss",
@@ -4275,7 +4542,7 @@
           "status": "在庫限り"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:20:28.136Z"
+      "lastCheckedAt": "2026-10-21T21:20:04.927Z"
     },
     {
       "id": "sspu-tfcb",
@@ -4350,7 +4617,7 @@
           "status": "受注生産"
         }
       ],
-      "lastCheckedAt": "2026-10-20T21:20:42.856Z"
+      "lastCheckedAt": "2026-10-21T21:20:19.080Z"
     }
   ]
 }
