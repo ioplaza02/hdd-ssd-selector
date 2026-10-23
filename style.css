@@ -448,3 +448,22 @@ body { background: linear-gradient(180deg, #eef2f6 0%, #e4e9ef 100%); min-height
   .filter-panel.is-collapsed .filter-clear-btn { display: none; }
 }
 .speed__none { font-size: 12px; font-weight: 700; color: var(--text-soft); }
+
+/* ---- ヘッダー：【社内限定】とお問い合わせ先（NAS／ISSセレクターと同じ表記） ---- */
+.site-header__internal {
+  color: #ffd75e; font-size: 20px; font-weight: 800; letter-spacing: .06em; white-space: nowrap;
+  text-shadow: 0 1px 6px rgba(0,0,0,.25);
+}
+.site-header__right { flex: 1 1 320px; max-width: 460px; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.site-header__right .search { width: 100%; max-width: none; flex: none; }
+.site-header__contact {
+  color: #fff; font-size: 14px; font-weight: 800; letter-spacing: .04em; white-space: nowrap;
+  background: rgba(255,255,255,.16); border: 1.5px solid rgba(255,255,255,.55);
+  padding: 6px 18px; border-radius: 999px; box-shadow: 0 4px 14px rgba(0,20,50,.25); backdrop-filter: blur(4px);
+}
+@media (max-width: 900px) {
+  .site-header__internal { font-size: 16px; }
+  .site-header__right { max-width: none; align-items: stretch; }
+  .site-header__contact { align-self: flex-start; font-size: 13px; padding: 5px 14px; }
+}
+@media print { .site-header__internal, .site-header__contact { display: none; } }
